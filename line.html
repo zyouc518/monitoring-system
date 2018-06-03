@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-<!--     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
- -->    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         /* css 代码  */
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -37,6 +39,50 @@
         li a:hover:not(.active) {
             background-color: #555;
             color: white;
+        }
+
+        #chartdiv {
+            position: absolute;
+            left: 200px;
+            top: 500px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-color: black;
+            border-radius: 10px;
+        }
+
+        #chartdiv2 {
+            position: absolute;
+            left: 700px;
+            top: 500px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-radius: 10px;
+        }
+
+        #chartdiv3 {
+            position: absolute;
+            left: 200px;
+            top: 650px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-color: black;
+            border-radius: 10px;
+
+        }
+
+        #chartdiv4 {
+            position: absolute;
+            left: 700px;
+            top: 650px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-radius: 10px;
+
         }
     </style>
     <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
@@ -134,27 +180,73 @@
             }]
 
         });
-
     </script>
     <div class="webpage-container">
         <div class="sidebar-navigation-container">
             <div class="logo">
-                "
-                矿物液化监控智能系统
-                "
+                " 矿物液化监控智能系统 "
             </div>
             <ul>
+                <li>
+                    <a href="dashboard.html">传感器数据</a>
+                </li>
                 <li>
                     <a href="navigate.html">回到主页</a>
                 </li>
                 <li>
-                    <a href="line.html">折线图</a>
-                </li>
-                <li>
-                    <a href="submitform.html">表单计算</a>
+                    <a href="submitform.html">报警界面</a>
                 </li>
             </ul>
         </div>
+    </div>
+    <div id="chartdiv">
+        <form action="calculate.php" method="post">
+            请输入装载工况：
+            <input type="text" name="content1">
+            <br> 请输入装载量：
+            <input type="text" name="content2">
+            <br> 请输入含水率：
+            <input type="text" name="content3">
+            <br> 请输入横倾角：
+            <input type="text" name="content3">
+            <input type="submit" value="计算">
+        </form>
+    </div>
+
+    <div id="chartdiv2">
+        <form action="calculate.php" method="post">
+            复原力臂：
+            <input type="text" name="content4">
+            <br> 静稳性曲线围成面积：
+            <input type="text" name="content5">
+            <br> 是否达到稳性要求：
+            <input type="text" name="content6">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <div id="chartdiv3">
+        <form action="calculate.php" method="post">
+            提交4:
+            <input type="text" name="content7">
+            <br> 提交5:
+            <input type="text" name="content8">
+            <br> 提交6:
+            <input type="text" name="content9">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <div id="chartdiv4">
+        <form action="calculate.php" method="post">
+            提交4:
+            <input type="text" name="content10">
+            <br> 提交5:
+            <input type="text" name="content11">
+            <br> 提交6:
+            <input type="text" name="content12">
+            <input type="submit" value="提交">
+        </form>
     </div>
 </body>
 

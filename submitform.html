@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">	
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Wang & Zhao">
     <meta name="description" content="Monitoring System">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="msapplication-TileColor" content="#000000">
-<!-- <meta http-equiv="refresh" content="2"> -->
-<style>
-ul {
+    <!-- <meta http-equiv="refresh" content="2"> -->
+    <style>
+        ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -44,64 +45,66 @@ ul {
             background-color: #555;
             color: white;
         }
-	#chartdiv {
-      position:absolute;
-      left:200px;
-      top:50px;
-      width: 30%;
-      height: 100px;
-      background-color: #EDEDED;
-      border-color: black;
-      border-radius: 10px;
-    }
-  #chartdiv2 {
-      position:absolute;
-      left:700px;
-      top:50px;
-      width: 30%;
-      height: 100px;
-      background-color: #EDEDED;
-      border-radius: 10px;
-    }
 
-    #chartdiv3 {
-      position:absolute;
-      left:200px;
-      top:200px;
-      width: 30%;
-      height: 100px;
-      background-color: #EDEDED;
-      border-color: black;
-      border-radius: 10px;
+        #chartdiv {
+            position: absolute;
+            left: 200px;
+            top: 50px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-color: black;
+            border-radius: 10px;
+        }
 
-    }
-  #chartdiv4 {
-      position:absolute;
-      left:700px;
-      top:200px;
-      width: 30%;
-      height: 100px;
-      background-color: #EDEDED;
-      border-radius: 10px;
+        #chartdiv2 {
+            position: absolute;
+            left: 700px;
+            top: 50px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-radius: 10px;
+        }
 
-    }
-</style>
+        #chartdiv3 {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-color: black;
+            border-radius: 10px;
+
+        }
+
+        #chartdiv4 {
+            position: absolute;
+            left: 700px;
+            top: 200px;
+            width: 30%;
+            height: 100px;
+            background-color: #EDEDED;
+            border-radius: 10px;
+
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="webpage-container">
+    <div class="webpage-container">
         <div class="sidebar-navigation-container">
             <div class="logo">
-                "
-                矿物液化监控智能系统
-                "
+                " 矿物液化监控智能系统 "
             </div>
             <ul>
                 <li>
-                    <a href="dashboard.html">仪表盘</a>
+                    <a href="dashboard.html">传感器数据</a>
                 </li>
                 <li>
-                    <a href="line.html">折线图</a>
+                    <a href="line.html">稳性计算</a>
                 </li>
                 <li>
                     <a href="submitform.html">回到主页</a>
@@ -110,41 +113,54 @@ ul {
         </div>
     </div>
 
-<div id="chartdiv">
-<form action="calculate.php" method="post"> 
-提交1: <input type="text" name="content1"><br>
-提交2: <input type="text" name="content2"><br>
-提交3: <input type="text" name="content3">
-<input type="submit" value="提交">
-</form> 
-</div>
+    <div id="chartdiv">
+        <form action="calculate.php" method="post">
+            提交1:
+            <input type="text" name="content1">
+            <br> 提交2:
+            <input type="text" name="content2">
+            <br> 提交3:
+            <input type="text" name="content3">
+            <input type="submit" value="提交">
+        </form>
+    </div>
 
-<div id="chartdiv2">
-<form action="calculate.php" method="post"> 
-提交4: <input type="text" name="content4"><br>
-提交5: <input type="text" name="content5"><br>
-提交6: <input type="text" name="content6">
-<input type="submit" value="提交">
-</form> 
-</div>
+    <div id="chartdiv2">
+        <form action="calculate.php" method="post">
+            提交4:
+            <input type="text" name="content4">
+            <br> 提交5:
+            <input type="text" name="content5">
+            <br> 提交6:
+            <input type="text" name="content6">
+            <input type="submit" value="提交">
+        </form>
+    </div>
 
-<div id="chartdiv3">
-<form action="calculate.php" method="post"> 
-提交4: <input type="text" name="content7"><br>
-提交5: <input type="text" name="content8"><br>
-提交6: <input type="text" name="content9">
-<input type="submit" value="提交">
-</form> 
-</div>
+    <div id="chartdiv3">
+        <form action="calculate.php" method="post">
+            提交4:
+            <input type="text" name="content7">
+            <br> 提交5:
+            <input type="text" name="content8">
+            <br> 提交6:
+            <input type="text" name="content9">
+            <input type="submit" value="提交">
+        </form>
+    </div>
 
-<div id="chartdiv4">
-<form action="calculate.php" method="post"> 
-提交4: <input type="text" name="content10"><br>
-提交5: <input type="text" name="content11"><br>
-提交6: <input type="text" name="content12">
-<input type="submit" value="提交">
-</form> 
-</div>
+    <div id="chartdiv4">
+        <form action="calculate.php" method="post">
+            提交4:
+            <input type="text" name="content10">
+            <br> 提交5:
+            <input type="text" name="content11">
+            <br> 提交6:
+            <input type="text" name="content12">
+            <input type="submit" value="提交">
+        </form>
+    </div>
 
 </body>
+
 </html>
