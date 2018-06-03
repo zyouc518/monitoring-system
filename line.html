@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<!--     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+ -->    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* css 代码  */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        li a.active {
+            background-color: #555;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+    <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+
+<body>
+    <div id="container" style="min-width:400px;height:400px"></div>
+    <script>
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                title: {
+                    text: 'heeling angle'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'righting lever'
+                },
+                min: 0
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: '{point.x} degree: {point.y:.2f} m'
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        enabled: true
+                    }
+                }
+            },
+            series: [{
+                name: 'GZ',
+                // Define the data points. All series have a dummy year http://ship.sssri.10zi.tech/#/home
+                // of 1970/71 in order to be compared on the same x axis. Note
+                // that in JavaScript, months start at 0 for January, 1 for February etc.
+                data: [
+                    [0.0, -0.073],
+                    [10.0, 3.678],
+                    [20.0, 4.904],
+                    [30.0, 4.711],
+                    [40.0, 4.010],
+                    [50.0, 3.066],
+                    [60.0, 2.067],
+                    [70.0, 1.089]
+                ]
+            }, {
+                name: 'GZC',
+                data: [
+                    [0.0, -0.163],
+                    [10.0, 3.453],
+                    [20.0, 4.563],
+                    [30.0, 4.455],
+                    [40.0, 3.739],
+                    [50.0, 2.682],
+                    [60.0, 1.772],
+                    [70.0, 0.884]
+                ]
+            }, {
+                name: 'AREA',
+                data: [
+                    [0.0, 0.000],
+                    [10.0, 0.355],
+                    [20.0, 1.131],
+                    [30.0, 1.983],
+                    [40.0, 2.748],
+                    [50.0, 3.367],
+                    [60.0, 3.815],
+                    [70.0, 4.091]
+                ]
+            }, {
+                name: 'AREAC',
+                data: [
+                    [0.0, 0.000],
+                    [10.0, 0.300],
+                    [20.0, 0.999],
+                    [30.0, 1.786],
+                    [40.0, 2.501],
+                    [50.0, 3.061],
+                    [60.0, 3.449],
+                    [70.0, 3.681]
+                ]
+            }]
+
+        });
+
+    </script>
+    <div class="webpage-container">
+        <div class="sidebar-navigation-container">
+            <div class="logo">
+                "
+                矿物液化监控智能系统
+                "
+            </div>
+            <ul>
+                <li>
+                    <a href="navigate.html">回到主页</a>
+                </li>
+                <li>
+                    <a href="line.html">折线图</a>
+                </li>
+                <li>
+                    <a href="submitform.html">表单计算</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
