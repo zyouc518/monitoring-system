@@ -3,12 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <!--     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
- -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* css 代码  */
-
         ul {
             list-style-type: none;
             margin: 0;
@@ -88,9 +84,30 @@
         #line {
             position: absolute;
             left: 11%;
-            top: 30%;
+            top: 15%;
             width: 50%;
             height: 100px;
+        }
+
+        #palette {
+            position: absolute;
+            left: 62%;
+            width: 35%;
+            top: 20%;
+            border: none;
+            display: table;
+        }
+
+        .divTableRow {
+            width: 100%;
+            display: table-row;
+        }
+
+        .divTableCell {
+            width: 16.6%;
+            padding: 1%;
+            border: 1px solid #000;
+            display: table-cell;
         }
     </style>
     <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
@@ -98,13 +115,15 @@
     <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
     <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
     <script type="text/javascript" src="Chart.js"></script>
+    <script type="text/javascript" src="calculate.js"></script>
+    <script type="text/javascript" src="defaultline.js"></script>
 </head>
 
 <body>
     <div class="webpage-container">
         <div class="sidebar-navigation-container">
             <div class="logo">
-                " 矿物液化监控智能系统 "
+                矿物液化监控智能系统
             </div>
             <ul>
                 <li>
@@ -137,168 +156,62 @@
         <input type="text" id="rat">
         <br> 请输入横倾角：
         <input type="text" id="degree">
-        <button type="button" onclick="Calc()">计算</button>
+        <button type="button" onclick="Calc1()">计算修正一</button>
+        <button type="button" onclick="Calc2()">计算修正二</button>
     </div>
-    <script>
-        function Calc() {
-            var M = document.getElementById("mass").value;
-            var rat = document.getElementById("rat").value;
-            var degree = document.getElementById("degree").value;
-            var rho = 2.38,
-                L = 36,
-                DWT = 400000,
-                pi = 3.1415926;
-            var condition = document.getElementById("condition").value;
-            switch (condition) {
-                case "349999ARRIVE":
-                    var gz0 = new Array(-0.007, 1.066, 2.159, 3.297, 4.395, 5.177, 5.692, 5.984, 6.058, 5.936, 5.652,
-                        5.237,
-                        4.721, 4.128, 3.473, 2.772);
-                    var s0 = new Array(0.00, 4.62e-2, 0.187, 4.25e-1, 7.61e-1, 1.18, 1.65, 2.16, 2.69, 3.210751,
-                        3.716373,
-                        4.191495, 4.625995, 5.012105, 5.343761, 5.616251);
-                    var dGM = 0.578;
-                    break;
-                case "349999DEPARTURE":
-                    var gz0 = new Array(-0.003, 1.060, 2.145, 3.272, 4.344, 5.081, 5.564, 5.836, 5.902, 5.784, 5.501,
-                        5.090, 4.581, 3.994, 3.348, 2.656);
-                    var s0 = new Array(0.00, 4.61e-2, 0.185965, 0.422326, 0.754637, 1.16588, 1.630355, 2.127774,
-                        2.639941, 3.149839, 3.64224, 4.104359, 4.526336, 4.900491, 5.220846, 5.48282);
-                    var dGM = 0.578;
-                    break;
-                case "FULLARRIVE":
-                    var gz0 = new Array(-0.003, 1.060, 2.145, 3.272, 4.344, 5.081, 5.564, 5.836, 5.902, 5.784, 5.501,
-                        5.090, 4.581, 3.994, 3.348, 2.656);
-                    var s0 = new Array(0.00, 4.61e-2, 0.185965, 0.422326, 0.754637, 1.16588, 1.630355, 2.127774,
-                        2.639941, 3.149839, 3.64224, 4.104359, 4.526336, 4.900491, 5.220846, 5.48282);
-                    var dGM = 0.578;
-                default:
-                    break;
-            }
-            var gz0 = new Array(-0.007, 1.066, 2.159, 3.297, 4.395, 5.177, 5.692, 5.984, 6.058, 5.936, 5.652, 5.237,
-                4.721, 4.128, 3.473, 2.772);
-            var s0 = new Array(0.00, 4.62e-2, 1.87e-1, 4.25e-1, 7.61e-1, 1.18, 1.65, 2.16, 2.69, 3.210751, 3.716373,
-                4.191495, 4.625995, 5.012105, 5.343761, 5.616251);
-            var gz1 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            var s1 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            var gz2 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            var s2 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            var b = (45.165 + Math.sqrt(45.165 * 2 + 4 * 1.833 * M / (rho * L))) / (2 * 1.833);
-            var h = 1.833 * b - 45.165;
-            var dh = 0.2 * h;
-            var h2 = h - dh;
-            var b2 = (h2 + 45.165) / 1.833;
-            var dm = (b + b2) * dh * L * rho / 2;
-            var thea = 0,
-                thearad = 0;
-            for (let i = 0; i < gz1.length; i++) {
-                thea = i * 5;
-                thearad = thea * pi / 180;
-                gz1[i] = gz0[i] - dGM * Math.cos(thearad);
-            }
-            for (let i = 1; i < 16; i++) {
-                thea = i * 5;
-                s1[i] = s1[i - 1] + pi * (gz1[i - 1] + gz1[i]) / 72
-            }
-
-            if (degree % 5 == 0) {
-                document.getElementById("chartdiv2").innerHTML = "复原力臂：" + gz1[(degree / 5)].toFixed(6) +
-                    "<br>静稳性曲线围成面积：" + s1[(degree / 5)].toFixed(6) + "<br>是否达到稳性要求：";
-            } else {
-                var ldegree = 5 * parseInt(degree / 5);
-                var hdegree = ldegree + 5;
-                var fitdegree = (gz1[hdegree / 5] - gz1[ldegree / 5]) / 5 * (degree - ldegree) + gz1[ldegree / 5];
-                var sdegree = (s1[hdegree / 5] - s1[ldegree / 5]) / 5 * (degree - ldegree) + s1[ldegree / 5];
-                document.getElementById("chartdiv2").innerHTML = "复原力臂：" + fitdegree.toFixed(6) +
-                    "<br>静稳性曲线围成面积：" + sdegree.toFixed(6) + "<br>是否达到稳性要求：";
-            }
-            //"复原力臂：<br>静稳性曲线围城面积：<br>是否达到稳性要求："
-            var ctx = document.getElementById("myChart").getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65",
-                        "70", "75"
-                    ],
-                    backgroundColor: 'blue', //填充色
-                    borderColor: 'green', //曲线边框色,
-                    borderWidth: 2, //曲线的宽度
-                    borderDash: [2, 3],
-                    fill: true, //
-                    pointBackgroundColor: 'purple', //数据点的填充色
-                    pointBorderColor: 'blue', //数据点边框颜色
-                    pointBorderWidth: 2, //数据点边框的宽度
-                    pointRadius: 2, //数据点的大小
-                    pointStyle: 'circle', //'cross''crossRot''dash''line''rect''rectRounded''rectRot''star''triangle'
-                    showLine: true, //如果为false,两数据点之间的线不会渲染
-                    spanGaps: true, //如果为false,NaN data会在折线上有断点
-                    steppedLine: true, //可选值[false, true, 'before', 'after'],为true,折线图的曲线会成直角，
-                    //将要在图上展示的数据，数组中的每一个object代表一条线
-                    datasets: [{　　　　　　　 // 颜色的使用类似于CSS，你也可以使用RGB、HEX或者HSL
-                        　　　　　　　 // rgba颜色中最后一个值代表透明度
-                        　　　　　　　 // 填充颜色
-                        fillColor: "rgba(220,220,220,0.5)",
-                        　　　　　　　 // 线的颜色
-                        strokeColor: "rgba(220,220,220,1)",
-                        　　　　　　　 // 点的填充颜色
-                        pointColor: "rgba(220,220,220,1)",
-                        　　　　　　　　 // 点的边线颜色
-                        pointStrokeColor: "#fff",
-                        　　　　　　　　 // 与x轴标示对应的数据
-                        data: gz0
-                    }, {
-                        fillColor: "rgba(151,187,205,0)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                        pointStrokeColor: "#fff",
-                        data: gz1
-                    }, {
-                        fillColor: "rgba(151,187,205,0)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                        pointStrokeColor: "#fff",
-                        data: s1
-                    }]
-                },
-                options: {
-                    title: {
-                        display: true,
-                        text: '稳性计算数据',
-                        fontFamily: 'Helvetica',
-                        padding: 20,
-                        fontSize: 16,
-                        lineHeight: 1.2
-                    },
-                    scales: {
-                        scaleLabel: {
-                            display: true,
-                            labelString: '状态'
-                        },
-                        yAxes: [{
-                            type: 'linear',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-
-                    },
-                    legend: {
-                        display: true,
-                    }
-                }
-            });
-        }
-    </script>
+    
     <div id="line">
         <canvas id="myChart" width="400" height="450"></canvas>
     </div>
-    <div id="chartdiv2">
-        复原力臂：
-        <!-- <input type="text" name="content4"> -->
-        <br> 静稳性曲线围成面积：
-        <!-- <input type="text" name="content5"> -->
-        <br> 是否达到稳性要求：
-        <!-- <input type="text" name="content6"> -->
+    <div id="palette" style="border: solid 1px black;">
+        <div class="divTableRow">
+            <div class="divTableCell">物理量</div>
+            <div class="divTableCell">描述</div>
+            <div class="divTableCell">参考值</div>
+            <div class="divTableCell">计算值</div>
+            <div class="divTableCell">单位</div>
+            <div class="divTableCell">状态</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">GZ</div>
+            <div class="divTableCell">复原力臂</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">m</div>
+            <div class="divTableCell">0</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">AREA</div>
+            <div class="divTableCell">静稳性曲线围成面积</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">mrad</div>
+            <div class="divTableCell">0</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">V.AREA30</div>
+            <div class="divTableCell">静稳性曲线围成面积（0-30°）</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">mrad</div>
+            <div class="divTableCell">0</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">V.AREA40</div>
+            <div class="divTableCell">静稳性曲线围成面积（0-40°）</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">mrad</div>
+            <div class="divTableCell">0</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">V.AREA3040</div>
+            <div class="divTableCell">静稳性曲线围成面积（30-40°）</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">0</div>
+            <div class="divTableCell">mrad</div>
+            <div class="divTableCell">0</div>
+        </div>
     </div>
 </body>
 
