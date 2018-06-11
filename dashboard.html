@@ -44,49 +44,165 @@ ul {
             background-color: #555;
             color: white;
         }
+    #header1 {
+      position:absolute;
+    left:270px;
+    top:20px;
+      width: 100%;
+      height: 30px;
+    }
+
+    #header2 {
+      position:absolute;
+    left:650px;
+    top:20px;
+      width: 100%;
+      height: 30px;
+    }
+
+    #header3 {
+      position:absolute;
+    left:1030px;
+    top:20px;
+      width: 100%;
+      height: 30px;
+    }
+
     #chartdiv {
       position:absolute;
-    left:-300px;
+    left:20px;
     top:50px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
     }
         #chartdiv2 {
           position:absolute;
-    left:300px;
+    left:180px;
     top:50px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
     }
 
     #chartdiv3 {
       position:absolute;
-    left:-300px;
+    left:20px;
     top:250px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
     }
     #chartdiv4 {
           position:absolute;
-    left:300px;
+    left:180px;
     top:250px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
     }
 
     #chartdiv5 {
       position:absolute;
-    left:-300px;
+    left:20px;
     top:450px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
     }
     #chartdiv6 {
           position:absolute;
-    left:300px;
+    left:180px;
     top:450px;
-      width: 100%;
-      height: 300px;
+      width: 30%;
+      height: 155px;
+    }
+
+
+	#chartdiv7 {
+      position:absolute;
+    left:400px;
+    top:50px;
+      width: 30%;
+      height: 155px;
+    }
+        #chartdiv8 {
+          position:absolute;
+    left:560px;
+    top:50px;
+      width: 30%;
+      height: 155px;
+    }
+
+    #chartdiv9 {
+      position:absolute;
+    left:400px;
+    top:250px;
+      width: 30%;
+      height: 155px;
+    }
+    #chartdiv10 {
+          position:absolute;
+    left:560px;
+    top:250px;
+      width: 30%;
+      height: 155px;
+    }
+
+    #chartdiv11 {
+      position:absolute;
+    left:400px;
+    top:450px;
+      width: 30%;
+      height: 155px;
+    }
+    #chartdiv12 {
+          position:absolute;
+    left:560px;
+    top:450px;
+      width: 30%;
+      height: 155px;
+    }
+
+
+#chartdiv13 {
+      position:absolute;
+    left:780px;
+    top:50px;
+      width: 30%;
+      height: 155px;
+    }
+        #chartdiv14 {
+          position:absolute;
+    left:940px;
+    top:50px;
+      width: 30%;
+      height: 155px;
+    }
+
+    #chartdiv15 {
+      position:absolute;
+    left:780px;
+    top:250px;
+      width: 30%;
+      height: 155px;
+    }
+    #chartdiv16 {
+          position:absolute;
+    left:940px;
+    top:250px;
+      width: 30%;
+      height: 155px;
+    }
+
+    #chartdiv17 {
+      position:absolute;
+    left:780px;
+    top:450px;
+      width: 30%;
+      height: 155px;
+    }
+    #chartdiv18 {
+          position:absolute;
+    left:940px;
+    top:450px;
+      width: 30%;
+      height: 155px;
     }
 
     </style>
@@ -113,7 +229,7 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
@@ -157,7 +273,7 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
@@ -199,7 +315,7 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
@@ -243,11 +359,12 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+                "unit": "%",
+
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
@@ -286,7 +403,7 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
@@ -330,7 +447,516 @@ ul {
         "gridInside": true,
         "inside": true,
         "radius": "50%",
-        "valueInterval": 10,
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+    var chart7 = AmCharts.makeChart("chartdiv7", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+    var chart8 = AmCharts.makeChart("chartdiv8", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+    var chart9 = AmCharts.makeChart("chartdiv9", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+    var chart10 = AmCharts.makeChart("chartdiv10", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+    var chart11 = AmCharts.makeChart("chartdiv11", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+    var chart12 = AmCharts.makeChart("chartdiv12", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart13 = AmCharts.makeChart("chartdiv13", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart14 = AmCharts.makeChart("chartdiv14", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart15 = AmCharts.makeChart("chartdiv15", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart16 = AmCharts.makeChart("chartdiv16", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart17 = AmCharts.makeChart("chartdiv17", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
+        "tickColor": "#67b7dc",
+        "startAngle": -90,
+        "endAngle": 90,
+        "unit": "%",
+        "bandOutlineAlpha": 0,
+        "bands": [{
+          "color": "#0080ff",
+          "endValue": 100,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }, {
+          "color": "#3cd3a3",
+          "endValue": 0,
+          "innerRadius": "105%",
+          "radius": "170%",
+          "gradientRatio": [0.5, 0, -0.5],
+          "startValue": 0
+        }]
+      }],
+      "arrows": [{
+        "alpha": 1,
+        "innerRadius": "35%",
+        "nailRadius": 0,
+        "radius": "170%"
+      }]
+    });
+
+
+    var chart18 = AmCharts.makeChart("chartdiv18", {
+      "theme": "light",
+      "type": "gauge",
+      "axes": [{
+        "topTextFontSize": 20,
+        "topTextYOffset": 70,
+        "axisColor": "#31d6ea",
+        "axisThickness": 1,
+        "endValue": 100,
+        "gridInside": true,
+        "inside": true,
+        "radius": "50%",
+        "valueInterval": 100,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
@@ -365,6 +991,18 @@ ul {
   setInterval(randomValue4, 2000);
   setInterval(randomValue5, 2000);
   setInterval(randomValue6, 2000);
+  setInterval(randomValue7, 2000);
+  setInterval(randomValue8, 2000);
+  setInterval(randomValue9, 2000);
+  setInterval(randomValue10, 2000);
+  setInterval(randomValue11, 2000);
+  setInterval(randomValue12, 2000);
+  setInterval(randomValue13, 2000);
+  setInterval(randomValue14, 2000);
+  setInterval(randomValue15, 2000);
+  setInterval(randomValue16, 2000);
+  setInterval(randomValue17, 2000);
+  setInterval(randomValue18, 2000);
 
 
     
@@ -415,6 +1053,101 @@ ul {
       // adjust darker band to new value
       chart6.axes[0].bands[1].setEndValue(value);
     }
+
+    function randomValue7() {
+      var value = Math.round(Math.random() * 100);
+      chart7.arrows[0].setValue(value);
+      chart7.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart7.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue8() {
+      var value = Math.round(Math.random() * 100);
+      chart8.arrows[0].setValue(value);
+      chart8.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart8.axes[0].bands[1].setEndValue(value);
+    }
+    function randomValue9() {
+      var value = Math.round(Math.random() * 100);
+      chart9.arrows[0].setValue(value);
+      chart9.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart9.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue10() {
+      var value = Math.round(Math.random() * 100);
+      chart10.arrows[0].setValue(value);
+      chart10.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart10.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue11() {
+      var value = Math.round(Math.random() * 100);
+      chart11.arrows[0].setValue(value);
+      chart11.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart11.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue12() {
+      var value = Math.round(Math.random() * 100);
+      chart12.arrows[0].setValue(value);
+      chart12.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart12.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue13() {
+      var value = Math.round(Math.random() * 100);
+      chart13.arrows[0].setValue(value);
+      chart13.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart13.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue14() {
+      var value = Math.round(Math.random() * 100);
+      chart14.arrows[0].setValue(value);
+      chart14.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart14.axes[0].bands[1].setEndValue(value);
+    }
+    function randomValue15() {
+      var value = Math.round(Math.random() * 100);
+      chart15.arrows[0].setValue(value);
+      chart15.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart15.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue16() {
+      var value = Math.round(Math.random() * 100);
+      chart16.arrows[0].setValue(value);
+      chart16.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart16.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue17() {
+      var value = Math.round(Math.random() * 100);
+      chart17.arrows[0].setValue(value);
+      chart17.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart17.axes[0].bands[1].setEndValue(value);
+    }
+
+    function randomValue18() {
+      var value = Math.round(Math.random() * 100);
+      chart18.arrows[0].setValue(value);
+      chart18.axes[0].setTopText(value + " %");
+      // adjust darker band to new value
+      chart18.axes[0].bands[1].setEndValue(value);
+    }
+
     </script>
     
     <!-- HTML -->
@@ -438,9 +1171,28 @@ ul {
             </ul>
         </div>
     </div>
+
+    <div id="header1">含水率报警器</div>
     <div id="chartdiv"></div>
         <div id="chartdiv2"></div>
     <div id="chartdiv3"></div>
         <div id="chartdiv4"></div>
     <div id="chartdiv5"></div>
         <div id="chartdiv6"></div>
+
+
+    <div id="header2">含水率报警器</div>
+    <div id="chartdiv7"></div>
+        <div id="chartdiv8"></div>
+    <div id="chartdiv9"></div>
+        <div id="chartdiv10"></div>
+    <div id="chartdiv11"></div>
+        <div id="chartdiv12"></div>
+
+    <div id="header3">含水率报警器</div>
+    <div id="chartdiv13"></div>
+        <div id="chartdiv14"></div>
+    <div id="chartdiv15"></div>
+        <div id="chartdiv16"></div>
+    <div id="chartdiv17"></div>
+        <div id="chartdiv18"></div>
