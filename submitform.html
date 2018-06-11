@@ -89,15 +89,42 @@
             border-radius: 10px;
 
         }
+
+        #alarm1 {
+      position:absolute;
+    left:200px;
+    top:20px;
+      width: 50%;
+      height: 30px;
+    }
+
+    #alarm2 {
+      position:absolute;
+    left:200px;
+    top:80px;
+      width: 50%;
+      height: 30px;
+    }
+
+    #alarm3 {
+      position:absolute;
+    left:200px;
+    top:140px;
+      width: 50%;
+      height: 30px;
+    }
     </style>
 </head>
 
 <body>
 
-    <div class="webpage-container">
+
+<div class="webpage-container">
         <div class="sidebar-navigation-container">
             <div class="logo">
-                " 矿物液化监控智能系统 "
+                "
+                矿物液化监控智能系统
+                "
             </div>
             <ul>
                 <li>
@@ -111,55 +138,55 @@
                 </li>
             </ul>
         </div>
-    </div>
+</div>
 
-    <div id="chartdiv">
-        <form action="calculate.php" method="post">
-            提交1:
-            <input type="text" name="content1">
-            <br> 提交2:
-            <input type="text" name="content2">
-            <br> 提交3:
-            <input type="text" name="content3">
-            <input type="submit" value="提交">
-        </form>
-    </div>
+<div id="alarm1">
+    一级预警：矿砂局部含水率已大于TML，将会发生液化。
+</div>
+<div id="alarm2">
+    二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。
+</div>
+<div id="alarm3">
+    三级预警：寻找锚地，就近靠港，停船。
+</div>
 
-    <div id="chartdiv2">
-        <form action="calculate.php" method="post">
-            提交4:
-            <input type="text" name="content4">
-            <br> 提交5:
-            <input type="text" name="content5">
-            <br> 提交6:
-            <input type="text" name="content6">
-            <input type="submit" value="提交">
-        </form>
-    </div>
+<script>
+//document.getElementById("alarm1").innerHTML = "段落已修改。";
 
-    <div id="chartdiv3">
-        <form action="calculate.php" method="post">
-            提交4:
-            <input type="text" name="content7">
-            <br> 提交5:
-            <input type="text" name="content8">
-            <br> 提交6:
-            <input type="text" name="content9">
-            <input type="submit" value="提交">
-        </form>
-    </div>
+var mysql= require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'maheng'
+});
 
-    <div id="chartdiv4">
-        <form action="calculate.php" method="post">
-            提交4:
-            <input type="text" name="content10">
-            <br> 提交5:
-            <input type="text" name="content11">
-            <br> 提交6:
-            <input type="text" name="content12">
-            <input type="submit" value="提交">
-        </form>
-    </div>
+connection.connect();
+// connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+//   //if (error) {document.getElementById("alarm1").innerHTML = "段落已修改。";} else {
+// //document.getElementById("alarm1").innerHTML = "段落已修改。";}
+// if (error) {
+//     alert("连接失败");
+// } else {
+//     alert("成功");
+// }
+// });
+var  sql = 'SELECT * FROM zyj';
+//查
+connection.query(sql,function (err, result) {
+        if(err){
+          console.log('[SELECT ERROR] - ',err.message);
+          return;
+        }
+ 
+       console.log('--------------------------SELECT----------------------------');
+       console.log(result);
+       console.log('------------------------------------------------------------\n\n');  
+});
+ 
+connection.end();
+</script>
+
 
 </body>
 
