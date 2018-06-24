@@ -1,14 +1,14 @@
 var config = {
     type: 'line',
     data: {
-        labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75'],
-        datasets: [{
+        labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+        datasets: [/*{
             label: 'GZ',
             fill: false,
         }, {
             label: 'AREA',
             fill: false
-        }, {
+        }, */{
             label: 'GZC',
             fill: false,
         }, {
