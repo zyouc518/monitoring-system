@@ -1,8 +1,15 @@
-<!DOCTYPE html>
-<html>
+<!-- AddType application/x-httpd-php .htm .html
+ --><!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Wang & Zhao">
     <meta name="description" content="Monitoring System">
@@ -14,38 +21,6 @@
     <meta name="msapplication-TileColor" content="#000000">
     <!-- <meta http-equiv="refresh" content="2"> -->
     <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 10%;
-            background-color: #f1f1f1;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-        }
-
-        li a {
-            display: block;
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-
-        li {
-            text-align: center;
-        }
-
-        li a.active {
-            background-color: #555;
-            color: white;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #555;
-            color: white;
-        }
-
         #chartdiv {
             position: absolute;
             left: 200px;
@@ -91,101 +66,130 @@
         }
 
         #alarm1 {
-      position:absolute;
-    left:200px;
-    top:20px;
-      width: 50%;
-      height: 30px;
-    }
+            position: absolute;
+            left: 200px;
+            top: 20px;
+            width: 50%;
+            height: 30px;
+            color: grey;
+        }
 
-    #alarm2 {
-      position:absolute;
-    left:200px;
-    top:80px;
-      width: 50%;
-      height: 30px;
-    }
+        #alarm2 {
+            position: absolute;
+            left: 200px;
+            top: 80px;
+            width: 50%;
+            height: 30px;
+            color: grey;
+        }
 
-    #alarm3 {
-      position:absolute;
-    left:200px;
-    top:140px;
-      width: 50%;
-      height: 30px;
-    }
+        #alarm3 {
+            position: absolute;
+            left: 200px;
+            top: 140px;
+            width: 50%;
+            height: 30px;
+            color: grey;
+        }
     </style>
 </head>
 
 <body>
 
 
-<div class="webpage-container">
-        <div class="sidebar-navigation-container">
-            <div class="logo">
-                "
-                矿物液化监控智能系统
-                "
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>矿物液化
+                    <br>智能监控系统</h3>
             </div>
-            <ul>
-                <li>
-                    <a href="dashboard.html">传感器数据</a>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">监测数据</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="dashboard1.html">含水率传感器</a>
+                        </li>
+                        <li>
+                            <a href="dashboard2.html">压力传感器</a>
+                        </li>
+                        <li>
+                            <a href="dashboard3.html">应变传感器</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="line.html">稳性计算</a>
                 </li>
                 <li>
-                    <a href="navigate.html">回到主页</a>
+                    <a href="submitform.html">报警系统</a>
                 </li>
             </ul>
+        </nav>
+        <div id="content">
+
+
+            <div id="alarm1">
+                一级预警：矿砂局部含水率已大于TML，将会发生液化。
+            </div>
+            <div id="alarm2">
+                二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。
+            </div>
+            <div id="alarm3">
+                三级预警：寻找锚地，就近靠港，停船。
+            </div>
+
+            <!-- <p id="pText">123</p> -->
+            <button type="button" onclick="changetext()">计算</button>
+
         </div>
-</div>
 
-<div id="alarm1">
-    一级预警：矿砂局部含水率已大于TML，将会发生液化。
-</div>
-<div id="alarm2">
-    二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。
-</div>
-<div id="alarm3">
-    三级预警：寻找锚地，就近靠港，停船。
-</div>
+        <script type="text/javascript">
+            var array = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 5` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
 
-<script>
-//document.getElementById("alarm1").innerHTML = "段落已修改。";
+            var array2 = array;
+            var j = 0;
+            for (var i = 0; i < array2.length; i++) {
+                if (array2[i] > 75) {
+                    j = j + 1;
+                }
+            }
 
-var mysql= require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'maheng'
-});
+            function changetext() {
+                // document.getElementById('pText').innerHTML = "";
+                // for (var i = 0; i < 114; i++) {
+                //     document.getElementById('pText').innerHTML = document.getElementById('pText').innerHTML + "<br>" +
+                //         array[i];
+                // }
+                if (j > 10) {
+                    document.getElementById('alarm2').style.color = "yellow";
+                }
+            }
+        </script>
+    </div>
 
-connection.connect();
-// connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-//   //if (error) {document.getElementById("alarm1").innerHTML = "段落已修改。";} else {
-// //document.getElementById("alarm1").innerHTML = "段落已修改。";}
-// if (error) {
-//     alert("连接失败");
-// } else {
-//     alert("成功");
-// }
-// });
-var  sql = 'SELECT * FROM zyj';
-//查
-connection.query(sql,function (err, result) {
-        if(err){
-          console.log('[SELECT ERROR] - ',err.message);
-          return;
-        }
- 
-       console.log('--------------------------SELECT----------------------------');
-       console.log(result);
-       console.log('------------------------------------------------------------\n\n');  
-});
- 
-connection.end();
-</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 
 </body>
