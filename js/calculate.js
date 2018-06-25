@@ -1,7 +1,9 @@
 function Calc1() {
     var M = document.getElementById("mass").value;
-    var rat = document.getElementById("rat").value;
-    var degree = document.getElementById("degree").value;
+    //var rat = document.getElementById("rat").value;
+    var rat = 0.1;
+    // var degree = document.getElementById("degree").value;
+    var degree = 20;
     var rho = 2.38,
         L = 36,
         DWT = 400000,
@@ -165,8 +167,10 @@ function Calc1() {
 
 function Calc2() {
     var M = document.getElementById("mass").value;
-    var rat = document.getElementById("rat").value;
-    var degree = document.getElementById("degree").value;
+    // var rat = document.getElementById("rat").value;
+    // var degree = document.getElementById("degree").value;
+    var rat = 0.1;
+    var degree = 20;
     var rho = 2.38,
         L = 36,
         DWT = 400000,
