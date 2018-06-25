@@ -8,4 +8,4 @@
 define('APP_PATH', __DIR__ . '/application/');
 
 
-require __DIR__ . '/navigate.html';
+require __DIR__ . '/dashboard1.html';
