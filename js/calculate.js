@@ -138,30 +138,48 @@ function Calc1() {
             }
         }
     });
-    var palette = document.getElementById("palette");
-    var rows = palette.getElementsByClassName("divTableRow");
-    var counter_row = 0,
-        counter_col = 0;
-    for (var row of rows) {
-        counter_col = 0;
-        var cells = row.getElementsByClassName("divTableCell");
-        for (var cell of cells) {
-            if (counter_row == 1 && counter_col == 1) {
-                cell.innerText = fitdegree.toFixed(6);
-            } else if (counter_row == 2 && counter_col == 1) {
-                cell.innerText = sdegree.toFixed(6);
-            } else if (counter_row == 3 && counter_col == 1) {
-                cell.innerText = s1[6].toFixed(6);
-            } else if (counter_row == 4 && counter_col == 1) {
-                cell.innerText = s1[8].toFixed(6);
-            } else if (counter_row == 5 && counter_col == 1) {
-                cell.innerText = (s1[8] - s1[6]).toFixed(6);
-            } else if (counter_col == 3 && counter_row != 0) {
-                cell.innerText = "OK";
+    // var palette = document.getElementById("palette");
+    // var rows = palette.getElementsByClassName("divTableRow");
+    // var counter_row = 0,
+    //     counter_col = 0;
+    // for (var row of rows) {
+    //     counter_col = 0;
+    //     var cells = row.getElementsByClassName("divTableCell");
+    //     for (var cell of cells) {
+    //         if (counter_row == 1 && counter_col == 1) {
+    //             cell.innerText = fitdegree.toFixed(6);
+    //         } else if (counter_row == 2 && counter_col == 1) {
+    //             cell.innerText = sdegree.toFixed(6);
+    //         } else if (counter_row == 3 && counter_col == 1) {
+    //             cell.innerText = s1[6].toFixed(6);
+    //         } else if (counter_row == 4 && counter_col == 1) {
+    //             cell.innerText = s1[8].toFixed(6);
+    //         } else if (counter_row == 5 && counter_col == 1) {
+    //             cell.innerText = (s1[8] - s1[6]).toFixed(6);
+    //         } else if (counter_col == 3 && counter_row != 0) {
+    //             cell.innerText = "OK";
+    //         }
+    //         counter_col++;
+    //     }
+    //     counter_row++;
+    // }
+    var myTable = document.getElementById("datatable");
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 4; j++) {
+            if (i == 1 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = fitdegree.toFixed(6);
+            } else if (i == 2 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = sdegree.toFixed(6);
+            } else if (i == 3 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = s1[6].toFixed(6);
+            } else if (i == 4 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = s1[8].toFixed(6);
+            } else if (i == 5 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = (s1[8] - s1[6]).toFixed(6);
+            } else if (j == 3 && i != 0) {
+                myTable.rows[i].cells[j].innerHTML = "<font color='green'>&#10004;</font>";
             }
-            counter_col++;
         }
-        counter_row++;
     }
 }
 
@@ -321,29 +339,47 @@ function Calc2() {
             }
         }
     });
-    var palette = document.getElementById("palette");
-    var rows = palette.getElementsByClassName("divTableRow");
-    var counter_row = 0,
-        counter_col = 0;
-    for (var row of rows) {
-        counter_col = 0;
-        var cells = row.getElementsByClassName("divTableCell");
-        for (var cell of cells) {
-            if (counter_row == 1 && counter_col == 1) {
-                cell.innerText = fitdegree.toFixed(6);
-            } else if (counter_row == 2 && counter_col == 1) {
-                cell.innerText = sdegree.toFixed(6);
-            } else if (counter_row == 3 && counter_col == 1) {
-                cell.innerText = s2[6].toFixed(6);
-            } else if (counter_row == 4 && counter_col == 1) {
-                cell.innerText = s2[8].toFixed(6);
-            } else if (counter_row == 5 && counter_col == 1) {
-                cell.innerText = (s2[8] - s2[6]).toFixed(6);
-            } else if (counter_col == 3 & counter_row != 0) {
-                cell.innerText = "OK";
+    // var palette = document.getElementById("palette");
+    // var rows = palette.getElementsByClassName("divTableRow");
+    // var counter_row = 0,
+    //     counter_col = 0;
+    // for (var row of rows) {
+    //     counter_col = 0;
+    //     var cells = row.getElementsByClassName("divTableCell");
+    //     for (var cell of cells) {
+    //         if (counter_row == 1 && counter_col == 1) {
+    //             cell.innerText = fitdegree.toFixed(6);
+    //         } else if (counter_row == 2 && counter_col == 1) {
+    //             cell.innerText = sdegree.toFixed(6);
+    //         } else if (counter_row == 3 && counter_col == 1) {
+    //             cell.innerText = s2[6].toFixed(6);
+    //         } else if (counter_row == 4 && counter_col == 1) {
+    //             cell.innerText = s2[8].toFixed(6);
+    //         } else if (counter_row == 5 && counter_col == 1) {
+    //             cell.innerText = (s2[8] - s2[6]).toFixed(6);
+    //         } else if (counter_col == 3 & counter_row != 0) {
+    //             cell.innerText = "OK";
+    //         }
+    //         counter_col++;
+    //     }
+    //     counter_row++;
+    // }
+    var myTable = document.getElementById("datatable");
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 4; j++) {
+            if (i == 1 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = fitdegree.toFixed(6);
+            } else if (i == 2 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = sdegree.toFixed(6);
+            } else if (i == 3 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = s2[6].toFixed(6);
+            } else if (i == 4 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = s2[8].toFixed(6);
+            } else if (i == 5 && j == 1) {
+                myTable.rows[i].cells[j].innerHTML = (s2[8] - s2[6]).toFixed(6);
+            } else if (j == 3 && i != 0) {
+                myTable.rows[i].cells[j].innerHTML = "&#10003;";
             }
-            counter_col++;
         }
-        counter_row++;
     }
 }
