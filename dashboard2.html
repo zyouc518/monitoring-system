@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ttt/css/style.css">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Wang & Zhao">
     <meta name="description" content="Monitoring System">
@@ -81,14 +82,14 @@
     left:20px;
     top:50px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
         #chartdiv2 {
           position:absolute;
     left:180px;
     top:50px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
 
     #chartdiv3 {
@@ -96,14 +97,14 @@
     left:20px;
     top:250px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
     #chartdiv4 {
           position:absolute;
     left:180px;
     top:250px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
 
     #chartdiv5 {
@@ -111,14 +112,14 @@
     left:20px;
     top:450px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
     #chartdiv6 {
           position:absolute;
     left:180px;
     top:450px;
       width: 30%;
-      height: 155px;
+      height: 205px;
     }
 </style>
 
@@ -139,24 +140,24 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">监测数据</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bullseye"> 监测数据</i></a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="dashboard1.html">含水率传感器</a>
+                            <a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
                         </li>
                         <li>
-                            <a href="dashboard2.html">压力传感器</a>
+                            <a href="dashboard2.html" class="fa fa-dashboard"> 压力传感器</a>
                         </li>
                         <li>
-                            <a href="dashboard3.html">应变传感器</a>
+                            <a href="dashboard3.html" class="fa fa-dashboard"> 应变传感器</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="line.html">稳性计算</a>
+                    <a href="line.html" class="fa fa-line-chart">稳性计算</a>
                 </li>
                 <li>
-                    <a href="submitform.html">报警系统</a>
+                    <a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
                 </li>
             </ul>
         </nav>
@@ -194,26 +195,26 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+        "unit": "KPa",
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -238,26 +239,26 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+        "unit": "KPa",
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -280,26 +281,26 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+        "unit": "KPa",
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -324,27 +325,27 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-                "unit": "%",
+                "unit": "KPa",
 
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -368,26 +369,26 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+        "unit": "KPa",
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -412,26 +413,26 @@
         "topTextYOffset": 70,
         "axisColor": "#31d6ea",
         "axisThickness": 1,
-        "endValue": 100,
+        "endValue": 2000,
         "gridInside": true,
-        "inside": true,
+        "inside": false,
         "radius": "50%",
-        "valueInterval": 100,
+        "valueInterval": 500,
         "tickColor": "#67b7dc",
         "startAngle": -90,
         "endAngle": 90,
-        "unit": "%",
+        "unit": "KPa",
         "bandOutlineAlpha": 0,
         "bands": [{
           "color": "#0080ff",
-          "endValue": 100,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
           "startValue": 0
         }, {
           "color": "#3cd3a3",
-          "endValue": 0,
+          "endValue": 2000,
           "innerRadius": "105%",
           "radius": "170%",
           "gradientRatio": [0.5, 0, -0.5],
@@ -455,9 +456,9 @@
   setInterval(randomValue6, 2000);
 
   function randomValue() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart.arrows[0].setValue(value);
-      chart.axes[0].setTopText(value + " %");
+      chart.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart.axes[0].bands[1].setEndValue(value);
       if (value>50)
@@ -471,9 +472,9 @@
     }
 
     function randomValue2() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart2.arrows[0].setValue(value);
-      chart2.axes[0].setTopText(value + " %");
+      chart2.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart2.axes[0].bands[1].setEndValue(value);
       if (value>50)
@@ -486,9 +487,9 @@
         }
     }
     function randomValue3() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart3.arrows[0].setValue(value);
-      chart3.axes[0].setTopText(value + " %");
+      chart3.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart3.axes[0].bands[1].setEndValue(value);
       if (value>50)
@@ -502,9 +503,9 @@
     }
 
     function randomValue4() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart4.arrows[0].setValue(value);
-      chart4.axes[0].setTopText(value + " %");
+      chart4.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart4.axes[0].bands[1].setEndValue(value);
       if (value>50)
@@ -518,9 +519,9 @@
     }
 
     function randomValue5() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart5.arrows[0].setValue(value);
-      chart5.axes[0].setTopText(value + " %");
+      chart5.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart5.axes[0].bands[1].setEndValue(value);
       if (value>50)
@@ -534,9 +535,9 @@
     }
 
     function randomValue6() {
-      var value = Math.round(Math.random() * 100);
+      var value = Math.round(Math.random() * 2000);
       chart6.arrows[0].setValue(value);
-      chart6.axes[0].setTopText(value + " %");
+      chart6.axes[0].setTopText(value + " KPa");
       // adjust darker band to new value
       chart6.axes[0].bands[1].setEndValue(value);
       if (value>50)
