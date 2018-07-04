@@ -20,7 +20,7 @@ var config = {
         responsive: true,
         title: {
             display: true,
-            text: '稳性计算数据'
+            text: '稳性值'
         },
         tooltips: {
             mode: 'index',

@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- JavaScript -->
     <script type="text/javascript" src="js/Chart.js"></script>
     <script type="text/javascript" src="js/defaultline.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
@@ -28,10 +29,10 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a>
                         <i class="fa fa-bullseye"> 监测数据</i>
                     </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <ul class="list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
                         </li>
@@ -56,14 +57,19 @@
             <div class="form-inline">
                 <div class="card" style="width: 40%;">
                     <div class="card-body">
-                        请输入装载量：
+                        请输入2#货舱装载量：
                         <input class="form-control" type="number" placeholder="在此输入装载量" id="mass" style="width:50%"> 吨
-                        <br>
-                        <br>请输入装载工况：
-                        <select class="form-control" id="condition">
+                        <br>请选择燃料类型：
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="LNG" checked>
+                            <label class="form-check-label" for="inlineRadio1">LNG&emsp;&emsp;&emsp;</label>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="HFO">
+                            <label class="form-check-label" for="inlineRadio2">HFO</label>
+                        </div>
+                        <!-- <select class="form-control" id="condition">
                             <option value="LNG">Use LNG</option>
                             <option value="WLNG">Without LNG</option>
-                        </select>
+                        </select> -->
                         <!-- <br> 请输入含水率：
                 <input type="text" id="rat">
                 <br> 请输入横倾角：

@@ -1,4 +1,5 @@
 function Calc1() {
+    delete myChart;
     var M = document.getElementById("mass").value;
     //var rat = document.getElementById("rat").value;
     var rat = 0.1;
@@ -8,7 +9,14 @@ function Calc1() {
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
-    var condition = document.getElementById("condition").value;
+    var condition;
+    var condition_obj = document.getElementsByName('inlineRadioOptions');
+    for (let i = 0; i < condition_obj.length; i++) {
+        if (condition_obj[i].checked) {
+            condition = condition_obj[i].value;
+            break;
+        }
+    }
     switch (condition) {
         case "LNG":
             if (M <= 50000) {
@@ -26,7 +34,7 @@ function Calc1() {
                     2.321506, 2.644043, 2.939003, 3.198709);
                 break;
             }
-        case "WLNG":
+        case "HFO":
             if (M <= 50000) {
                 var gz0 = new Array(-0.044, 1.031, 2.127, 3.268, 4.375, 5.172, 5.699, 5.999, 6.077, 5.956, 5.671,
                     5.257, 4.742);
@@ -45,8 +53,6 @@ function Calc1() {
     }
     var gz1 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var s1 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var gz2 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var s2 = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var b = (45.165 + Math.sqrt(45.165 * 45.165 + 4 * 1.833 * M / (rho * L))) / (2 * 1.833);
     var h = 1.833 * b - 45.165;
     var dh = 0.2 * h;
@@ -110,7 +116,7 @@ function Calc1() {
             responsive: true,
             title: {
                 display: true,
-                text: '稳性计算数据'
+                text: '稳性值'
             },
             tooltips: {
                 mode: 'index',
@@ -177,7 +183,11 @@ function Calc1() {
             } else if (i == 5 && j == 1) {
                 myTable.rows[i].cells[j].innerHTML = (s1[8] - s1[6]).toFixed(6);
             } else if (j == 3 && i != 0) {
-                myTable.rows[i].cells[j].innerHTML = "<font color='green'>&#10004;</font>";
+                if (fitdegree.toFixed(6) <= 0 || sdegree.toFixed(6) <= 0 || s1[6].toFixed(6) <= 0 || s1[8].toFixed(6) <= 0 || (s1[8] - s1[6]).toFixed(6) <= 0) {
+                    myTable.rows[i].cells[j].innerHTML = "<font color='red'>&#x2718;</font>"
+                } else {
+                    myTable.rows[i].cells[j].innerHTML = "<font color='green'>&#10004;</font>";
+                }
             }
         }
     }
@@ -193,7 +203,14 @@ function Calc2() {
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
-    var condition = document.getElementById("condition").value;
+    var condition;
+    var condition_obj = document.getElementsByName('inlineRadioOptions');
+    for (let i = 0; i < condition_obj.length; i++) {
+        if (condition_obj[i].checked) {
+            condition = condition_obj[i].value;
+            break;
+        }
+    }
     switch (condition) {
         case "LNG":
             if (M <= 50000) {
@@ -211,7 +228,7 @@ function Calc2() {
                     2.321506, 2.644043, 2.939003, 3.198709, 3.417355, 3.590535, 3.714977);
                 break;
             }
-        case "WLNG":
+        case "HFO":
             if (M <= 50000) {
                 var gz0 = new Array(-0.044, 1.031, 2.127, 3.268, 4.375, 5.172, 5.699, 5.999, 6.077, 5.956, 5.671,
                     5.257, 4.742, 4.149, 3.494, 2.793);
@@ -311,7 +328,7 @@ function Calc2() {
             responsive: true,
             title: {
                 display: true,
-                text: '稳性计算数据'
+                text: '稳性值'
             },
             tooltips: {
                 mode: 'index',
@@ -378,7 +395,11 @@ function Calc2() {
             } else if (i == 5 && j == 1) {
                 myTable.rows[i].cells[j].innerHTML = (s2[8] - s2[6]).toFixed(6);
             } else if (j == 3 && i != 0) {
-                myTable.rows[i].cells[j].innerHTML = "&#10003;";
+                if (fitdegree.toFixed(6) <= 0 || sdegree.toFixed(6) <= 0 || s1[6].toFixed(6) <= 0 || s1[8].toFixed(6) <= 0 || (s1[8] - s1[6]).toFixed(6) <= 0) {
+                    myTable.rows[i].cells[j].innerHTML = "<font color='red'>&#x2718;</font>"
+                } else {
+                    myTable.rows[i].cells[j].innerHTML = "<font color='green'>&#10004;</font>";
+                }
             }
         }
     }
