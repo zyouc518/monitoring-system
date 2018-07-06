@@ -1,5 +1,6 @@
 <!-- AddType application/x-httpd-php .htm .html
- --><!DOCTYPE html>
+ -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,74 +23,97 @@
     <meta name="msapplication-TileColor" content="#000000">
     <!-- <meta http-equiv="refresh" content="2"> -->
     <style>
-        #chartdiv {
+        #header1 {
             position: absolute;
-            left: 200px;
-            top: 50px;
-            width: 30%;
-            height: 100px;
-            background-color: #EDEDED;
-            border-color: black;
-            border-radius: 10px;
-        }
-
-        #chartdiv2 {
-            position: absolute;
-            left: 700px;
-            top: 50px;
-            width: 30%;
-            height: 100px;
-            background-color: #EDEDED;
-            border-radius: 10px;
-        }
-
-        #chartdiv3 {
-            position: absolute;
-            left: 200px;
-            top: 200px;
-            width: 30%;
-            height: 100px;
-            background-color: #EDEDED;
-            border-color: black;
-            border-radius: 10px;
-
-        }
-
-        #chartdiv4 {
-            position: absolute;
-            left: 700px;
-            top: 200px;
-            width: 30%;
-            height: 100px;
-            background-color: #EDEDED;
-            border-radius: 10px;
-
-        }
-
-        #alarm1 {
-            position: absolute;
-            left: 200px;
-            top: 20px;
+            left: 5%;
+            top: 25%;
             width: 50%;
-            height: 30px;
+            height: 155px;
             color: grey;
         }
 
-        #alarm2 {
+        #header2 {
             position: absolute;
-            left: 200px;
-            top: 80px;
+            left: 5%;
+            top: 50%;
             width: 50%;
-            height: 30px;
+            height: 155px;
             color: grey;
         }
 
-        #alarm3 {
+        #header3 {
             position: absolute;
-            left: 200px;
-            top: 140px;
+            left: 5%;
+            top: 75%;
             width: 50%;
-            height: 30px;
+            height: 155px;
+            color: grey;
+        }
+
+        #header4 {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            width: 50%;
+            height: 155px;
+            color: grey;
+        }
+
+        #header5 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            height: 155px;
+            color: grey;
+        }
+
+        #header6 {
+            position: absolute;
+            left: 50%;
+            top: 75%;
+            width: 50%;
+            height: 155px;
+            color: grey;
+        }
+
+        #div1 {
+            position: absolute;
+            left: 2%;
+            top: 5%;
+            width: 45%;
+            height: 37%;
+            font-size: 14px;
+            color: grey;
+        }
+
+        #div2 {
+            position: absolute;
+            left: 49%;
+            top: 5%;
+            width: 45%;
+            height: 37%;
+            font-size: 14px;
+            color: grey;
+        }
+
+        #div3 {
+            position: absolute;
+            left: 2%;
+            top: 49%;
+            width: 45%;
+            height: 37%;
+            font-size: 14px;
+            color: grey;
+        }
+
+        #div4 {
+            position: absolute;
+            left: 49%;
+            top: 49%;
+            width: 45%;
+            height: 37%;
+            font-size: 14px;
             color: grey;
         }
     </style>
@@ -106,11 +130,13 @@
                     <br>智能监控系统</h3>
             </div>
             <br>
-			<a href="submitform.html">&emsp;&emsp;中文</a>
-            <a href="submitformen.html">&emsp;English</a>
+            <a href="submitform.php">&emsp;&emsp;中文</a>
+            <a href="submitformen.php">&emsp;English</a>
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a><i class="fa fa-bullseye"> 监测数据</i></a>
+                    <a>
+                        <i class="fa fa-bullseye"> 监测数据</i>
+                    </a>
                     <ul class="list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
@@ -127,25 +153,56 @@
                     <a href="line.html" class="fa fa-line-chart"> 稳性计算</a>
                 </li>
                 <li>
-                    <a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
+                    <a href="submitform.php" class="fa fa-exclamation-triangle"> 报警系统</a>
                 </li>
             </ul>
         </nav>
         <div id="content">
-
-
-            <div id="alarm1">
-                一级预警：矿砂局部含水率已大于TML，将会发生液化。
+            <div id="div1">
+                <div class="card" style="width: 100%;height: 100%">
+                    <div class="card-body">
+                        <h3>预警</h3>
+                        <!-- 一级预警：矿砂局部含水率已大于TML，将会发生液化。 -->
+                        <div id="header1" style="width:100%">● 一级预警：矿砂局部含水率已大于TML，将会发生液化。</div>
+                        <div id="header2" style="width:100%">● 二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
+                        <div id="header3" style="width:100%">● 三级预警：寻找锚地，就近靠港，停船。</div>
+                    </div>
+                </div>
             </div>
-            <div id="alarm2">
-                二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。
+            <div id="div2">
+                <div class="card" style="width: 100%;height: 100%;">
+                    <div class="card-body">
+                        <h3>结构应力</h3>
+                        <div id="header1">● 1</div>
+                        <div id="header2">● 2</div>
+                        <div id="header3">● 3</div>
+                        <div id="header4">● 4</div>
+                        <div id="header5">● 5</div>
+                        <div id="header6">● 6</div>
+                    </div>
+                </div>
             </div>
-            <div id="alarm3">
-                三级预警：寻找锚地，就近靠港，停船。
+            <div id="div3">
+                <div class="card" style="width: 100%;height: 100%;">
+                    <div class="card-body">
+                        <h3>设备故障</h3>
+                        <div id="header1">● 1</div>
+                        <div id="header2">● 2</div>
+                        <div id="header3">● 3</div>
+                    </div>
+                </div>
+            </div>
+            <div id="div4">
+                <div class="card" style="width: 100%;height: 100%;">
+                    <div class="card-body">
+                        <h3>导出数据</h3>
+                        <button type="button" class="btn btn-primary" onclick="alert('没有找到数据!')">导出到csv</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- <p id="pText">123</p> -->
-            <button type="button" onclick="changetext()">计算</button>
+            <!-- <p id="pText">123</p>
+            <button type="button" onclick="changetext()">计算</button> -->
 
         </div>
 
