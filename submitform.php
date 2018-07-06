@@ -2,6 +2,7 @@
 <!-- AddType application/x-httpd-php .htm .html
  -->
 <!DOCTYPE html>
+<META HTTP-EQUIV="Refresh" CONTENT="5">
 <html lang="en">
 
 <head>
