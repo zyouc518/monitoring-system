@@ -1,3 +1,4 @@
+
 <!-- AddType application/x-httpd-php .htm .html
  -->
 <!DOCTYPE html>
@@ -31,7 +32,6 @@
             height: 155px;
             color: grey;
         }
-
         #header2 {
             position: absolute;
             left: 5%;
@@ -40,7 +40,6 @@
             height: 155px;
             color: grey;
         }
-
         #header3 {
             position: absolute;
             left: 5%;
@@ -49,7 +48,6 @@
             height: 155px;
             color: grey;
         }
-
         #header4 {
             position: absolute;
             left: 50%;
@@ -58,7 +56,6 @@
             height: 155px;
             color: grey;
         }
-
         #header5 {
             position: absolute;
             left: 50%;
@@ -67,7 +64,6 @@
             height: 155px;
             color: grey;
         }
-
         #header6 {
             position: absolute;
             left: 50%;
@@ -76,7 +72,6 @@
             height: 155px;
             color: grey;
         }
-
         #div1 {
             position: absolute;
             left: 2%;
@@ -86,7 +81,6 @@
             font-size: 14px;
             color: grey;
         }
-
         #div2 {
             position: absolute;
             left: 49%;
@@ -96,7 +90,6 @@
             font-size: 14px;
             color: grey;
         }
-
         #div3 {
             position: absolute;
             left: 2%;
@@ -106,7 +99,6 @@
             font-size: 14px;
             color: grey;
         }
-
         #div4 {
             position: absolute;
             left: 49%;
@@ -222,7 +214,6 @@
                     }
                 ?>
             ];
-
             var array2 = array;
             var j = 0;
             for (var i = 0; i < array2.length; i++) {
@@ -230,7 +221,6 @@
                     j = j + 1;
                 }
             }
-
             function changetext() {
                 // document.getElementById('pText').innerHTML = "";
                 // for (var i = 0; i < 114; i++) {
@@ -241,6 +231,98 @@
                     document.getElementById('alarm2').style.color = "yellow";
                 }
             }
+
+
+
+            //以下为内部逻辑
+            //一级报警
+            var alarm1flag=0;
+            if (array1[49]>75) alarm1flag++;
+            if (array2[49]>75) alarm1flag++;
+            if (array3[49]>75) alarm1flag++;
+            if (array4[49]>75) alarm1flag++;
+            if (array5[49]>75) alarm1flag++;
+            if (array6[49]>75) alarm1flag++;
+
+            if (alarm1flag>=4)
+            {
+                //一级报警操作
+            }
+
+            //二级报警
+            var alarm2water=0;
+            var alarm2pressure=0;
+            var alarm2strain=0;
+            var waterflag=0;
+            for (var k=0;k<50;k++)
+            {
+                if (array1[k]>22){waterflag++;}
+                if (array2[k]>22){waterflag++;}
+                if (array3[k]>22){waterflag++;}
+                if (array4[k]>22){waterflag++;}
+                if (array5[k]>22){waterflag++;}
+                if (array6[k]>22){waterflag++;}
+            }
+            if ((waterflag/300)>0.75)
+            {
+                alarm2water=1;
+            }
+
+            var pressurealarm=0;
+            if ((array7[49]-array7[48])>100){pressurealarm++;}
+            if ((array8[49]-array8[48])>100){pressurealarm++;}
+            if ((array9[49]-array9[48])>100){pressurealarm++;}
+            if ((array10[49]-array10[48])>100){pressurealarm++;}
+            if ((array11[49]-array11[48])>100){pressurealarm++;}
+            if ((array12[49]-array12[48])>100){pressurealarm++;}
+            if (pressurealarm>3)
+            {
+                alarm2pressure=1;
+            }
+            
+            var strainalarm=0;
+            if ((array13[49]-array13[48])>1000){strainalarm++;}
+            if ((array14[49]-array14[48])>1000){strainalarm++;}
+            if ((array15[49]-array15[48])>1000){strainalarm++;}
+            if ((array16[49]-array16[48])>1000){strainalarm++;}
+            if ((array17[49]-array17[48])>1000){strainalarm++;}
+            if ((array18[49]-array18[48])>1000){strainalarm++;}
+            if (strainalarm>3)
+            {
+                alarm2strain=1;
+            }
+
+            if (alarm2water && (alarm2pressure|| alarm2strain))
+            {
+                //二级报警操作
+            }
+
+            //三级报警
+            var alarm3=0;
+            var alarm3flag=0;
+            for (var k=0;k<200;k++)
+            {
+                if (array1[k]>27)
+                {
+                    alarm3flag++;
+                }
+                if (array4[k]>27) //最上层是传感器1和4
+                {
+                    alarm3flag++;
+                }
+            }
+            if (alarm3flag>100)
+            {
+                alarm3=1;
+            }
+            if (alarm3==1)
+            {
+                //三级报警操作
+            }
+
+
+
+
         </script>
     </div>
 
@@ -255,3 +337,4 @@
 </body>
 
 </html>
+
