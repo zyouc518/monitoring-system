@@ -199,7 +199,81 @@
         </div>
 
         <script type="text/javascript">
-            var array = [
+            
+            // var array2 = array;
+            // var j = 20;
+            // for (var i = 0; i < array2.length; i++) {
+            //     if (array2[i] > 75) {
+            //         j = j + 1;
+            //     }
+            // }
+            function changetext() {
+                // document.getElementById('pText').innerHTML = "";
+                // for (var i = 0; i < 114; i++) {
+                //     document.getElementById('pText').innerHTML = document.getElementById('pText').innerHTML + "<br>" +
+                //         array[i];
+                // }
+                var array1 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 1` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array2 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 2` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array3 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 3` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array4 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 4` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array5 = [
                 <?php
                     $dbhost = 'localhost'; // mysql服务器主机地址
                     $dbuser = 'root'; // mysql用户名
@@ -214,29 +288,208 @@
                     }
                 ?>
             ];
-            var array2 = array;
-            var j = 0;
-            for (var i = 0; i < array2.length; i++) {
-                if (array2[i] > 75) {
-                    j = j + 1;
-                }
-            }
-            function changetext() {
-                // document.getElementById('pText').innerHTML = "";
-                // for (var i = 0; i < 114; i++) {
-                //     document.getElementById('pText').innerHTML = document.getElementById('pText').innerHTML + "<br>" +
-                //         array[i];
+            var array6 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 6` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array7 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 7` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array8 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 8` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array9 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 9` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array10= [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 10` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+            var array11 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 11` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array12 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 12` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+
+
+
+
+            var array13 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 13` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array14 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 14` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array15 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 15` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array16 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 16` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array17 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 17` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];var array18 = [
+                <?php
+                    $dbhost = 'localhost'; // mysql服务器主机地址
+                    $dbuser = 'root'; // mysql用户名
+                    $dbpass = ''; // mysql用户名密码
+                    $dbname = "maheng";
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    $sqlsearch = "SELECT * FROM `table 18` WHERE `id` >= 2000";
+                    $result = $conn->query($sqlsearch) or die($conn->error);
+                    while ($car = $result->fetch_assoc()) {
+                        $car_name = $car['COL 3'];
+                        echo "'$car_name',";
+                    }
+                ?>
+            ];
+                // if (array1[0] > 76.4) {
+                //     document.getElementById('header1').style.color = "red";
                 // }
-                if (j > 10) {
-                    document.getElementById('alarm2').style.color = "yellow";
-                }
-            }
+                // else
+                // {
+                //     document.getElementById('header1').style.color= "green";
+                // }
 
-
-
-            //以下为内部逻辑
-            //一级报警
-            var alarm1flag=0;
+                 var alarm1flag=0;
             if (array1[49]>75) alarm1flag++;
             if (array2[49]>75) alarm1flag++;
             if (array3[49]>75) alarm1flag++;
@@ -247,6 +500,7 @@
             if (alarm1flag>=4)
             {
                 //一级报警操作
+                document.getElementById('header1').style.color = "red";
             }
 
             //二级报警
@@ -295,6 +549,7 @@
             if (alarm2water && (alarm2pressure|| alarm2strain))
             {
                 //二级报警操作
+                document.getElementById('header2').style.color = "red";
             }
 
             //三级报警
@@ -318,7 +573,98 @@
             if (alarm3==1)
             {
                 //三级报警操作
+                document.getElementById('header3').style.color = "red";
             }
+            
+}
+            setInterval(changetext(), 2000);
+
+
+            //以下为内部逻辑
+            //一级报警
+            // var alarm1flag=0;
+            // if (array1[49]>75) alarm1flag++;
+            // if (array2[49]>75) alarm1flag++;
+            // if (array3[49]>75) alarm1flag++;
+            // if (array4[49]>75) alarm1flag++;
+            // if (array5[49]>75) alarm1flag++;
+            // if (array6[49]>75) alarm1flag++;
+
+            // if (alarm1flag>=4)
+            // {
+            //     //一级报警操作
+            // }
+
+            // //二级报警
+            // var alarm2water=0;
+            // var alarm2pressure=0;
+            // var alarm2strain=0;
+            // var waterflag=0;
+            // for (var k=0;k<50;k++)
+            // {
+            //     if (array1[k]>22){waterflag++;}
+            //     if (array2[k]>22){waterflag++;}
+            //     if (array3[k]>22){waterflag++;}
+            //     if (array4[k]>22){waterflag++;}
+            //     if (array5[k]>22){waterflag++;}
+            //     if (array6[k]>22){waterflag++;}
+            // }
+            // if ((waterflag/300)>0.75)
+            // {
+            //     alarm2water=1;
+            // }
+
+            // var pressurealarm=0;
+            // if ((array7[49]-array7[48])>100){pressurealarm++;}
+            // if ((array8[49]-array8[48])>100){pressurealarm++;}
+            // if ((array9[49]-array9[48])>100){pressurealarm++;}
+            // if ((array10[49]-array10[48])>100){pressurealarm++;}
+            // if ((array11[49]-array11[48])>100){pressurealarm++;}
+            // if ((array12[49]-array12[48])>100){pressurealarm++;}
+            // if (pressurealarm>3)
+            // {
+            //     alarm2pressure=1;
+            // }
+            
+            // var strainalarm=0;
+            // if ((array13[49]-array13[48])>1000){strainalarm++;}
+            // if ((array14[49]-array14[48])>1000){strainalarm++;}
+            // if ((array15[49]-array15[48])>1000){strainalarm++;}
+            // if ((array16[49]-array16[48])>1000){strainalarm++;}
+            // if ((array17[49]-array17[48])>1000){strainalarm++;}
+            // if ((array18[49]-array18[48])>1000){strainalarm++;}
+            // if (strainalarm>3)
+            // {
+            //     alarm2strain=1;
+            // }
+
+            // if (alarm2water && (alarm2pressure|| alarm2strain))
+            // {
+            //     //二级报警操作
+            // }
+
+            // //三级报警
+            // var alarm3=0;
+            // var alarm3flag=0;
+            // for (var k=0;k<200;k++)
+            // {
+            //     if (array1[k]>27)
+            //     {
+            //         alarm3flag++;
+            //     }
+            //     if (array4[k]>27) //最上层是传感器1和4
+            //     {
+            //         alarm3flag++;
+            //     }
+            // }
+            // if (alarm3flag>100)
+            // {
+            //     alarm3=1;
+            // }
+            // if (alarm3==1)
+            // {
+            //     //三级报警操作
+            // }
 
 
 
