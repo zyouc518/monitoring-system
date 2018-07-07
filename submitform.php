@@ -179,9 +179,9 @@
                 <div class="card" style="width: 100%;height: 100%;">
                     <div class="card-body">
                         <h3>设备故障</h3>
-                        <div id="header1">● 1</div>
-                        <div id="header2">● 2</div>
-                        <div id="header3">● 3</div>
+                        <div id="header1">● 1 含水率传感器</div>
+                        <div id="header2">● 2 压力传感器</div>
+                        <div id="header3">● 3 应变传感器</div>
                     </div>
                 </div>
             </div>
@@ -491,12 +491,13 @@
                 // }
 
                  var alarm1flag=0;
-            if (array1[49]>75) alarm1flag++;
-            if (array2[49]>75) alarm1flag++;
-            if (array3[49]>75) alarm1flag++;
-            if (array4[49]>75) alarm1flag++;
-            if (array5[49]>75) alarm1flag++;
-            if (array6[49]>75) alarm1flag++;
+                 var TML= a*b/(a*b+1-a);
+            if (array1[0]>TML) alarm1flag++;
+            if (array2[0]>TML) alarm1flag++;
+            if (array3[0]>TML) alarm1flag++;
+            if (array4[0]>TML) alarm1flag++;
+            if (array5[0]>TML) alarm1flag++;
+            if (array6[0]>TML) alarm1flag++;
 
             if (alarm1flag>=4)
             {
@@ -509,39 +510,38 @@
             var alarm2pressure=0;
             var alarm2strain=0;
             var waterflag=0;
-            for (var k=0;k<50;k++)
-            {
-                if (array1[k]>22){waterflag++;}
-                if (array2[k]>22){waterflag++;}
-                if (array3[k]>22){waterflag++;}
-                if (array4[k]>22){waterflag++;}
-                if (array5[k]>22){waterflag++;}
-                if (array6[k]>22){waterflag++;}
-            }
-            if ((waterflag/300)>0.75)
+            if (array1[0]>20){waterflag++;}
+            if (array2[0]>20){waterflag++;}
+            if (array3[0]>20){waterflag++;}
+            if (array4[0]>20){waterflag++;}
+            if (array5[0]>20){waterflag++;}
+            if (array6[0]>20){waterflag++;}
+            if ((waterflag/6)>0.75)
             {
                 alarm2water=1;
             }
 
             var pressurealarm=0;
-            if ((array7[49]-array7[48])>100){pressurealarm++;}
-            if ((array8[49]-array8[48])>100){pressurealarm++;}
-            if ((array9[49]-array9[48])>100){pressurealarm++;}
-            if ((array10[49]-array10[48])>100){pressurealarm++;}
-            if ((array11[49]-array11[48])>100){pressurealarm++;}
-            if ((array12[49]-array12[48])>100){pressurealarm++;}
+            if (((array7[0]-array7[1])/array7[1])>0.25){pressurealarm++;}
+            if (((array8[0]-array8[1])/array8[1])>0.25){pressurealarm++;}
+            if (((array9[0]-array9[1])/array9[1])>0.25){pressurealarm++;}
+            if (((array10[0]-array10[1])/array10[1])>0.25){pressurealarm++;}
+            if (((array11[0]-array11[1])/array11[1])>0.25){pressurealarm++;}
+            if (((array12[0]-array12[1])/array12[1])>0.25){pressurealarm++;}
+
             if (pressurealarm>3)
             {
                 alarm2pressure=1;
             }
             
             var strainalarm=0;
-            if ((array13[49]-array13[48])>1000){strainalarm++;}
-            if ((array14[49]-array14[48])>1000){strainalarm++;}
-            if ((array15[49]-array15[48])>1000){strainalarm++;}
-            if ((array16[49]-array16[48])>1000){strainalarm++;}
-            if ((array17[49]-array17[48])>1000){strainalarm++;}
-            if ((array18[49]-array18[48])>1000){strainalarm++;}
+            if (((array13[0]-array13[1])/array13[1])>0.2){strainalarm++;}
+            if (((array14[0]-array14[1])/array14[1])>0.2){strainalarm++;}
+            if (((array15[0]-array15[1])/array15[1])>0.2){strainalarm++;}
+            if (((array16[0]-array16[1])/array16[1])>0.2){strainalarm++;}
+            if (((array17[0]-array17[1])/array17[1])>0.2){strainalarm++;}
+            if (((array18[0]-array18[1])/array18[1])>0.2){strainalarm++;}
+
             if (strainalarm>3)
             {
                 alarm2strain=1;
@@ -556,13 +556,13 @@
             //三级报警
             var alarm3=0;
             var alarm3flag=0;
-            for (var k=0;k<200;k++)
+            for (var k=0;k<100;k++)
             {
-                if (array1[k]>27)
+                if (array1[k]>99)
                 {
                     alarm3flag++;
                 }
-                if (array4[k]>27) //最上层是传感器1和4
+                if (array4[k]>99) //最上层是传感器1和4
                 {
                     alarm3flag++;
                 }
