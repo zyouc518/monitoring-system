@@ -73,10 +73,19 @@
             height: 155px;
             color: grey;
         }
+        #div0 {
+            position: absolute;
+            left: 2%;
+            top: 2%;
+            width: 90%;
+            height: 40%;
+            font-size: 14px;
+            color: grey;
+        }
         #div1 {
             position: absolute;
             left: 2%;
-            top: 5%;
+            top: 20%;
             width: 45%;
             height: 37%;
             font-size: 14px;
@@ -85,7 +94,7 @@
         #div2 {
             position: absolute;
             left: 49%;
-            top: 5%;
+            top: 20%;
             width: 45%;
             height: 37%;
             font-size: 14px;
@@ -94,7 +103,7 @@
         #div3 {
             position: absolute;
             left: 2%;
-            top: 49%;
+            top: 59%;
             width: 45%;
             height: 37%;
             font-size: 14px;
@@ -103,7 +112,7 @@
         #div4 {
             position: absolute;
             left: 49%;
-            top: 49%;
+            top: 59%;
             width: 45%;
             height: 37%;
             font-size: 14px;
@@ -151,12 +160,32 @@
             </ul>
         </nav>
         <div id="content">
+        <div id="div0">
+                <div class="card" style="width: 100%;height: 50%;">
+<!--                     <div class="card-body">-->
+                        <div class="form-inline">
+                        <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:25%"> 吨/m³
+                        </div> 
+                        <div class="form-inline">
+                        <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:25%"> %
+                        </div> 
+                        <button type="button" class="btn bt-primary" style="width:10%" onclick="Calc1()">提交</button>
+                        
+                    </div>
+                </div>
+            
             <div id="div1">
                 <div class="card" style="width: 100%;height: 100%">
                     <div class="card-body">
                         <h3>预警</h3>
+<!--                         <div class="form-inline">
+                        <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:40%">
+                        <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:40%">
+                        <button type="button" class="btn btn-primary" style="width: 40%" onclick="Calc1()">提交</button> -->
+                      <!--   </div> -->
+                                               
                         <!-- 一级预警：矿砂局部含水率已大于TML，将会发生液化。 -->
-                        <div id="header1" style="width:100%">● 一级预警：矿砂局部含水率已大于TML，将会发生液化。</div>
+                        <div id="header1" style="width:100%">● 一级预警：矿砂局部含水率已大于TML,将会发生液化。</div>
                         <div id="header2" style="width:100%">● 二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
                         <div id="header3" style="width:100%">● 三级预警：寻找锚地，就近靠港，停船。</div>
                     </div>

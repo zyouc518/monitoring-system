@@ -547,7 +547,7 @@
 			chart.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header1').style.color = "red";
 			} else {
 				document.getElementById('header1').style.color = "grey";
@@ -561,7 +561,7 @@
 			chart2.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart2.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header2').style.color = "red";
 			} else {
 				document.getElementById('header2').style.color = "grey";
@@ -575,7 +575,7 @@
 			chart3.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart3.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header3').style.color = "red";
 			} else {
 				document.getElementById('header3').style.color = "grey";
@@ -589,7 +589,7 @@
 			chart4.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart4.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header4').style.color = "red";
 			} else {
 				document.getElementById('header4').style.color = "grey";
@@ -603,7 +603,7 @@
 			chart5.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart5.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header5').style.color = "red";
 			} else {
 				document.getElementById('header5').style.color = "grey";
@@ -617,7 +617,7 @@
 			chart6.axes[0].setTopText(value + " KPa");
 			// adjust darker band to new value
 			chart6.axes[0].bands[1].setEndValue(value);
-			if (value > 50) {
+			if (value > 2000 || value < 0) {
 				document.getElementById('header6').style.color = "red";
 			} else {
 				document.getElementById('header6').style.color = "grey";

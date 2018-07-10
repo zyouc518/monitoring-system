@@ -161,10 +161,16 @@
                 <div class="card" style="width: 100%;height: 100%">
                     <div class="card-body">
                         <h3>Alarm</h3>
+                        <div class="form-inline">
+                        <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:40%">
+                        <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:40%">
+                        <button type="button" class="btn btn-primary" onclick="Calc1()">提交</button>
+                        </div>
+                                               
                         <!-- 一级预警：矿砂局部含水率已大于TML，将会发生液化。 -->
-                        <div id="header1" style="width:100%">● 一级预警：矿砂局部含水率已大于TML，将会发生液化。</div>
-                        <div id="header2" style="width:100%">● 二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
-                        <div id="header3" style="width:100%">● 三级预警：寻找锚地，就近靠港，停船。</div>
+                        <div id="header1" style="width:100%;top:50%">● 一级预警：矿砂局部含水率已大于TML,将会发生液化。</div>
+                        <div id="header2" style="width:100%;top:65%">● 二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
+                        <div id="header3" style="width:100%;top:80%">● 三级预警：寻找锚地，就近靠港，停船。</div>
                     </div>
                 </div>
             </div>
