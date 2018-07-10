@@ -165,15 +165,15 @@
 <!--                     <div class="card-body">-->
                         <div class="form-inline">
                         <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:25%"> 吨/m³
-                        </div> 
+                        </div>
                         <div class="form-inline">
                         <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:25%"> %
-                        </div> 
+                        </div>
                         <button type="button" class="btn bt-primary" style="width:10%" onclick="Calc1()">提交</button>
-                        
+
                     </div>
                 </div>
-            
+
             <div id="div1">
                 <div class="card" style="width: 100%;height: 100%">
                     <div class="card-body">
@@ -183,7 +183,7 @@
                         <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:40%">
                         <button type="button" class="btn btn-primary" style="width: 40%" onclick="Calc1()">提交</button> -->
                       <!--   </div> -->
-                                               
+
                         <!-- 一级预警：矿砂局部含水率已大于TML，将会发生液化。 -->
                         <div id="header1" style="width:100%">● 一级预警：矿砂局部含水率已大于TML,将会发生液化。</div>
                         <div id="header2" style="width:100%">● 二级预警：调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
@@ -229,7 +229,7 @@
         </div>
 
         <script type="text/javascript">
-            
+
             // var array2 = array;
             // var j = 20;
             // for (var i = 0; i < array2.length; i++) {
@@ -245,182 +245,182 @@
                 // }
                 var array1 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 1` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 1` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array2 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 2` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 2` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array3 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 3` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 3` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array4 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 4` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 4` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array5 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 5` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 5` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array6 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 6` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 6` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array7 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 7` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 7` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array8 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 8` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 8` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array9 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 9` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 9` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array10= [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 10` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 10` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
             var array11 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 11` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 11` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array12 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 12` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 12` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
 
 
@@ -428,88 +428,88 @@
 
             var array13 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 13` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 13` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array14 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 14` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 14` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array15 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 15` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 15` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array16 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 16` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 16` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array17 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 17` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 17` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];var array18 = [
                 <?php
-                    $dbhost = 'localhost'; // mysql服务器主机地址
-                    $dbuser = 'root'; // mysql用户名
-                    $dbpass = ''; // mysql用户名密码
-                    $dbname = "maheng";
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-                    $sqlsearch = "SELECT * FROM `table 18` WHERE `id` >= 2000";
-                    $result = $conn->query($sqlsearch) or die($conn->error);
-                    while ($car = $result->fetch_assoc()) {
-                        $car_name = $car['COL 3'];
-                        echo "'$car_name',";
-                    }
-                ?>
+$dbhost = 'localhost'; // mysql服务器主机地址
+$dbuser = 'root'; // mysql用户名
+$dbpass = ''; // mysql用户名密码
+$dbname = "maheng";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$sqlsearch = "SELECT * FROM `table 18` WHERE `id` >= 2000";
+$result = $conn->query($sqlsearch) or die($conn->error);
+while ($car = $result->fetch_assoc()) {
+    $car_name = $car['COL 3'];
+    echo "'$car_name',";
+}
+?>
             ];
                 // if (array1[0] > 76.4) {
                 //     document.getElementById('header1').style.color = "red";
@@ -562,7 +562,7 @@
             {
                 alarm2pressure=1;
             }
-            
+
             var strainalarm=0;
             if (((array13[0]-array13[1])/array13[1])>0.2){strainalarm++;}
             if (((array14[0]-array14[1])/array14[1])>0.2){strainalarm++;}
@@ -605,7 +605,7 @@
                 //三级报警操作
                 document.getElementById('header3').style.color = "red";
             }
-            
+
 }
             setInterval(changetext(), 2000);
 
@@ -655,7 +655,7 @@
             // {
             //     alarm2pressure=1;
             // }
-            
+
             // var strainalarm=0;
             // if ((array13[49]-array13[48])>1000){strainalarm++;}
             // if ((array14[49]-array14[48])>1000){strainalarm++;}

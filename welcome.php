@@ -25,7 +25,7 @@ echo $passwordenen;
 while ($car = $result->fetch_assoc())
 {
 	if ($car[zyj_username] == $name && $car[zyj_password] == $passwordenen) {
-    $link = 'dashboard1.html';
+    $link = 'submitform.php';
     header("Location: $link");
 	}
 	else

@@ -35,14 +35,14 @@ var config = {
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Heeling Angle (degree)'
+                    labelString: '横倾角'
                 }
             }],
             yAxes: [{
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Value'
+                    labelString: '稳性值'
                 }
             }]
         }
