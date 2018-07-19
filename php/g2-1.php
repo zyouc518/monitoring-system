@@ -1,0 +1,24 @@
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "", "OMLS");//改成对应的服务器地址、用户名、密码、数据库名称
+
+// Check connection
+if ($link === false) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+// Print host information
+echo "Connect Successfully. Host info: " . mysqli_get_host_info($link) . "<br>";
+$query = "SELECT * FROM `sensor1` WHERE `WCFM` >= 78";//改成对应的数据表名称、列名称
+$result = $link->query($query) or die($link->error);
+$i = 0;
+while ($car = $result->fetch_assoc()) {
+    $car_name[$i] = $car['WCFM'];
+    $i++;
+}
+?>
+
+<script type="text/javascript">
+var ar = <?php echo json_encode($car_name) ?>;
+</script>
