@@ -439,5 +439,5 @@ $(document).ready(function () {
         window.myLine5 = new Chart(ctx5, config5);
         var ctx6 = document.getElementById("myChart6").getContext('2d');
         window.myLine6 = new Chart(ctx6, config6);
-    }, 1000);
+    }, 15000);
 });
