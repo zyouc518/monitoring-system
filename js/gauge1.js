@@ -30,7 +30,7 @@ $(document).ready(function () {
         chart2.axes[0].setTopText(ar2[ar2.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart2.axes[0].bands[1].setEndValue(ar2[ar2.length - 1]);
-        if (ar[ar2.length - 1] > 100 || ar2[ar2.length - 1] < 0) {
+        if (ar2[ar2.length - 1] > 100 || ar2[ar2.length - 1] < 0) {
             document.getElementById('header2').style.color = "red";
         } else {
             document.getElementById('header2').style.color = "grey";
@@ -40,7 +40,7 @@ $(document).ready(function () {
         chart3.axes[0].setTopText(ar3[ar3.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart3.axes[0].bands[1].setEndValue(ar3[ar3.length - 1]);
-        if (ar[ar3.length - 1] > 100 || ar3[ar3.length - 1] < 0) {
+        if (ar3[ar3.length - 1] > 100 || ar3[ar3.length - 1] < 0) {
             document.getElementById('header3').style.color = "red";
         } else {
             document.getElementById('header3').style.color = "grey";
@@ -50,7 +50,7 @@ $(document).ready(function () {
         chart4.axes[0].setTopText(ar4[ar4.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart4.axes[0].bands[1].setEndValue(ar4[ar4.length - 1]);
-        if (ar[ar4.length - 1] > 100 || ar4[ar4.length - 1] < 0) {
+        if (ar4[ar4.length - 1] > 100 || ar4[ar4.length - 1] < 0) {
             document.getElementById('header4').style.color = "red";
         } else {
             document.getElementById('header4').style.color = "grey";
@@ -60,7 +60,7 @@ $(document).ready(function () {
         chart5.axes[0].setTopText(ar5[ar5.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart5.axes[0].bands[1].setEndValue(ar5[ar5.length - 1]);
-        if (ar[ar5.length - 1] > 100 || ar5[ar5.length - 1] < 0) {
+        if (ar5[ar5.length - 1] > 100 || ar5[ar5.length - 1] < 0) {
             document.getElementById('header5').style.color = "red";
         } else {
             document.getElementById('header5').style.color = "grey";
@@ -70,7 +70,7 @@ $(document).ready(function () {
         chart6.axes[0].setTopText(ar6[ar6.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart6.axes[0].bands[1].setEndValue(ar6[ar6.length - 1]);
-        if (ar[ar6.length - 1] > 100 || ar6[ar6.length - 1] < 0) {
+        if (ar6[ar6.length - 1] > 100 || ar6[ar6.length - 1] < 0) {
             document.getElementById('header6').style.color = "red";
         } else {
             document.getElementById('header6').style.color = "grey";

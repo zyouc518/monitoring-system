@@ -16,71 +16,71 @@ $(document).ready(function () {
         $('#results').load('php/g2-4.php');
         $('#results').load('php/g2-5.php');
         $('#results').load('php/g2-6.php');
-        chart.arrows[0].setValue(ar[ar.length - 1]);
-        chart.axes[0].setTopText(ar[ar.length - 1] + " KPa");
+        chart.arrows[0].setValue(aar[aar.length - 1]);
+        chart.axes[0].setTopText(aar[aar.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(ar[ar.length - 1]);
-        if (ar[ar.length - 1] > 2000 || ar[ar.length - 1] < 0) {
+        chart.axes[0].bands[1].setEndValue(aar[aar.length - 1]);
+        if (aar[aar.length - 1] > 2000 || aar[aar.length - 1] < 0) {
             document.getElementById('header1').style.color = "red";
         } else {
             document.getElementById('header1').style.color = "grey";
         }
 
-        chart2.arrows[0].setValue(ar2[ar2.length - 1]);
-        chart2.axes[0].setTopText(ar2[ar2.length - 1] + " KPa");
+        chart2.arrows[0].setValue(aar2[aar2.length - 1]);
+        chart2.axes[0].setTopText(aar2[aar2.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(ar2[ar2.length - 1]);
-        if (ar[ar2.length - 1] > 2000 || ar2[ar2.length - 1] < 0) {
+        chart2.axes[0].bands[1].setEndValue(aar2[aar2.length - 1]);
+        if (aar2[aar2.length - 1] > 2000 || aar2[aar2.length - 1] < 0) {
             document.getElementById('header2').style.color = "red";
         } else {
             document.getElementById('header2').style.color = "grey";
         }
 
-        chart3.arrows[0].setValue(ar3[ar3.length - 1]);
-        chart3.axes[0].setTopText(ar3[ar3.length - 1] + " KPa");
+        chart3.arrows[0].setValue(aar3[aar3.length - 1]);
+        chart3.axes[0].setTopText(aar3[aar3.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(ar3[ar3.length - 1]);
-        if (ar[ar3.length - 1] > 2000 || ar3[ar3.length - 1] < 0) {
+        chart3.axes[0].bands[1].setEndValue(aar3[aar3.length - 1]);
+        if (aar3[aar3.length - 1] > 2000 || aar3[aar3.length - 1] < 0) {
             document.getElementById('header3').style.color = "red";
         } else {
             document.getElementById('header3').style.color = "grey";
         }
 
-        chart4.arrows[0].setValue(ar4[ar4.length - 1]);
-        chart4.axes[0].setTopText(ar4[ar4.length - 1] + " KPa");
+        chart4.arrows[0].setValue(aar4[aar4.length - 1]);
+        chart4.axes[0].setTopText(aar4[aar4.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(ar4[ar4.length - 1]);
-        if (ar[ar4.length - 1] > 2000 || ar4[ar4.length - 1] < 0) {
+        chart4.axes[0].bands[1].setEndValue(aar4[aar4.length - 1]);
+        if (aar4[aar4.length - 1] > 2000 || aar4[aar4.length - 1] < 0) {
             document.getElementById('header4').style.color = "red";
         } else {
             document.getElementById('header4').style.color = "grey";
         }
 
-        chart5.arrows[0].setValue(ar5[ar5.length - 1]);
-        chart5.axes[0].setTopText(ar5[ar5.length - 1] + " KPa");
+        chart5.arrows[0].setValue(aar5[aar5.length - 1]);
+        chart5.axes[0].setTopText(aar5[aar5.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(ar5[ar5.length - 1]);
-        if (ar[ar5.length - 1] > 2000 || ar5[ar5.length - 1] < 0) {
+        chart5.axes[0].bands[1].setEndValue(aar5[aar5.length - 1]);
+        if (aar5[aar5.length - 1] > 2000 || aar5[aar5.length - 1] < 0) {
             document.getElementById('header5').style.color = "red";
         } else {
             document.getElementById('header5').style.color = "grey";
         }
 
-        chart6.arrows[0].setValue(ar6[ar6.length - 1]);
-        chart6.axes[0].setTopText(ar6[ar6.length - 1] + " KPa");
+        chart6.arrows[0].setValue(aar6[aar6.length - 1]);
+        chart6.axes[0].setTopText(aar6[aar6.length - 1] + " KPa");
         // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(ar6[ar6.length - 1]);
-        if (ar[ar6.length - 1] > 2000 || ar6[ar6.length - 1] < 0) {
+        chart6.axes[0].bands[1].setEndValue(aar6[aar6.length - 1]);
+        if (aar6[aar6.length - 1] > 2000 || aar6[aar6.length - 1] < 0) {
             document.getElementById('header6').style.color = "red";
         } else {
             document.getElementById('header6').style.color = "grey";
         }
-        var currentValue1 = ar[ar.length - 1];
-        var currentValue2 = ar2[ar2.length - 1];
-        var currentValue3 = ar3[ar3.length - 1];
-        var currentValue4 = ar4[ar4.length - 1];
-        var currentValue5 = ar5[ar5.length - 1];
-        var currentValue6 = ar6[ar6.length - 1];
+        var currentValue1 = aar[aar.length - 1];
+        var currentValue2 = aar2[aar2.length - 1];
+        var currentValue3 = aar3[aar3.length - 1];
+        var currentValue4 = aar4[aar4.length - 1];
+        var currentValue5 = aar5[aar5.length - 1];
+        var currentValue6 = aar6[aar6.length - 1];
         valueArray1[getValueIndex] = currentValue1;
         valueArray2[getValueIndex] = currentValue2;
         valueArray3[getValueIndex] = currentValue3;
