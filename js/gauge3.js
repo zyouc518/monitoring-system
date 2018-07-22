@@ -10,71 +10,73 @@ $(document).ready(function () {
     var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var getValueIndex = 0;
     setInterval(function () {
-        $('#results').load('php/g3-1.php');
-        $('#results').load('php/g3-2.php');
-        $('#results').load('php/g3-3.php');
-        $('#results').load('php/g3-4.php');
-        $('#results').load('php/g3-5.php');
-        $('#results').load('php/g3-6.php');
-        chart.arrows[0].setValue(aaar[aaar.length - 1]);
-        chart.axes[0].setTopText(aaar[aaar.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(aaar[aaar.length - 1]);
-        if (aaar[aaar.length - 1] > 2000 || ar[aaar.length - 1] < 0) {
-            document.getElementById('header1').style.color = "red";
-        } else {
-            document.getElementById('header1').style.color = "grey";
-        }
+        setInterval(function () {
+            $('#results').load('php/g3-1.php');
+            $('#results').load('php/g3-2.php');
+            $('#results').load('php/g3-3.php');
+            $('#results').load('php/g3-4.php');
+            $('#results').load('php/g3-5.php');
+            $('#results').load('php/g3-6.php');
+            chart.arrows[0].setValue(aaar[aaar.length - 1]);
+            chart.axes[0].setTopText(aaar[aaar.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart.axes[0].bands[1].setEndValue(aaar[aaar.length - 1]);
+            if (aaar[aaar.length - 1] > 2000 || aaar[aaar.length - 1] < 0) {
+                document.getElementById('header1').style.color = "red";
+            } else {
+                document.getElementById('header1').style.color = "grey";
+            }
 
-        chart2.arrows[0].setValue(aaar2[aaar2.length - 1]);
-        chart2.axes[0].setTopText(aaar2[aaar2.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(aaar2[aaar2.length - 1]);
-        if (aaar2[aaar2.length - 1] > 2000 || aaar2[aaar2.length - 1] < 0) {
-            document.getElementById('header2').style.color = "red";
-        } else {
-            document.getElementById('header2').style.color = "grey";
-        }
+            chart2.arrows[0].setValue(aaar2[aaar2.length - 1]);
+            chart2.axes[0].setTopText(aaar2[aaar2.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart2.axes[0].bands[1].setEndValue(aaar2[aaar2.length - 1]);
+            if (aaar2[aaar2.length - 1] > 2000 || aaar2[aaar2.length - 1] < 0) {
+                document.getElementById('header2').style.color = "red";
+            } else {
+                document.getElementById('header2').style.color = "grey";
+            }
 
-        chart3.arrows[0].setValue(aaar3[aaar3.length - 1]);
-        chart3.axes[0].setTopText(aaar3[aaar3.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(aaar3[aaar3.length - 1]);
-        if (aaar3[aaar3.length - 1] > 2000 || aaar3[aaar3.length - 1] < 0) {
-            document.getElementById('header3').style.color = "red";
-        } else {
-            document.getElementById('header3').style.color = "grey";
-        }
+            chart3.arrows[0].setValue(aaar3[aaar3.length - 1]);
+            chart3.axes[0].setTopText(aaar3[aaar3.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart3.axes[0].bands[1].setEndValue(aaar3[aaar3.length - 1]);
+            if (aaar3[aaar3.length - 1] > 2000 || aaar3[aaar3.length - 1] < 0) {
+                document.getElementById('header3').style.color = "red";
+            } else {
+                document.getElementById('header3').style.color = "grey";
+            }
 
-        chart4.arrows[0].setValue(aaar4[aaar4.length - 1]);
-        chart4.axes[0].setTopText(aaar4[aaar4.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(aaar4[aaar4.length - 1]);
-        if (aaar4[aaar4.length - 1] > 2000 || aaar4[aaar4.length - 1] < 0) {
-            document.getElementById('header4').style.color = "red";
-        } else {
-            document.getElementById('header4').style.color = "grey";
-        }
+            chart4.arrows[0].setValue(aaar4[aaar4.length - 1]);
+            chart4.axes[0].setTopText(aaar4[aaar4.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart4.axes[0].bands[1].setEndValue(aaar4[aaar4.length - 1]);
+            if (aaar4[aaar4.length - 1] > 2000 || aaar4[aaar4.length - 1] < 0) {
+                document.getElementById('header4').style.color = "red";
+            } else {
+                document.getElementById('header4').style.color = "grey";
+            }
 
-        chart5.arrows[0].setValue(aaar5[aaar5.length - 1]);
-        chart5.axes[0].setTopText(aaar5[aaar5.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(aaar5[aaar5.length - 1]);
-        if (aaar5[aaar5.length - 1] > 2000 || aaar5[aaar5.length - 1] < 0) {
-            document.getElementById('header5').style.color = "red";
-        } else {
-            document.getElementById('header5').style.color = "grey";
-        }
+            chart5.arrows[0].setValue(aaar5[aaar5.length - 1]);
+            chart5.axes[0].setTopText(aaar5[aaar5.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart5.axes[0].bands[1].setEndValue(aaar5[aaar5.length - 1]);
+            if (aaar5[aaar5.length - 1] > 2000 || aaar5[aaar5.length - 1] < 0) {
+                document.getElementById('header5').style.color = "red";
+            } else {
+                document.getElementById('header5').style.color = "grey";
+            }
 
-        chart6.arrows[0].setValue(aaar6[aaar6.length - 1]);
-        chart6.axes[0].setTopText(aaar6[aaar6.length - 1] + " \265\u03b5");
-        // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(aaar6[aaar6.length - 1]);
-        if (aaar6[aaar6.length - 1] > 2000 || aaar6[aaar6.length - 1] < 0) {
-            document.getElementById('header6').style.color = "red";
-        } else {
-            document.getElementById('header6').style.color = "grey";
-        }
+            chart6.arrows[0].setValue(aaar6[aaar6.length - 1]);
+            chart6.axes[0].setTopText(aaar6[aaar6.length - 1] + " \265\u03b5");
+            // adjust darker band to new ar[ar.length-1]
+            chart6.axes[0].bands[1].setEndValue(aaar6[aaar6.length - 1]);
+            if (aaar6[aaar6.length - 1] > 2000 || aaar6[aaar6.length - 1] < 0) {
+                document.getElementById('header6').style.color = "red";
+            } else {
+                document.getElementById('header6').style.color = "grey";
+            }
+        }, 1000);
         var currentValue1 = aaar[aaar.length - 1];
         var currentValue2 = aaar2[aaar2.length - 1];
         var currentValue3 = aaar3[aaar3.length - 1];

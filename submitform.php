@@ -128,8 +128,7 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>矿物液化
-                    <br>智能监控系统</h3>
+                <h5>矿物液化智能监控系统</h5>
             </div>
             <br>
             <a href="submitform.php">&emsp;&emsp;中文</a>
@@ -164,12 +163,12 @@
                 <div class="card" style="width: 100%;height: 50%;">
 <!--                     <div class="card-body">-->
                         <div class="form-inline">
-                        <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:25%"> 吨/m³
+                        <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:25%"> t/m³
                         </div>
                         <div class="form-inline">
                         <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:25%"> %
                         </div>
-                        <button type="button" class="btn bt-primary" style="width:10%" onclick="Calc1()">提交</button>
+                        <button type="button" class="btn btn-primary" style="width:10%" onclick="Calc1()">提交</button>
 
                     </div>
                 </div>
