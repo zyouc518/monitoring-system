@@ -4,8 +4,7 @@
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no, shrink-to-fit=no"/> -->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -13,15 +12,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="Wang & Zhao">
 	<meta name="description" content="Monitoring System">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>矿物液化监控智能系统</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="msapplication-TileColor" content="#000000">
 
 
 	<style>
+		/* #wholepage { position:absolute; margin:0px; width:100%; } */
+
 		#h2position {
 			position: absolute;
 			left: 37%;
@@ -187,90 +184,97 @@
 	<script src="js/export.min.js"></script>
 	<link rel="stylesheet" href="css/export.css" type="text/css" media="all" />
 	<script src="js/light.js"></script>
+	<script>
+		if (screen.width <= 1024 || screen.height <= 768) {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+		}
+	</script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- Sidebar -->
-		<nav id="sidebar">
-			<div class="sidebar-header">
-				<h5>矿物液化智能监控系统</h5>
+	<div class="zoom">
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<div class="sidebar-header">
+					<h5>矿物液化智能监控系统</h5>
+				</div>
+				<br>
+				<a href="dashboard1.html">&emsp;&emsp;中文</a>
+				<a href="dashboard1en.html">&emsp;English</a>
+				<ul class="list-unstyled components">
+					<li class="active">
+						<!-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> -->
+						<a>
+							<i class="fa fa-bullseye"> 监测数据</i>
+						</a>
+						<ul class="list-unstyled" id="homeSubmenu">
+							<li>
+								<a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
+							</li>
+							<li>
+								<a href="dashboard2.html" class="fa fa-dashboard"> 压力传感器</a>
+							</li>
+							<li>
+								<a href="dashboard3.html" class="fa fa-dashboard"> 应变传感器</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="line.html" class="fa fa-line-chart">稳性计算</a>
+					</li>
+					<li>
+						<a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
+					</li>
+				</ul>
+			</nav>
+
+
+
+			<div id="content">
+				<h2 id="h2position">含水率传感器</h2>
+				<div id="header1">● 1</div>
+				<div id="chartdiv"></div>
+				<div id="linegraph1">
+					<canvas id="myChart1" width="400" height="450"></canvas>
+				</div>
+
+				<div id="header2">● 2</div>
+				<div id="chartdiv2"></div>
+				<div id="linegraph2">
+					<canvas id="myChart2" width="400" height="450"></canvas>
+				</div>
+
+
+				<div id="header3">● 3</div>
+				<div id="chartdiv3"></div>
+				<div id="linegraph3">
+					<canvas id="myChart3" width="400" height="450"></canvas>
+				</div>
+
+
+				<div id="header4">● 4</div>
+				<div id="chartdiv4"></div>
+				<div id="linegraph4">
+					<canvas id="myChart4" width="400" height="450"></canvas>
+				</div>
+
+
+				<div id="header5">● 5</div>
+				<div id="chartdiv5"></div>
+				<div id="linegraph5">
+					<canvas id="myChart5" width="400" height="450"></canvas>
+				</div>
+
+
+				<div id="header6">● 6</div>
+				<div id="chartdiv6"></div>
+				<div id="linegraph6">
+					<canvas id="myChart6" width="400" height="450"></canvas>
+				</div>
+
+
 			</div>
-			<br>
-			<a href="dashboard1.html">&emsp;&emsp;中文</a>
-			<a href="dashboard1en.html">&emsp;English</a>
-			<ul class="list-unstyled components">
-				<li class="active">
-					<!-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> -->
-					<a>
-						<i class="fa fa-bullseye"> 监测数据</i>
-					</a>
-					<ul class="list-unstyled" id="homeSubmenu">
-						<li>
-							<a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
-						</li>
-						<li>
-							<a href="dashboard2.html" class="fa fa-dashboard"> 压力传感器</a>
-						</li>
-						<li>
-							<a href="dashboard3.html" class="fa fa-dashboard"> 应变传感器</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="line.html" class="fa fa-line-chart">稳性计算</a>
-				</li>
-				<li>
-					<a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
-				</li>
-			</ul>
-		</nav>
-
-
-
-		<div id="content">
-			<h2 id="h2position">含水率传感器</h2>
-			<div id="header1">● 1</div>
-			<div id="chartdiv"></div>
-			<div id="linegraph1">
-				<canvas id="myChart1" width="400" height="450"></canvas>
-			</div>
-
-			<div id="header2">● 2</div>
-			<div id="chartdiv2"></div>
-			<div id="linegraph2">
-				<canvas id="myChart2" width="400" height="450"></canvas>
-			</div>
-
-
-			<div id="header3">● 3</div>
-			<div id="chartdiv3"></div>
-			<div id="linegraph3">
-				<canvas id="myChart3" width="400" height="450"></canvas>
-			</div>
-
-
-			<div id="header4">● 4</div>
-			<div id="chartdiv4"></div>
-			<div id="linegraph4">
-				<canvas id="myChart4" width="400" height="450"></canvas>
-			</div>
-
-
-			<div id="header5">● 5</div>
-			<div id="chartdiv5"></div>
-			<div id="linegraph5">
-				<canvas id="myChart5" width="400" height="450"></canvas>
-			</div>
-
-
-			<div id="header6">● 6</div>
-			<div id="chartdiv6"></div>
-			<div id="linegraph6">
-				<canvas id="myChart6" width="400" height="450"></canvas>
-			</div>
-
-
 		</div>
 	</div>
 	<script>
