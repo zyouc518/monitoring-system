@@ -10,7 +10,7 @@ if ($link === false) {
 
 // Print host information
 echo "Connect Successfully. Host info: " . mysqli_get_host_info($link) . "<br>";
-$query = "SELECT * FROM `sensor15`";//改成对应的数据表名称、列名称
+$query = "SELECT * FROM `sensor15` ORDER BY Time_1 DESC LIMIT 10";//改成对应的数据表名称、列名称
 //SELECT * FROM `sensor1` ORDER BY `id` DESC LIMIT 10; 搜索最后10个
 
 $result = $link->query($query) or die($link->error);
