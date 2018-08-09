@@ -2,23 +2,18 @@
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="author" content="Wang & Zhao">
-	<meta name="description" content="Monitoring System">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>矿物液化监控智能系统</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="msapplication-TileColor" content="#000000">
+	 <!-- Required meta tags -->
+	 <meta charset="utf-8">
+	 <!-- <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no, shrink-to-fit=no"/> -->
+	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+	 <link rel="stylesheet" href="css/font-awesome.min.css">
+	 <link rel="stylesheet" href="css/style.css">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="author" content="Wang & Zhao">
+	 <meta name="description" content="Monitoring System">
+	 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	 <title>OLMS</title>
 
 
 	<style>
@@ -188,6 +183,11 @@
 	<script src="js/export.min.js"></script>
 	<link rel="stylesheet" href="css/export.css" type="text/css" media="all" />
 	<script src="js/light.js"></script>
+	<script>
+		if (screen.width <= 1024 || screen.height <= 768) {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+		}
+	</script>
 </head>
 
 <body>

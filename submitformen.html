@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,13 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Wang & Zhao">
     <meta name="description" content="Monitoring System">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>矿物液化监控智能系统</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="msapplication-TileColor" content="#000000">
-    <!-- <meta http-equiv="refresh" content="2"> -->
+    <title>OLMS</title>
     <style>
         #header1 {
             position: absolute;
@@ -128,6 +122,11 @@
             color: grey;
         }
     </style>
+    <script>
+		if (screen.width <= 1024 || screen.height <= 768) {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+		}
+	</script>
 </head>
 
 <body>

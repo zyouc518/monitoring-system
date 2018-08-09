@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,6 +15,11 @@
     <script type="text/javascript" src="js/defaultline.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
     <title>矿物液化智能监控系统</title>
+    <script>
+		if (screen.width <= 1024 || screen.height <= 768) {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+		}
+	</script>
 </head>
 
 <body>
