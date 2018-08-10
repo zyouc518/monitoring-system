@@ -439,27 +439,33 @@ $(document).ready(function () {
         //     valueArray5[12] = currentValue5;
         //     valueArray6[12] = currentValue6;
         // }
-        window.myLine1.data.datasets.forEach((dataset)=> {
+        window.myLine1.labels.push(15);
+        window.myLine1.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue1);
         });
         window.myLine1.update();
-        window.myLine2.data.datasets.forEach((dataset)=> {
+        window.myLine2.labels.push(15);
+        window.myLine2.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue2);
         });
         window.myLine2.update();
-        window.myLine3.data.datasets.forEach((dataset)=> {
+        window.myLine3.labels.push(15);
+        window.myLine3.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue3);
         });
         window.myLine3.update();
-        window.myLine4.data.datasets.forEach((dataset)=> {
+        window.myLine4.labels.push(15);
+        window.myLine4.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue4);
         });
         window.myLine4.update();
-        window.myLine5.data.datasets.forEach((dataset)=> {
+        window.myLine5.labels.push(15);
+        window.myLine5.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue5);
         });
         window.myLine5.update();
-        window.myLine6.data.datasets.forEach((dataset)=> {
+        window.myLine6.labels.push(15);
+        window.myLine6.data.datasets.forEach((dataset) => {
             dataset.data.push(currentValue6);
         });
         window.myLine6.update();
