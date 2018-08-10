@@ -335,15 +335,15 @@ $(document).ready(function () {
     var ctx1 = document.getElementById("myChart1").getContext('2d');
     window.myLine1 = new Chart(ctx1, config1);
     var ctx2 = document.getElementById("myChart2").getContext('2d');
-    window.myLine2 = new Chart(ctx2, config1);
+    window.myLine2 = new Chart(ctx2, config2);
     var ctx3 = document.getElementById("myChart3").getContext('2d');
-    window.myLine3 = new Chart(ctx3, config1);
+    window.myLine3 = new Chart(ctx3, config3);
     var ctx4 = document.getElementById("myChart4").getContext('2d');
-    window.myLine4 = new Chart(ctx4, config1);
+    window.myLine4 = new Chart(ctx4, config4);
     var ctx5 = document.getElementById("myChart5").getContext('2d');
-    window.myLine5 = new Chart(ctx5, config1);
+    window.myLine5 = new Chart(ctx5, config5);
     var ctx6 = document.getElementById("myChart6").getContext('2d');
-    window.myLine6 = new Chart(ctx6, config1);
+    window.myLine6 = new Chart(ctx6, config6);
     setInterval(function () {
         $('#results').load('php/g1-1.php');
         $('#results').load('php/g1-2.php');
