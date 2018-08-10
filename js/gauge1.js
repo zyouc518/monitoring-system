@@ -439,23 +439,29 @@ $(document).ready(function () {
         //     valueArray5[12] = currentValue5;
         //     valueArray6[12] = currentValue6;
         // }
-        myLine1.data.datasets.forEach((dataset)=> {
+        window.myLine1.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue1);
         });
-        myLine2.data.datasets.forEach((dataset)=> {
+        window.myLine1.update();
+        window.myLine2.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue2);
         });
-        myLine3.data.datasets.forEach((dataset)=> {
+        window.myLine2.update();
+        window.myLine3.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue3);
         });
-        myLine4.data.datasets.forEach((dataset)=> {
+        window.myLine3.update();
+        window.myLine4.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue4);
         });
-        myLine5.data.datasets.forEach((dataset)=> {
+        window.myLine4.update();
+        window.myLine5.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue5);
         });
-        myLine6.data.datasets.forEach((dataset)=> {
+        window.myLine5.update();
+        window.myLine6.data.datasets.forEach((dataset)=> {
             dataset.data.push(currentValue6);
         });
+        window.myLine6.update();
     }, 1000);
 });
