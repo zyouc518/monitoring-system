@@ -13,9 +13,9 @@
     <!-- JavaScript -->
     <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/defaultline.js"></script>
-    <script type="text/javascript" src="php/calculate.php"></script>
-    <title>矿物液化智能监控系统</title>
+    <script type="text/javascript" src="js/defaultlineen.js"></script>
+    <script type="text/javascript" src="php/calculateen.php"></script>
+    <title>OLMS</title>
     <script>
 		if (screen.width <= 1024 || screen.height <= 768) {
 			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
@@ -28,43 +28,44 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h5>矿物液化智能监控系统</h5>
-            </div><br>
+                <h3>OLMS</h3>
+            </div>
+            <br>
             <a href="line.html">&emsp;&emsp;中文</a>
             <a href="lineen.html">&emsp;English</a>
             <ul class="list-unstyled components">
                 <li class="active">
                     <a>
-                        <i class="fa fa-bullseye"> 监测数据</i>
+                        <i class="fa fa-bullseye"> Sensor Data</i>
                     </a>
                     <ul class="list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
+                            <a href="dashboard1en.html" class="fa fa-dashboard"> Moisture Content Sensor</a>
                         </li>
                         <li>
-                            <a href="dashboard2.html" class="fa fa-dashboard"> 压力传感器</a>
+                            <a href="dashboard2en.html" class="fa fa-dashboard"> Pressure Sensor</a>
                         </li>
                         <li>
-                            <a href="dashboard3.html" class="fa fa-dashboard"> 应变传感器</a>
+                            <a href="dashboard3en.html" class="fa fa-dashboard"> Strain Sensor</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="line.html" class="fa fa-line-chart">稳性计算</a>
+                    <a href="lineen.html" class="fa fa-line-chart">Stability Calculation</a>
                 </li>
                 <li>
-                    <a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
+                    <a href="submitformen.html" class="fa fa-exclamation-triangle"> Alarm System</a>
                 </li>
             </ul>
         </nav>
         <div id="content">
-            <h2>稳性计算</h2>
+            <h2>Stability Calculation</h2>
             <div class="form-inline">
-                <div class="card" style="width: 40%;">
+                <div class="card" style="width: 45%;">
                     <div class="card-body">
-                        2#货舱装载量：
-                        <input class="form-control" type="number" placeholder="在此输入装载量" id="mass" style="width:50%"> 吨
-                        <br>请选择燃料类型：
+                        2# cargo hold load：
+                        <input class="form-control" type="number" placeholder="Input load here" id="mass" style="width:50%"> t
+                        <br>Choose fuel type：
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="HFO" checked>
                             <label class="form-check-label" for="inlineRadio2">HFO&emsp;&emsp;&emsp;</label>
@@ -80,7 +81,7 @@
                 <input type="text" id="rat">
                 <br> 请输入横倾角：
                 <input type="text" id="degree"> -->
-                        <button type="button" class="btn btn-primary" onclick="Calc1()">计算</button>
+                        <button type="button" class="btn btn-primary" onclick="Calc1()">Calculate</button>
                         <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -224,7 +225,7 @@ function Calc1() {
             responsive: true,
             title: {
                 display: true,
-                text: '稳性值'
+                text: 'Calculation Result'
             },
             tooltips: {
                 mode: 'index',
@@ -239,14 +240,14 @@ function Calc1() {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: '横倾角（度）'
+                        labelString: 'Heeling Angle (degree)'
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: '稳性值'
+                        labelString: 'Value'
                     }
                 }]
             }
@@ -437,7 +438,7 @@ function Calc2() {
             responsive: true,
             title: {
                 display: true,
-                text: '稳性值'
+                text: 'Calculation Result'
             },
             tooltips: {
                 mode: 'index',
@@ -452,14 +453,14 @@ function Calc2() {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: '横倾角（度）'
+                        labelString: 'Heeling Angle (degree)'
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: '稳性值'
+                        labelString: 'Value'
                     }
                 }]
             }
@@ -564,10 +565,10 @@ function Calc2() {
             <table id="datatable" class="table" style="width:40%">
                 <thead>
                     <tr>
-                        <th scope="col">物理量</th>
-                        <th scope="col">计算值</th>
-                        <th scope="col">单位</th>
-                        <th scope="col">状态</th>
+                        <th scope="col">Physical Quantity</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Unit</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
