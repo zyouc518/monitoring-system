@@ -36,10 +36,10 @@ $(document).ready(function () {
             if (ar5[0]>TML) alarm1flag++;
             if (ar6[0]>TML) alarm1flag++;
 
-            if (alarm1flag>=4)
+            if (alarm1flag>=0)
             {
                 //一级报警操作
-                document.getElementById('header1').style.color = "red";
+                document.getElementById('header1').className = "main";
             }
 
             //二级报警
@@ -111,7 +111,7 @@ $(document).ready(function () {
             if (alarm3==1)
             {
                 //三级报警操作
-                document.getElementById('header3').style.color = "red";
+                document.getElementById('header3')style.color = "main";
             }
 
 
