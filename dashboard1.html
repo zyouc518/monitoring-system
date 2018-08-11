@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -18,7 +18,16 @@
 
 	<style>
 		/* #wholepage { position:absolute; margin:0px; width:100%; } */
-
+.main{
+    animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: transparent;    }
+    1%{    color: red; }
+    50%{    color: transparent; }
+    51%{    color:red;  }
+    100%{   color: red;    }
+}
 		#h2position {
 			position: absolute;
 			left: 37%;
@@ -538,8 +547,9 @@
 		});
 	</script>
 	<div id="results" style="visibility: hidden"></div>
-	<script type="text/javascript" src="js/dashline1.js"></script>
 	<script type="text/javascript" src="js/gauge1.js"></script>
+
+    <script type="text/javascript" src="js/dashalarm1.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>

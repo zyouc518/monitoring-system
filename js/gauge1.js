@@ -2,13 +2,354 @@ $(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
-    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    $('#results').load('php/g1-1.php');
+    $('#results').load('php/g1-2.php');
+    $('#results').load('php/g1-3.php');
+    $('#results').load('php/g1-4.php');
+    $('#results').load('php/g1-5.php');
+    $('#results').load('php/g1-6.php');
+    var valueArray1 = ar;
+    var valueArray2 = ar2;
+    var valueArray3 = ar3;
+    var valueArray4 = ar4;
+    var valueArray5 = ar5;
+    var valueArray6 = ar6;
     var getValueIndex = 0;
+    var config1 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [{
+                data: valueArray1,
+                label: 'Data',
+                borderColor: 'green',
+                fill: false,
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // window.onload = function () {
+    //     var ctx1 = document.getElementById("myChart1").getContext('2d');
+    //     window.myLine = new Chart(ctx1, config1);
+    // };
+
+    var config2 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [
+                /*{
+                            label: 'GZ',
+                            fill: false,
+                        }, {
+                            label: 'AREA',
+                            fill: false
+                        }, */
+                {
+                    data: valueArray2,
+                    label: 'Data',
+                    borderColor: 'green',
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // window.onload = function () {
+    //     var ctx2 = document.getElementById("myChart2").getContext('2d');
+    //     window.myLine = new Chart(ctx2, config2);
+    // };
+
+    var config3 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [
+                /*{
+                            label: 'GZ',
+                            fill: false,
+                        }, {
+                            label: 'AREA',
+                            fill: false
+                        }, */
+                {
+                    data: valueArray3,
+                    label: 'Data',
+                    borderColor: 'green',
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                        // labelString: 'Heeling Angle (degree)'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // window.onload = function () {
+    //     var ctx3 = document.getElementById("myChart3").getContext('2d');
+    //     window.myLine = new Chart(ctx3, config3);
+    // };
+
+    var config4 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [
+                /*{
+                            label: 'GZ',
+                            fill: false,
+                        }, {
+                            label: 'AREA',
+                            fill: false
+                        }, */
+                {
+                    data: valueArray4,
+                    label: 'Data',
+                    borderColor: 'green',
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // window.onload = function () {
+    //     var ctx4 = document.getElementById("myChart4").getContext('2d');
+    //     window.myLine = new Chart(ctx4, config4);
+    // };
+
+    var config5 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [
+                /*{
+                            label: 'GZ',
+                            fill: false,
+                        }, {
+                            label: 'AREA',
+                            fill: false
+                        }, */
+                {
+                    data: valueArray5,
+                    label: 'Data',
+                    borderColor: 'green',
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // window.onload = function () {
+    //     var ctx5 = document.getElementById("myChart5").getContext('2d');
+    //     window.myLine = new Chart(ctx5, config5);
+    // };
+
+    var config6 = {
+        type: 'line',
+        data: {
+            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            datasets: [
+                /*{
+                            label: 'GZ',
+                            fill: false,
+                        }, {
+                            label: 'AREA',
+                            fill: false
+                        }, */
+                {
+                    data: valueArray6,
+                    label: 'Data',
+                    borderColor: 'green',
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                // text: '含水率传感器数据'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    var ctx1 = document.getElementById("myChart1").getContext('2d');
+    window.myLine1 = new Chart(ctx1, config1);
+    var ctx2 = document.getElementById("myChart2").getContext('2d');
+    window.myLine2 = new Chart(ctx2, config2);
+    var ctx3 = document.getElementById("myChart3").getContext('2d');
+    window.myLine3 = new Chart(ctx3, config3);
+    var ctx4 = document.getElementById("myChart4").getContext('2d');
+    window.myLine4 = new Chart(ctx4, config4);
+    var ctx5 = document.getElementById("myChart5").getContext('2d');
+    window.myLine5 = new Chart(ctx5, config5);
+    var ctx6 = document.getElementById("myChart6").getContext('2d');
+    window.myLine6 = new Chart(ctx6, config6);
     setInterval(function () {
         $('#results').load('php/g1-1.php');
         $('#results').load('php/g1-2.php');
@@ -104,340 +445,12 @@ $(document).ready(function () {
             valueArray5[12] = currentValue5;
             valueArray6[12] = currentValue6;
         }
-        var config1 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [{
-                    data: valueArray1,
-                    label: 'Data',
-                    borderColor: 'green',
-                    fill: false,
-                }]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        // window.onload = function () {
-        //     var ctx1 = document.getElementById("myChart1").getContext('2d');
-        //     window.myLine = new Chart(ctx1, config1);
-        // };
 
-        var config2 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [
-                    /*{
-                                label: 'GZ',
-                                fill: false,
-                            }, {
-                                label: 'AREA',
-                                fill: false
-                            }, */
-                    {
-                        data: valueArray2,
-                        label: 'Data',
-                        borderColor: 'green',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        // window.onload = function () {
-        //     var ctx2 = document.getElementById("myChart2").getContext('2d');
-        //     window.myLine = new Chart(ctx2, config2);
-        // };
-
-        var config3 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [
-                    /*{
-                                label: 'GZ',
-                                fill: false,
-                            }, {
-                                label: 'AREA',
-                                fill: false
-                            }, */
-                    {
-                        data: valueArray3,
-                        label: 'Data',
-                        borderColor: 'green',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                            // labelString: 'Heeling Angle (degree)'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        // window.onload = function () {
-        //     var ctx3 = document.getElementById("myChart3").getContext('2d');
-        //     window.myLine = new Chart(ctx3, config3);
-        // };
-
-        var config4 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [
-                    /*{
-                                label: 'GZ',
-                                fill: false,
-                            }, {
-                                label: 'AREA',
-                                fill: false
-                            }, */
-                    {
-                        data: valueArray4,
-                        label: 'Data',
-                        borderColor: 'green',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        // window.onload = function () {
-        //     var ctx4 = document.getElementById("myChart4").getContext('2d');
-        //     window.myLine = new Chart(ctx4, config4);
-        // };
-
-        var config5 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [
-                    /*{
-                                label: 'GZ',
-                                fill: false,
-                            }, {
-                                label: 'AREA',
-                                fill: false
-                            }, */
-                    {
-                        data: valueArray5,
-                        label: 'Data',
-                        borderColor: 'green',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        // window.onload = function () {
-        //     var ctx5 = document.getElementById("myChart5").getContext('2d');
-        //     window.myLine = new Chart(ctx5, config5);
-        // };
-
-        var config6 = {
-            type: 'line',
-            data: {
-                labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
-                datasets: [
-                    /*{
-                                label: 'GZ',
-                                fill: false,
-                            }, {
-                                label: 'AREA',
-                                fill: false
-                            }, */
-                    {
-                        data: valueArray6,
-                        label: 'Data',
-                        borderColor: 'green',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: true,
-                    // text: '含水率传感器数据'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
-                    }]
-                }
-            }
-        };
-        var ctx1 = document.getElementById("myChart1").getContext('2d');
-        window.myLine1 = new Chart(ctx1, config1);
-        var ctx2 = document.getElementById("myChart2").getContext('2d');
-        window.myLine2 = new Chart(ctx2, config2);
-        var ctx3 = document.getElementById("myChart3").getContext('2d');
-        window.myLine3 = new Chart(ctx3, config3);
-        var ctx4 = document.getElementById("myChart4").getContext('2d');
-        window.myLine4 = new Chart(ctx4, config4);
-        var ctx5 = document.getElementById("myChart5").getContext('2d');
-        window.myLine5 = new Chart(ctx5, config5);
-        var ctx6 = document.getElementById("myChart6").getContext('2d');
-        window.myLine6 = new Chart(ctx6, config6);
+        window.myLine1.update(0);
+        window.myLine2.update(0);
+        window.myLine3.update(0);
+        window.myLine4.update(0);
+        window.myLine5.update(0);
+        window.myLine6.update(0);
     }, 1000);
 });

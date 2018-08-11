@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- <META HTTP-EQUIV="Refresh" CONTENT="5">
  -->
 <html lang="en">
@@ -19,40 +19,15 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>矿物液化监控智能系统</title>
     <style>
-    .main{
-  color: #666;margin-top: 50px;
+.main{
+    animation:blinkingText 0.8s infinite;
 }
-/* 定义keyframe动画，命名为blink */
-@keyframes blink{
-  0%{opacity: 1;}
-  100%{opacity: 0;} 
-}
-/* 添加兼容性前缀 */
-@-webkit-keyframes blink {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-@-moz-keyframes blink {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-@-ms-keyframes blink {
-    0% {opacity: 1; } 
-    100% { opacity: 0;}
-}
-@-o-keyframes blink {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-/* 定义blink类*/
-.blink{
-    color: #dd4814;
-    animation: blink 1s linear infinite;  
-    /* 其它浏览器兼容性前缀 */
-    -webkit-animation: blink 1s linear infinite;
-    -moz-animation: blink 1s linear infinite;
-    -ms-animation: blink 1s linear infinite;
-    -o-animation: blink 1s linear infinite;
+@keyframes blinkingText{
+    0%{     color: transparent;    }
+    1%{    color: red; }
+    50%{    color: transparent; }
+    51%{    color:red;  }
+    100%{   color: red;    }
 }
         #header1 {
             position: absolute;

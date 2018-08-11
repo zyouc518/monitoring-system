@@ -1,4 +1,4 @@
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); 
@@ -36,7 +36,7 @@ $(document).ready(function () {
             if (ar5[0]>TML) alarm1flag++;
             if (ar6[0]>TML) alarm1flag++;
 
-            if (alarm1flag>=0)
+            if (alarm1flag>=4)
             {
                 //一级报警操作
                 document.getElementById('header1').className = "main";
@@ -87,7 +87,7 @@ $(document).ready(function () {
             if (alarm2water && (alarm2pressure|| alarm2strain))
             {
                 //二级报警操作
-                document.getElementById('header2').style.color = "red";
+                document.getElementById('header2').className = "main";
             }
 
             //三级报警
@@ -111,8 +111,91 @@ $(document).ready(function () {
             if (alarm3==1)
             {
                 //三级报警操作
-                document.getElementById('header3')style.color = "main";
+                document.getElementById('header3').className = "main";
             }
+
+	var press1=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar[k]!=ar[k-1])
+		{
+			press1=1;
+		}
+	}
+	if (press1==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
+
+
+	var press2=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar2[k]!=ar2[k-1])
+		{
+			press2=1;
+		}
+	}
+	
+	if (press2==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
+
+	var press3=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar3[k]!=ar3[k-1])
+		{
+			press3=1;
+		}
+	}
+	
+	if (press3==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
+
+	var press4=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar4[k]!=ar4[k-1])
+		{
+			press4=1;
+		}
+	}
+	
+	if (press4==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
+
+	var press5=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar5[k]!=ar5[k-1])
+		{
+			press5=1;
+		}
+	}
+	
+	if (press5==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
+
+	var press6=0; 
+	for (var k=1;k<50;k++)
+	{
+		if (ar6[k]!=ar6[k-1])
+		{
+			press6=1;
+		}
+	}	
+	if (press6==0)
+	{
+		document.getElementById('header3').className = "main";	
+	}
 
 
 
