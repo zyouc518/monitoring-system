@@ -116,7 +116,7 @@ function Calc1() {
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
-    var degree = heel[0]*180/pi;
+        var degree = Math.abs(heel[0]*180/pi);
     var condition;
     var condition_obj = document.getElementsByName('inlineRadioOptions');
     for (let i = 0; i < condition_obj.length; i++) {
@@ -311,7 +311,7 @@ function Calc2() {
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
-    var degree = heel[0]*180/pi;
+    var degree = Math.abs(heel[0]*180/pi);
     var condition;
     var condition_obj = document.getElementsByName('inlineRadioOptions');
     for (let i = 0; i < condition_obj.length; i++) {
