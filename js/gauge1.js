@@ -375,42 +375,42 @@ $(document).ready(function () {
         $('#results').load('php/g1-4.php');
         $('#results').load('php/g1-5.php');
         $('#results').load('php/g1-6.php');
-        chart.arrows[0].setValue(ar[ar.length - 1]);
-        chart.axes[0].setTopText(ar[ar.length - 1] + " %");
+        chart.arrows[0].setValue(ar[0]);
+        chart.axes[0].setTopText(ar[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(ar[ar.length - 1]);
+        chart.axes[0].bands[1].setEndValue(ar[0]);
 
-        chart2.arrows[0].setValue(ar2[ar2.length - 1]);
-        chart2.axes[0].setTopText(ar2[ar2.length - 1] + " %");
+        chart2.arrows[0].setValue(ar2[0]);
+        chart2.axes[0].setTopText(ar2[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(ar2[ar2.length - 1]);
+        chart2.axes[0].bands[1].setEndValue(ar2[0]);
 
-        chart3.arrows[0].setValue(ar3[ar3.length - 1]);
-        chart3.axes[0].setTopText(ar3[ar3.length - 1] + " %");
+        chart3.arrows[0].setValue(ar3[0]);
+        chart3.axes[0].setTopText(ar3[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(ar3[ar3.length - 1]);
+        chart3.axes[0].bands[1].setEndValue(ar3[0]);
 
-        chart4.arrows[0].setValue(ar4[ar4.length - 1]);
-        chart4.axes[0].setTopText(ar4[ar4.length - 1] + " %");
+        chart4.arrows[0].setValue(ar4[0]);
+        chart4.axes[0].setTopText(ar4[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(ar4[ar4.length - 1]);
+        chart4.axes[0].bands[1].setEndValue(ar4[0]);
 
-        chart5.arrows[0].setValue(ar5[ar5.length - 1]);
-        chart5.axes[0].setTopText(ar5[ar5.length - 1] + " %");
+        chart5.arrows[0].setValue(ar5[0]);
+        chart5.axes[0].setTopText(ar5[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(ar5[ar5.length - 1]);
+        chart5.axes[0].bands[1].setEndValue(ar5[0]);
 
-        chart6.arrows[0].setValue(ar6[ar6.length - 1]);
-        chart6.axes[0].setTopText(ar6[ar6.length - 1] + " %");
+        chart6.arrows[0].setValue(ar6[0]);
+        chart6.axes[0].setTopText(ar6[0] + " %");
         // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(ar6[ar6.length - 1]);
+        chart6.axes[0].bands[1].setEndValue(ar6[0]);
 
-        var currentValue1 = ar[ar.length - 1];
-        var currentValue2 = ar2[ar2.length - 1];
-        var currentValue3 = ar3[ar3.length - 1];
-        var currentValue4 = ar4[ar4.length - 1];
-        var currentValue5 = ar5[ar5.length - 1];
-        var currentValue6 = ar6[ar6.length - 1];
+        var currentValue1 = ar[0];
+        var currentValue2 = ar2[0];
+        var currentValue3 = ar3[0];
+        var currentValue4 = ar4[0];
+        var currentValue5 = ar5[0];
+        var currentValue6 = ar6[0];
         valueArray1[getValueIndex] = currentValue1;
         valueArray2[getValueIndex] = currentValue2;
         valueArray3[getValueIndex] = currentValue3;

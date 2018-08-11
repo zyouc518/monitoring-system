@@ -375,42 +375,42 @@ $(document).ready(function () {
         $('#results').load('php/g3-4.php');
         $('#results').load('php/g3-5.php');
         $('#results').load('php/g3-6.php');
-        chart.arrows[0].setValue(aaar[aaar.length - 1]);
-        chart.axes[0].setTopText(aaar[aaar.length - 1] + "  \265\u03b5");
+        chart.arrows[0].setValue(aaar[0]);
+        chart.axes[0].setTopText(aaar[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(aaar[aaar.length - 1]);
+        chart.axes[0].bands[1].setEndValue(aaar[0]);
 
-        chart2.arrows[0].setValue(aaar2[aaar2.length - 1]);
-        chart2.axes[0].setTopText(aaar2[aaar2.length - 1] + "  \265\u03b5");
+        chart2.arrows[0].setValue(aaar2[0]);
+        chart2.axes[0].setTopText(aaar2[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(aaar2[aaar2.length - 1]);
+        chart2.axes[0].bands[1].setEndValue(aaar2[0]);
 
-        chart3.arrows[0].setValue(aaar3[aaar3.length - 1]);
-        chart3.axes[0].setTopText(aaar3[aaar3.length - 1] + "  \265\u03b5");
+        chart3.arrows[0].setValue(aaar3[0]);
+        chart3.axes[0].setTopText(aaar3[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(aaar3[aaar3.length - 1]);
+        chart3.axes[0].bands[1].setEndValue(aaar3[0]);
 
-        chart4.arrows[0].setValue(aaar4[aaar4.length - 1]);
-        chart4.axes[0].setTopText(aaar4[aaar4.length - 1] + "  \265\u03b5");
+        chart4.arrows[0].setValue(aaar4[0]);
+        chart4.axes[0].setTopText(aaar4[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(aaar4[aaar4.length - 1]);
+        chart4.axes[0].bands[1].setEndValue(aaar4[0]);
 
-        chart5.arrows[0].setValue(aaar5[aaar5.length - 1]);
-        chart5.axes[0].setTopText(aaar5[aaar5.length - 1] + "  \265\u03b5");
+        chart5.arrows[0].setValue(aaar5[0]);
+        chart5.axes[0].setTopText(aaar5[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(aaar5[aaar5.length - 1]);
+        chart5.axes[0].bands[1].setEndValue(aaar5[0]);
 
-        chart6.arrows[0].setValue(aaar6[aaar6.length - 1]);
-        chart6.axes[0].setTopText(aaar6[aaar6.length - 1] + "  \265\u03b5");
+        chart6.arrows[0].setValue(aaar6[0]);
+        chart6.axes[0].setTopText(aaar6[0] + "  \265\u03b5");
         // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(aaar6[aaar6.length - 1]);
+        chart6.axes[0].bands[1].setEndValue(aaar6[0]);
 
-        var currentValue1 = aaar[aaar.length - 1];
-        var currentValue2 = aaar2[aaar2.length - 1];
-        var currentValue3 = aaar3[aaar3.length - 1];
-        var currentValue4 = aaar4[aaar4.length - 1];
-        var currentValue5 = aaar5[aaar5.length - 1];
-        var currentValue6 = aaar6[aaar6.length - 1];
+        var currentValue1 = aaar[0];
+        var currentValue2 = aaar2[0];
+        var currentValue3 = aaar3[0];
+        var currentValue4 = aaar4[0];
+        var currentValue5 = aaar5[0];
+        var currentValue6 = aaar6[0];
         valueArray1[getValueIndex] = currentValue1;
         valueArray2[getValueIndex] = currentValue2;
         valueArray3[getValueIndex] = currentValue3;

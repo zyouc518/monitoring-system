@@ -375,42 +375,42 @@ $(document).ready(function () {
         $('#results').load('php/g2-4.php');
         $('#results').load('php/g2-5.php');
         $('#results').load('php/g2-6.php');
-        chart.arrows[0].setValue(aar[aar.length - 1]);
-        chart.axes[0].setTopText(aar[aar.length - 1] + " kPa");
+        chart.arrows[0].setValue(aar[0]);
+        chart.axes[0].setTopText(aar[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(aar[aar.length - 1]);
+        chart.axes[0].bands[1].setEndValue(aar[0]);
 
-        chart2.arrows[0].setValue(aar2[aar2.length - 1]);
-        chart2.axes[0].setTopText(aar2[aar2.length - 1] + " kPa");
+        chart2.arrows[0].setValue(aar2[0]);
+        chart2.axes[0].setTopText(aar2[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(aar2[aar2.length - 1]);
+        chart2.axes[0].bands[1].setEndValue(aar2[0]);
 
-        chart3.arrows[0].setValue(aar3[aar3.length - 1]);
-        chart3.axes[0].setTopText(aar3[aar3.length - 1] + " kPa");
+        chart3.arrows[0].setValue(aar3[0]);
+        chart3.axes[0].setTopText(aar3[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(aar3[aar3.length - 1]);
+        chart3.axes[0].bands[1].setEndValue(aar3[0]);
 
-        chart4.arrows[0].setValue(aar4[aar4.length - 1]);
-        chart4.axes[0].setTopText(aar4[aar4.length - 1] + " kPa");
+        chart4.arrows[0].setValue(aar4[0]);
+        chart4.axes[0].setTopText(aar4[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(aar4[aar4.length - 1]);
+        chart4.axes[0].bands[1].setEndValue(aar4[0]);
 
-        chart5.arrows[0].setValue(aar5[aar5.length - 1]);
-        chart5.axes[0].setTopText(aar5[aar5.length - 1] + " kPa");
+        chart5.arrows[0].setValue(aar5[0]);
+        chart5.axes[0].setTopText(aar5[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(aar5[aar5.length - 1]);
+        chart5.axes[0].bands[1].setEndValue(aar5[0]);
 
-        chart6.arrows[0].setValue(aar6[aar6.length - 1]);
-        chart6.axes[0].setTopText(aar6[aar6.length - 1] + " kPa");
+        chart6.arrows[0].setValue(aar6[0]);
+        chart6.axes[0].setTopText(aar6[0] + " kPa");
         // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(aar6[aar6.length - 1]);
+        chart6.axes[0].bands[1].setEndValue(aar6[0]);
 
-        var currentValue1 = aar[aar.length - 1];
-        var currentValue2 = aar2[aar2.length - 1];
-        var currentValue3 = aar3[aar3.length - 1];
-        var currentValue4 = aar4[aar4.length - 1];
-        var currentValue5 = aar5[aar5.length - 1];
-        var currentValue6 = aar6[aar6.length - 1];
+        var currentValue1 = aar[0];
+        var currentValue2 = aar2[0];
+        var currentValue3 = aar3[0];
+        var currentValue4 = aar4[0];
+        var currentValue5 = aar5[0];
+        var currentValue6 = aar6[0];
         valueArray1[getValueIndex] = currentValue1;
         valueArray2[getValueIndex] = currentValue2;
         valueArray3[getValueIndex] = currentValue3;
