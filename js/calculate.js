@@ -1,5 +1,4 @@
 function Calc1() {
-    delete myChart;
     var M = document.getElementById("mass").value;
     //var rat = document.getElementById("rat").value;
     var rat = 0.1;

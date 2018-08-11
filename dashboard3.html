@@ -17,16 +17,28 @@
 
 
 	<style>
-.main{
-    animation:blinkingText 0.8s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: transparent;    }
-    1%{    color: red; }
-    50%{    color: transparent; }
-    51%{    color:red;  }
-    100%{   color: red;    }
-}
+		.main {
+			animation: blinkingText 0.8s infinite;
+		}
+
+		@keyframes blinkingText {
+			0% {
+				color: transparent;
+			}
+			1% {
+				color: red;
+			}
+			50% {
+				color: transparent;
+			}
+			51% {
+				color: red;
+			}
+			100% {
+				color: red;
+			}
+		}
+
 		#h2position {
 			position: absolute;
 			left: 37%;
@@ -542,9 +554,36 @@
 			}]
 		});
 	</script>
+	<script>
+		window.onload = function () {
+			chart.arrows[0].setValue(0);
+			chart.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart.axes[0].bands[1].setEndValue(0);
+			chart2.arrows[0].setValue(0);
+			chart2.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart2.axes[0].bands[1].setEndValue(0);
+			chart3.arrows[0].setValue(0);
+			chart3.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart3.axes[0].bands[1].setEndValue(0);
+			chart4.arrows[0].setValue(0);
+			chart4.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart4.axes[0].bands[1].setEndValue(0);
+			chart5.arrows[0].setValue(0);
+			chart5.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart5.axes[0].bands[1].setEndValue(0);
+			chart6.arrows[0].setValue(0);
+			chart6.axes[0].setTopText(0 + " %");
+			// adjust darker band to new ar[ar.length-1]
+			chart6.axes[0].bands[1].setEndValue(0);
+		}
+	</script>
 	<div id="results" style="visibility: hidden"></div>
-	<script type="text/javascript" src="js/dashline3.js"></script>
-<script type="text/javascript" src="js/dashalarm3.js"></script>
+	<script type="text/javascript" src="js/dashalarm3.js"></script>
 	<script type="text/javascript" src="js/gauge3.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

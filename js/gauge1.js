@@ -12,7 +12,7 @@ $(document).ready(function () {
     var config1 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [{
                 data: valueArray1,
                 label: 'Data',
@@ -46,6 +46,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -59,7 +63,7 @@ $(document).ready(function () {
     var config2 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -102,6 +106,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -115,7 +123,7 @@ $(document).ready(function () {
     var config3 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -159,6 +167,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -172,7 +184,7 @@ $(document).ready(function () {
     var config4 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -215,6 +227,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -228,7 +244,7 @@ $(document).ready(function () {
     var config5 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -271,6 +287,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -284,7 +304,7 @@ $(document).ready(function () {
     var config6 = {
         type: 'line',
         data: {
-            labels: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -327,6 +347,10 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        max: 100,
+                        min: 0
                     }
                 }]
             }
@@ -355,61 +379,32 @@ $(document).ready(function () {
         chart.axes[0].setTopText(ar[ar.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart.axes[0].bands[1].setEndValue(ar[ar.length - 1]);
-        if (ar[ar.length - 1] > 100 || ar[ar.length - 1] < 0) {
-            document.getElementById('header1').style.color = "red";
-        } else {
-            document.getElementById('header1').style.color = "grey";
-        }
 
         chart2.arrows[0].setValue(ar2[ar2.length - 1]);
         chart2.axes[0].setTopText(ar2[ar2.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart2.axes[0].bands[1].setEndValue(ar2[ar2.length - 1]);
-        if (ar2[ar2.length - 1] > 100 || ar2[ar2.length - 1] < 0) {
-            document.getElementById('header2').style.color = "red";
-        } else {
-            document.getElementById('header2').style.color = "grey";
-        }
 
         chart3.arrows[0].setValue(ar3[ar3.length - 1]);
         chart3.axes[0].setTopText(ar3[ar3.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart3.axes[0].bands[1].setEndValue(ar3[ar3.length - 1]);
-        if (ar3[ar3.length - 1] > 100 || ar3[ar3.length - 1] < 0) {
-            document.getElementById('header3').style.color = "red";
-        } else {
-            document.getElementById('header3').style.color = "grey";
-        }
 
         chart4.arrows[0].setValue(ar4[ar4.length - 1]);
         chart4.axes[0].setTopText(ar4[ar4.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart4.axes[0].bands[1].setEndValue(ar4[ar4.length - 1]);
-        if (ar4[ar4.length - 1] > 100 || ar4[ar4.length - 1] < 0) {
-            document.getElementById('header4').style.color = "red";
-        } else {
-            document.getElementById('header4').style.color = "grey";
-        }
 
         chart5.arrows[0].setValue(ar5[ar5.length - 1]);
         chart5.axes[0].setTopText(ar5[ar5.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart5.axes[0].bands[1].setEndValue(ar5[ar5.length - 1]);
-        if (ar5[ar5.length - 1] > 100 || ar5[ar5.length - 1] < 0) {
-            document.getElementById('header5').style.color = "red";
-        } else {
-            document.getElementById('header5').style.color = "grey";
-        }
 
         chart6.arrows[0].setValue(ar6[ar6.length - 1]);
         chart6.axes[0].setTopText(ar6[ar6.length - 1] + " %");
         // adjust darker band to new ar[ar.length-1]
         chart6.axes[0].bands[1].setEndValue(ar6[ar6.length - 1]);
-        if (ar6[ar6.length - 1] > 100 || ar6[ar6.length - 1] < 0) {
-            document.getElementById('header6').style.color = "red";
-        } else {
-            document.getElementById('header6').style.color = "grey";
-        }
+
         var currentValue1 = ar[ar.length - 1];
         var currentValue2 = ar2[ar2.length - 1];
         var currentValue3 = ar3[ar3.length - 1];
@@ -427,12 +422,14 @@ $(document).ready(function () {
         }
         if (getValueIndex == 12) {
             for (var j = 0; j < 12; j++) {
+                valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
                 valueArray3[j] = valueArray3[j + 1];
                 valueArray4[j] = valueArray4[j + 1];
                 valueArray5[j] = valueArray5[j + 1];
                 valueArray6[j] = valueArray6[j + 1];
             }
+            valueArray1[12] = currentValue1;
             valueArray2[12] = currentValue2;
             valueArray3[12] = currentValue3;
             valueArray4[12] = currentValue4;
