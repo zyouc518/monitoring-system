@@ -2,18 +2,12 @@ $(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
-    $('#results').load('php/g1-1.php');
-    $('#results').load('php/g1-2.php');
-    $('#results').load('php/g1-3.php');
-    $('#results').load('php/g1-4.php');
-    $('#results').load('php/g1-5.php');
-    $('#results').load('php/g1-6.php');
-    var valueArray1 = ar;
-    var valueArray2 = ar2;
-    var valueArray3 = ar3;
-    var valueArray4 = ar4;
-    var valueArray5 = ar5;
-    var valueArray6 = ar6;
+    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var getValueIndex = 0;
     var config1 = {
         type: 'line',
