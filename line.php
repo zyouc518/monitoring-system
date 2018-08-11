@@ -14,7 +14,6 @@
     <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/defaultline.js"></script>
-    <script type="text/javascript" src="php/calculate.php"></script>
     <title>矿物液化智能监控系统</title>
     <script>
 		if (screen.width <= 1024 || screen.height <= 768) {
@@ -30,8 +29,8 @@
             <div class="sidebar-header">
                 <h5>矿物液化智能监控系统</h5>
             </div><br>
-            <a href="line.html">&emsp;&emsp;中文</a>
-            <a href="lineen.html">&emsp;English</a>
+            <a href="line.php">&emsp;&emsp;中文</a>
+            <a href="lineen.php">&emsp;English</a>
             <ul class="list-unstyled components">
                 <li class="active">
                     <a>
@@ -50,7 +49,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="line.html" class="fa fa-line-chart">稳性计算</a>
+                    <a href="line.php" class="fa fa-line-chart">稳性计算</a>
                 </li>
                 <li>
                     <a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
