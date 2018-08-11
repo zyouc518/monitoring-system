@@ -2,12 +2,12 @@ $(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
-    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var getValueIndex = 0;
     var config1 = {
         type: 'line',
@@ -417,11 +417,11 @@ $(document).ready(function () {
         valueArray4[getValueIndex] = currentValue4;
         valueArray5[getValueIndex] = currentValue5;
         valueArray6[getValueIndex] = currentValue6;
-        if (getValueIndex < 12) {
+        if (getValueIndex < 13) {
             getValueIndex++;
         }
-        if (getValueIndex == 12) {
-            for (var j = 0; j < 12; j++) {
+        if (getValueIndex == 13) {
+            for (var j = 0; j < 13; j++) {
                 valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
                 valueArray3[j] = valueArray3[j + 1];
