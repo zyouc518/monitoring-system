@@ -1,13 +1,41 @@
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "123456", "mineral liquefying"); //改成对应的服务器地址、用户名、密码、数据库名称
+
+// Check connection
+if ($link === false) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+// Print host information
+echo "Connect Successfully. Host info: " . mysqli_get_host_info($link) . "<br>";
+$query = "SELECT * FROM `shipdraft` ORDER BY Time_1 DESC LIMIT 10"; //改成对应的数据表名称、列名称
+//SELECT * FROM `sensor1` ORDER BY id DESC LIMIT 10; 搜索最后10个
+;
+
+$result = $link->query($query) or die($link->error);
+$i = 0;
+while ($car = $result->fetch_assoc()) {
+    $car_name[$i] = $car['Heel'];
+    $i++;
+}
+?>
+
+
+<script>
 function Calc1() {
+    var heel = <?php echo json_encode($car_name) ?>;
     var M = document.getElementById("mass").value;
     //var rat = document.getElementById("rat").value;
     var rat = 0.1;
     // var degree = document.getElementById("degree").value;
-    var degree = 20;
     var rho = 2.38,
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
+    var degree = heel[0]*180/pi;
+    alert(degree);
     var condition;
     var condition_obj = document.getElementsByName('inlineRadioOptions');
     for (let i = 0; i < condition_obj.length; i++) {
@@ -193,15 +221,17 @@ function Calc1() {
 }
 
 function Calc2() {
+    var heel = <?php echo json_encode($car_name) ?>;
     var M = document.getElementById("mass").value;
     // var rat = document.getElementById("rat").value;
     // var degree = document.getElementById("degree").value;
     var rat = 0.1;
-    var degree = 20;
     var rho = 2.38,
         L = 36,
         DWT = 400000,
         pi = 3.1415926;
+    var degree = heel[0]*180/pi;
+    alert(degree);
     var condition;
     var condition_obj = document.getElementsByName('inlineRadioOptions');
     for (let i = 0; i < condition_obj.length; i++) {
@@ -403,3 +433,4 @@ function Calc2() {
         }
     }
 }
+</script>
