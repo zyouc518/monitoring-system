@@ -31,9 +31,9 @@
         var b = document.getElementById('waterpercon').value;
         var TML = 100;
         if (a != "" && b != "") {
-            TML = 100;
+            TML = a * b / (a * b + 1 - a);
         } else {
-            TML = a * b / (a * b + 1 - a); //这里需要完善，拿到页面的输入
+            TML = 100; //这里需要完善，拿到页面的输入
         }
         if (ar[0] > TML) alarm1flag++;
         if (ar2[0] > TML) alarm1flag++;
