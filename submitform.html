@@ -19,16 +19,28 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>矿物液化监控智能系统</title>
     <style>
-.main{
-    animation:blinkingText 0.8s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: transparent;    }
-    1%{    color: red; }
-    50%{    color: transparent; }
-    51%{    color:red;  }
-    100%{   color: red;    }
-}
+        .main {
+            animation: blinkingText 0.8s infinite;
+        }
+
+        @keyframes blinkingText {
+            0% {
+                color: transparent;
+            }
+            1% {
+                color: red;
+            }
+            50% {
+                color: transparent;
+            }
+            51% {
+                color: red;
+            }
+            100% {
+                color: red;
+            }
+        }
+
         #header1 {
             position: absolute;
             left: 5%;
@@ -83,7 +95,7 @@
             color: grey;
         }
 
-#header7 {
+        #header7 {
             position: absolute;
             left: 50%;
             top: 25%;
@@ -161,10 +173,10 @@
         }
     </style>
     <script>
-		if (screen.width <= 1024 || screen.height <= 768) {
-			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
-		}
-	</script>
+        if (screen.width <= 1024 || screen.height <= 768) {
+            $('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+        }
+    </script>
 </head>
 
 <body>
@@ -215,11 +227,24 @@
                         <div class="form-inline">
                             <input class="form-control" type="number" placeholder="在此输入质量含水率" id="waterper" style="width:25%" name="water"> %
                         </div>
-                        <button type="button" class="btn btn-primary" style="width:10%" onclick="Calc1()">提交</button>
+                        <button type="button" class="btn btn-primary" style="width:10%" onclick="save()">提交</button>
                     </form>
                 </div>
             </div>
-
+            <div id="rhocon" style="visibility: hidden"></div>
+            <div id="waterpercon" style="visibility: hidden"></div>
+            <script>
+                function save() {
+                    rho = document.getElementById('rho').value;
+                    waterper = document.getElementById('waterper').value;
+                    if (rho == "" || waterper == "") {
+                        alert("请输入计算值");
+                    } else {
+                        document.getElementById('rhocon').innerHTML = rho;
+                        document.getElementById('waterpercon').innerHTML = waterper;
+                    }
+                }
+            </script>
             <div id="div1">
                 <div class="card" style="width: 100%;height: 100%">
                     <div class="card-body">

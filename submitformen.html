@@ -204,11 +204,24 @@
                         <div class="form-inline">
                             <input class="form-control" type="number" placeholder="Input TML here" id="waterper" style="width:25%" name="water"> %
                         </div>
-                        <button type="button" class="btn btn-primary" style="width:10%" onclick="Calc1()">提交</input>
+                        <button type="button" class="btn btn-primary" style="width:10%" onclick="save()">提交</input>
                     </form>
                 </div>
             </div>
-
+            <div id="rhocon" style="visibility: hidden"></div>
+            <div id="waterpercon" style="visibility: hidden"></div>
+            <script>
+                function save() {
+                    rho = document.getElementById('rho').value;
+                    waterper = document.getElementById('waterper').value;
+                    if (rho == "" || waterper == "") {
+                        alert("请输入计算值");
+                    } else {
+                        document.getElementById('rhocon').innerHTML = rho;
+                        document.getElementById('waterpercon').innerHTML = waterper;
+                    }
+                }
+            </script>
             <div id="div1">
                 <div class="card" style="width: 100%;height: 100%">
                     <div class="card-body">
