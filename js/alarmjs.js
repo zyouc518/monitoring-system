@@ -27,8 +27,8 @@
         $('#results').load('php/g3-6.php');
 
         var alarm1flag = 0;
-        var a = document.getElementById('rhocon').value;
-        var b = document.getElementById('waterpercon').value;
+        var a = document.getElementById('rhocon').innerHTML;
+        var b = document.getElementById('waterpercon').innerHTML;
         var TML = 100;
         if (a != "" && b != "") {
             TML = a * b / (a * b + 1 - a);
