@@ -1,130 +1,119 @@
-$(document).ready(function () {  //±¾ÎÄ¼þµÄµ÷ÊÔ·ÅÔÚµÚÈýºÍµÚÁù¸ö´«¸ÐÆ÷£¬Èç¹û°ÑËüÃÇÉèÖÃ³É2Ôò±¨¾¯£¬2000Ôò²»±¨¾¯¡£
-    $.ajaxSetup({
-        cache: false
-    }); 
+$(document).ready(function () { //ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Äµï¿½ï¿½Ô·ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½2ï¿½ò±¨¾ï¿½ï¿½ï¿½2000ï¿½ò²»±ï¿½ï¿½ï¿½ï¿½ï¿½
+	$.ajaxSetup({
+		cache: false
+	});
 
 
 
-        setInterval(function () {
+	setInterval(function () {
 
-        $('#results').load('php/g2-1.php');
-        $('#results').load('php/g2-2.php');
-        $('#results').load('php/g2-3.php');
-        $('#results').load('php/g2-4.php');
-        $('#results').load('php/g2-5.php');
-        $('#results').load('php/g2-6.php');
+		$('#results').load('php/g2-1.php');
+		$('#results').load('php/g2-2.php');
+		$('#results').load('php/g2-3.php');
+		$('#results').load('php/g2-4.php');
+		$('#results').load('php/g2-5.php');
+		$('#results').load('php/g2-6.php');
 
-	var press1=0; 
-	var press1a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar[k]!=null)
-		{
-			press1=1;
+		var press1 = 0;
+		var press1a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar[k] != null) {
+				press1 = 1;
+			}
+			if (aar[k] > 2000) {
+				press1a = 1;
+			}
 		}
-		if (aar[k]>2000)
-		{
-			press1a=1;
+		if (press1 == 0 || press1a == 1) {
+			document.getElementById('header1').className = "main";
+		} else {
+			document.getElementById('header1').className = "normal";
 		}
-	}
-	if (press1==0 || press1a==1)
-	{
-		document.getElementById('header1').className = "main";	
-	}
 
 
-	var press2=0; 
-	var press2a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar2[k]!=null)
-		{
-			press2=1;
+		var press2 = 0;
+		var press2a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar2[k] != null) {
+				press2 = 1;
+			}
+			if (aar2[k] > 2000) {
+				press2a = 1;
+			}
+			//if (aar2[k]>=64)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½Ç¿ï¿½ï¿½Ðµï¿½
+			//{press2++;}
 		}
-		if (aar2[k]>2000)
-		{
-			press2a=1;
+		if (press1 == 0 || press2a == 1) {
+			document.getElementById('header2').className = "main";
+		} else {
+			document.getElementById('header2').className = "normal";
 		}
-		//if (aar2[k]>=64)µ÷ÊÔÓï¾ä£¬ÊÇ¿ÉÐÐµÄ
-		//{press2++;}
-	}
-	if (press1==0 || press2a==1)
-	{
-		document.getElementById('header2').className = "main";	
-	}
 
-	var press3=0; 
-	var press3a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar3[k]!=null)
-		{
-			press3=1;
+		var press3 = 0;
+		var press3a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar3[k] != null) {
+				press3 = 1;
+			}
+			if (aar3[k] > 2000) {
+				press3a = 1;
+			}
 		}
-		if (aar3[k]>2000)
-		{
-			press3a=1;
+		if (press3 == 0 || press3a == 1) {
+			document.getElementById('header3').className = "main";
+		} else {
+			document.getElementById('header3').className = "normal";
 		}
-	}
-	if (press3==0 || press3a==1)
-	{
-		document.getElementById('header3').className = "main";	
-	}
 
 
-	var press4=0; 
-	var press4a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar4[k]!=null)
-		{
-			press4=1;
+		var press4 = 0;
+		var press4a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar4[k] != null) {
+				press4 = 1;
+			}
+			if (aar4[k] > 2000) {
+				press4a = 1;
+			}
 		}
-		if (aar4[k]>2000)
-		{
-			press4a=1;
+		if (press4 == 0 || press4a == 1) {
+			document.getElementById('header4').className = "main";
+		} else {
+			document.getElementById('header4').className = "normal";
 		}
-	}
-	if (press4==0 || press4a==1)
-	{
-		document.getElementById('header4').className = "main";	
-	}
 
-	var press5=0; 
-	var press5a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar5[k]!=null)
-		{
-			press5=1;
+		var press5 = 0;
+		var press5a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar5[k] != null) {
+				press5 = 1;
+			}
+			if (aar5[k] > 2000) {
+				press5a = 1;
+			}
 		}
-		if (aar5[k]>2000)
-		{
-			press5a=1;
+		if (press5 == 0 || press5a == 1) {
+			document.getElementById('header5').className = "main";
+		} else {
+			document.getElementById('header5').className = "normal";
 		}
-	}
-	if (press5==0 || press5a==1)
-	{
-		document.getElementById('header5').className = "main";	
-	}
 
-	var press6=0; 
-	var press6a=0;
-	for (var k=0;k<300;k++)
-	{
-		if (aar6[k]!=null)
-		{
-			press6=1;
+		var press6 = 0;
+		var press6a = 0;
+		for (var k = 0; k < 300; k++) {
+			if (aar6[k] != null) {
+				press6 = 1;
+			}
+			if (aar6[k] > 2000) //(aar6[k]>2)
+			{
+				press6a = 1;
+			}
 		}
-		if (aar6[k]>2000) //(aar6[k]>2)
-		{
-			press6a=1;
+		if (press6 == 0 || press6a == 1) {
+			document.getElementById('header6').className = "main";
+		} else {
+			document.getElementById('header6').className = "normal";
 		}
-	}
-	if (press6==0 || press6a==1)
-	{
-		document.getElementById('header6').className = "main";	
-	}
 
-    }, 1000);
+	}, 1000);
 });

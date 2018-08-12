@@ -44,6 +44,8 @@
         if (alarm1flag >= 4) {
             //一级报警操作
             document.getElementById('header1').className = "main";
+        } else {
+            document.getElementById('header1').className = "normal";
         }
 
         //二级报警
@@ -124,6 +126,8 @@
         if (alarm2water && (alarm2waterure || alarm2strain)) {
             //二级报警操作
             document.getElementById('header2').className = "main";
+        } else {
+            document.getElementById('header2').className = "normal";
         }
 
         //三级报警
@@ -144,6 +148,8 @@
         if (alarm3 == 1) {
             //三级报警操作
             document.getElementById('header3').className = "main";
+        } else {
+            document.getElementById('header3').className = "normal";
         }
 
 
@@ -240,6 +246,8 @@
 
         if (waterflag > 0) {
             document.getElementById('header7').className = "main";
+        } else {
+            document.getElementById('header7').className = "normal";
         }
 
 
@@ -335,6 +343,8 @@
 
         if (pressflag > 0) {
             document.getElementById('header8').className = "main";
+        } else {
+            document.getElementById('header8').className = "normal";
         }
 
 
@@ -435,6 +445,8 @@
 
         if (strainflag > 0) {
             document.getElementById('header9').className = "main";
+        } else {
+            document.getElementById('header9').className = "normal";
         }
 
 

@@ -18,6 +18,30 @@
     <meta name="description" content="Monitoring System">
     <title>OLMS</title>
     <style>
+        .normal {}
+
+        .main {
+            animation: blinkingText 0.8s infinite;
+        }
+
+        @keyframes blinkingText {
+            0% {
+                color: transparent;
+            }
+            1% {
+                color: red;
+            }
+            50% {
+                color: transparent;
+            }
+            51% {
+                color: red;
+            }
+            100% {
+                color: red;
+            }
+        }
+
         #header1 {
             position: absolute;
             left: 5%;
@@ -71,8 +95,8 @@
             height: 155px;
             color: grey;
         }
-	    
-	        #header7 {
+
+        #header7 {
             position: absolute;
             left: 50%;
             top: 25%;
@@ -150,10 +174,10 @@
         }
     </style>
     <script>
-		if (screen.width <= 1024 || screen.height <= 768) {
-			$('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
-		}
-	</script>
+        if (screen.width <= 1024 || screen.height <= 768) {
+            $('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+        }
+    </script>
 </head>
 
 <body>
