@@ -12,7 +12,7 @@ $(document).ready(function () {
     var config1 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [{
                 data: valueArray1,
                 label: 'Data',
@@ -46,10 +46,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -63,7 +59,7 @@ $(document).ready(function () {
     var config2 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -106,10 +102,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -123,7 +115,7 @@ $(document).ready(function () {
     var config3 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -167,10 +159,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -184,7 +172,7 @@ $(document).ready(function () {
     var config4 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -227,10 +215,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -244,7 +228,7 @@ $(document).ready(function () {
     var config5 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -287,10 +271,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -304,7 +284,7 @@ $(document).ready(function () {
     var config6 = {
         type: 'line',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -347,10 +327,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
-                    },
-                    ticks: {
-                        max: 2000,
-                        min: 0
                     }
                 }]
             }
@@ -436,12 +412,17 @@ $(document).ready(function () {
             valueArray5[12] = currentValue5;
             valueArray6[12] = currentValue6;
         }
-
-        window.myLine1.update(0);
-        window.myLine2.update(0);
-        window.myLine3.update(0);
-        window.myLine4.update(0);
-        window.myLine5.update(0);
-        window.myLine6.update(0);
+        window.myLine1.data.labels[12] += 1;
+        window.myLine2.data.labels[12] += 1;
+        window.myLine3.data.labels[12] += 1;
+        window.myLine4.data.labels[12] += 1;
+        window.myLine5.data.labels[12] += 1;
+        window.myLine6.data.labels[12] += 1;
+        window.myLine1.update();
+        window.myLine2.update();
+        window.myLine3.update();
+        window.myLine4.update();
+        window.myLine5.update();
+        window.myLine6.update();
     }, 1000);
 });
