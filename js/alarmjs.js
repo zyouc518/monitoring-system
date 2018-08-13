@@ -157,7 +157,7 @@
         var water1 = 0;
         var water1a = 0;
         var waterflag = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar[k] != null) {
                 water1 = 1;
             }
@@ -172,7 +172,7 @@
 
         var water2 = 0;
         var water2a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar2[k] != null) {
                 water2 = 1;
             }
@@ -188,7 +188,7 @@
 
         var water3 = 0;
         var water3a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar3[k] != null) {
                 water3 = 1;
             }
@@ -203,7 +203,7 @@
 
         var water4 = 0;
         var water4a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar4[k] != null) {
                 water4 = 1;
             }
@@ -217,7 +217,7 @@
 
         var water5 = 0;
         var water5a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar5[k] != null) {
                 water5 = 1;
             }
@@ -231,7 +231,7 @@
 
         var water6 = 0;
         var water6a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (ar6[k] != null) {
                 water6 = 1;
             }
@@ -254,7 +254,7 @@
         var press1 = 0;
         var press1a = 0;
         var pressflag = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar[k] != null) {
                 press1 = 1;
             }
@@ -269,7 +269,7 @@
 
         var press2 = 0;
         var press2a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar2[k] != null) {
                 press2 = 1;
             }
@@ -285,7 +285,7 @@
 
         var press3 = 0;
         var press3a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar3[k] != null) {
                 press3 = 1;
             }
@@ -300,7 +300,7 @@
 
         var press4 = 0;
         var press4a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar4[k] != null) {
                 press4 = 1;
             }
@@ -314,7 +314,7 @@
 
         var press5 = 0;
         var press5a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar5[k] != null) {
                 press5 = 1;
             }
@@ -328,7 +328,7 @@
 
         var press6 = 0;
         var press6a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aar6[k] != null) {
                 press6 = 1;
             }
@@ -351,7 +351,7 @@
         var strain1 = 0;
         var strain1a = 0;
         var strainflag = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar[k] != null) {
                 strain1 = 1;
             }
@@ -362,7 +362,7 @@
             //if (aaar[k]>2)
             //{strain1a=strain1a+1;}
         }
-        if (strain1 == 0 || strain1a == 1) //if (strain1a==300)
+        if (strain1 == 0 || strain1a == 1) //if (strain1a==60)
         {
             strainflag++;
         }
@@ -370,7 +370,7 @@
 
         var strain2 = 0;
         var strain2a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar2[k] != null) {
                 strain2 = 1;
             }
@@ -386,7 +386,7 @@
 
         var strain3 = 0;
         var strain3a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar3[k] != null) {
                 strain3 = 1;
             }
@@ -401,7 +401,7 @@
 
         var strain4 = 0;
         var strain4a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar4[k] != null) {
                 strain4 = 1;
             }
@@ -415,7 +415,7 @@
 
         var strain5 = 0;
         var strain5a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar5[k] != null) {
                 strain5 = 1;
             }
@@ -429,7 +429,7 @@
 
         var strain6 = 0;
         var strain6a = 0;
-        for (var k = 0; k < 300; k++) {
+        for (var k = 0; k < 60; k++) {
             if (aaar6[k] != null) {
                 strain6 = 1;
             }

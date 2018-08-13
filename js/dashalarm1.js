@@ -16,7 +16,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press1 = 0;
 		var press1a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar[k] != null) {
 				press1 = 1;
 			}
@@ -34,7 +34,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press2 = 0;
 		var press2a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar2[k] != null) {
 				press2 = 1;
 			}
@@ -52,7 +52,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press3 = 0;
 		var press3a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar3[k] != null) {
 				press3 = 1;
 			}
@@ -69,7 +69,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press4 = 0;
 		var press4a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar4[k] != null) {
 				press4 = 1;
 			}
@@ -85,7 +85,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press5 = 0;
 		var press5a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar5[k] != null) {
 				press5 = 1;
 			}
@@ -101,7 +101,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 		var press6 = 0;
 		var press6a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (ar6[k] != null) {
 				press6 = 1;
 			}

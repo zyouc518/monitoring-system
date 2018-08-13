@@ -16,7 +16,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press1 = 0;
 		var press1a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar[k] != null) {
 				press1 = 1;
 			}
@@ -27,7 +27,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 			//if (aaar[k]>2)
 			//{press1a=press1a+1;}
 		}
-		if (press1 == 0 || press1a == 1) //if (press1a==300)
+		if (press1 == 0 || press1a == 1) //if (press1a==60)
 		{
 			document.getElementById('header1').className = "main";
 		} else {
@@ -37,7 +37,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press2 = 0;
 		var press2a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar2[k] != null) {
 				press2 = 1;
 			}
@@ -55,7 +55,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press3 = 0;
 		var press3a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar3[k] != null) {
 				press3 = 1;
 			}
@@ -72,7 +72,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press4 = 0;
 		var press4a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar4[k] != null) {
 				press4 = 1;
 			}
@@ -88,7 +88,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press5 = 0;
 		var press5a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar5[k] != null) {
 				press5 = 1;
 			}
@@ -104,7 +104,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 		var press6 = 0;
 		var press6a = 0;
-		for (var k = 0; k < 300; k++) {
+		for (var k = 0; k < 60; k++) {
 			if (aaar6[k] != null) {
 				press6 = 1;
 			}
