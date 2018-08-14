@@ -9,10 +9,17 @@ $(document).ready(function () {
     var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var getValueIndex = 0;
+    var d = new Date();
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    if (minute < 10) {
+        minute = "0" + minute;
+    }
+    time = hour + ":" + minute;
     var config1 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [{
                 data: valueArray1,
                 label: 'Data',
@@ -46,6 +53,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -59,7 +69,7 @@ $(document).ready(function () {
     var config2 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -102,6 +112,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -115,7 +128,7 @@ $(document).ready(function () {
     var config3 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -159,6 +172,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -172,7 +188,7 @@ $(document).ready(function () {
     var config4 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -215,6 +231,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -228,7 +247,7 @@ $(document).ready(function () {
     var config5 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -271,6 +290,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -284,7 +306,7 @@ $(document).ready(function () {
     var config6 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', 0],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -327,6 +349,9 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Value'
+                    },
+                    ticks: {
+                        stepSize: 200
                     }
                 }]
             }
@@ -412,12 +437,19 @@ $(document).ready(function () {
             valueArray5[12] = currentValue5;
             valueArray6[12] = currentValue6;
         }
-        window.myLine1.data.labels[12] += 15;
-        window.myLine2.data.labels[12] += 15;
-        window.myLine3.data.labels[12] += 15;
-        window.myLine4.data.labels[12] += 15;
-        window.myLine5.data.labels[12] += 15;
-        window.myLine6.data.labels[12] += 15;
+        var d = new Date();
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
+        time = hour + ":" + minute;
+        window.myLine1.data.labels[12] = time;
+        window.myLine2.data.labels[12] = time;
+        window.myLine3.data.labels[12] = time;
+        window.myLine4.data.labels[12] = time;
+        window.myLine5.data.labels[12] = time;
+        window.myLine6.data.labels[12] = time;
         window.myLine1.update();
         window.myLine2.update();
         window.myLine3.update();

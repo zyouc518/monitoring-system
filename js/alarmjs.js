@@ -182,7 +182,7 @@
             //if (ar2[k]>=64)调试语句，是可行的
             //{water2++;}
         }
-        if (water1 == 0 || water2a == 1) {
+        if (water2 == 0 || water2a == 1) {
             waterflag++;
         }
 
@@ -279,7 +279,7 @@
             //if (aar2[k]>=64)调试语句，是可行的
             //{press2++;}
         }
-        if (press1 == 0 || press2a == 1) {
+        if (press2 == 0 || press2a == 1) {
             pressflag++;
         }
 
@@ -380,7 +380,7 @@
             //if (aaar2[k]>=64)调试语句，是可行的
             //{strain2++;}
         }
-        if (strain1 == 0 || strain2a == 1) {
+        if (strain2 == 0 || strain2a == 1) {
             strainflag++;
         }
 

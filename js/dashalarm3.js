@@ -47,7 +47,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 			//if (aaar2[k]>=64)������䣬�ǿ��е�
 			//{press2++;}
 		}
-		if (press1 == 0 || press2a == 1) {
+		if (press2 == 0 || press2a == 1) {
 			document.getElementById('header2').className = "main";
 		} else {
 			document.getElementById('header2').className = "normal";
