@@ -2,12 +2,12 @@ $(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
-    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var getValueIndex = 0;
     var d = new Date();
     var hour = d.getHours();
@@ -19,7 +19,7 @@ $(document).ready(function () {
     var config1 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [{
                 data: valueArray1,
                 label: 'Data',
@@ -70,7 +70,7 @@ $(document).ready(function () {
     var config2 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -130,7 +130,7 @@ $(document).ready(function () {
     var config3 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -191,7 +191,7 @@ $(document).ready(function () {
     var config4 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -251,7 +251,7 @@ $(document).ready(function () {
     var config5 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -311,7 +311,7 @@ $(document).ready(function () {
     var config6 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -376,12 +376,7 @@ $(document).ready(function () {
     var ctx6 = document.getElementById("myChart6").getContext('2d');
     window.myLine6 = new Chart(ctx6, config6);
     setInterval(function () {
-        $('#results').load('php/g1-1.php');
-        $('#results').load('php/g1-2.php');
-        $('#results').load('php/g1-3.php');
-        $('#results').load('php/g1-4.php');
-        $('#results').load('php/g1-5.php');
-        $('#results').load('php/g1-6.php');
+        $('#results').load('php/g1.php');
         chart.arrows[0].setValue(ar[0]);
         chart.axes[0].setTopText(ar[0] + " %");
         // adjust darker band to new ar[ar.length-1]
@@ -424,11 +419,11 @@ $(document).ready(function () {
         valueArray4[getValueIndex] = currentValue4;
         valueArray5[getValueIndex] = currentValue5;
         valueArray6[getValueIndex] = currentValue6;
-        if (getValueIndex < 13) {
+        if (getValueIndex < 20) {
             getValueIndex++;
         }
-        if (getValueIndex == 13) {
-            for (var j = 0; j < 13; j++) {
+        if (getValueIndex == 20) {
+            for (var j = 0; j < 20; j++) {
                 valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
                 valueArray3[j] = valueArray3[j + 1];
@@ -436,12 +431,12 @@ $(document).ready(function () {
                 valueArray5[j] = valueArray5[j + 1];
                 valueArray6[j] = valueArray6[j + 1];
             }
-            valueArray1[12] = currentValue1;
-            valueArray2[12] = currentValue2;
-            valueArray3[12] = currentValue3;
-            valueArray4[12] = currentValue4;
-            valueArray5[12] = currentValue5;
-            valueArray6[12] = currentValue6;
+            valueArray1[19] = currentValue1;
+            valueArray2[19] = currentValue2;
+            valueArray3[19] = currentValue3;
+            valueArray4[19] = currentValue4;
+            valueArray5[19] = currentValue5;
+            valueArray6[19] = currentValue6;
         }
         var d = new Date();
         var hour = d.getHours();
@@ -450,12 +445,12 @@ $(document).ready(function () {
             minute = "0" + minute;
         }
         time = hour + ":" + minute;
-        window.myLine1.data.labels[12] = time;
-        window.myLine2.data.labels[12] = time;
-        window.myLine3.data.labels[12] = time;
-        window.myLine4.data.labels[12] = time;
-        window.myLine5.data.labels[12] = time;
-        window.myLine6.data.labels[12] = time;
+        window.myLine1.data.labels[19] = time;
+        window.myLine2.data.labels[19] = time;
+        window.myLine3.data.labels[19] = time;
+        window.myLine4.data.labels[19] = time;
+        window.myLine5.data.labels[19] = time;
+        window.myLine6.data.labels[19] = time;
 
         window.myLine1.update();
         window.myLine2.update();

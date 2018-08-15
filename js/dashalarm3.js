@@ -7,12 +7,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 
 	setInterval(function () {
 
-		$('#results').load('php/g3-1.php');
-		$('#results').load('php/g3-2.php');
-		$('#results').load('php/g3-3.php');
-		$('#results').load('php/g3-4.php');
-		$('#results').load('php/g3-5.php');
-		$('#results').load('php/g3-6.php');
+		$('#results').load('php/g3.php');
 
 		var press1 = 0;
 		var press1a = 0;
@@ -119,5 +114,5 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 			document.getElementById('header6').className = "normal";
 		}
 
-	}, 15000);
+	}, 1000);
 });

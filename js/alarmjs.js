@@ -7,24 +7,9 @@
 
     setInterval(function () {
 
-        $('#results').load('php/g1-1.php');
-        $('#results').load('php/g1-2.php');
-        $('#results').load('php/g1-3.php');
-        $('#results').load('php/g1-4.php');
-        $('#results').load('php/g1-5.php');
-        $('#results').load('php/g1-6.php');
-        $('#results').load('php/g2-1.php');
-        $('#results').load('php/g2-2.php');
-        $('#results').load('php/g2-3.php');
-        $('#results').load('php/g2-4.php');
-        $('#results').load('php/g2-5.php');
-        $('#results').load('php/g2-6.php');
-        $('#results').load('php/g3-1.php');
-        $('#results').load('php/g3-2.php');
-        $('#results').load('php/g3-3.php');
-        $('#results').load('php/g3-4.php');
-        $('#results').load('php/g3-5.php');
-        $('#results').load('php/g3-6.php');
+        $('#results').load('php/g1.php');
+        $('#results').load('php/g2.php');
+        $('#results').load('php/g3.php');
 
         var alarm1flag = 0;
         var a = document.getElementById('rhocon').innerHTML;

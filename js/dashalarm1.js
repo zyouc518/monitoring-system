@@ -7,12 +7,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 	setInterval(function () {
 
-		$('#results').load('php/g1-1.php');
-		$('#results').load('php/g1-2.php');
-		$('#results').load('php/g1-3.php');
-		$('#results').load('php/g1-4.php');
-		$('#results').load('php/g1-5.php');
-		$('#results').load('php/g1-6.php');
+		$('#results').load('php/g1.php');
 
 		var press1 = 0;
 		var press1a = 0;
