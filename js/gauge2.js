@@ -16,10 +16,23 @@ $(document).ready(function () {
         minute = "0" + minute;
     }
     time = hour + ":" + minute;
+    var hourb = d.getHours();
+    var minuteb = d.getMinutes();
+    if (minuteb < 19) {
+        minuteb = minuteb + 60 - 19;
+        if (hourb == 0) {
+            hourb = 23;
+        } else {
+            hourb -= 1;
+        }
+    } else {
+        minuteb -= 19;
+    }
+    timeb = hourb + ":" + minuteb;
     var config1 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [{
                 data: valueArray1,
                 label: 'Data',
@@ -69,7 +82,7 @@ $(document).ready(function () {
     var config2 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -128,7 +141,7 @@ $(document).ready(function () {
     var config3 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -188,7 +201,7 @@ $(document).ready(function () {
     var config4 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -247,7 +260,7 @@ $(document).ready(function () {
     var config5 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -306,7 +319,7 @@ $(document).ready(function () {
     var config6 = {
         type: 'line',
         data: {
-            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
+            labels: [timeb, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', time],
             datasets: [
                 /*{
                             label: 'GZ',
@@ -440,6 +453,19 @@ $(document).ready(function () {
             minute = "0" + minute;
         }
         time = hour + ":" + minute;
+        var hourb = d.getHours();
+        var minuteb = d.getMinutes();
+        if (minuteb < 19) {
+            minuteb = minuteb + 60 - 19;
+            if (hourb == 0) {
+                hourb = 23;
+            } else {
+                hourb -= 1;
+            }
+        } else {
+            minuteb -= 19;
+        }
+        timeb = hourb + ":" + minuteb;
         window.myLine1.data.labels[19] = time;
         window.myLine2.data.labels[19] = time;
         window.myLine3.data.labels[19] = time;
