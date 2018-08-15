@@ -2,12 +2,12 @@ $(document).ready(function () {
     $.ajaxSetup({
         cache: false
     }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
-    var valueArray1 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray2 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray3 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray4 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray5 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var valueArray6 = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var valueArray1 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    var valueArray2 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    var valueArray3 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    var valueArray4 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    var valueArray5 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    var valueArray6 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     var getValueIndex = 0;
     var d = new Date();
     var hour = d.getHours();
@@ -65,7 +65,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -125,7 +125,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -186,7 +186,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -246,7 +246,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -306,7 +306,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -366,7 +366,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Value (%)'
                     },
                     ticks: {
                         beginAtZero: true,
