@@ -27,7 +27,7 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h5>矿物液化智能监控系统</h5>
+            <h5 style="color: yellow">矿物液化智能监控系统</h5>
             </div><br>
             <a href="line.php">&emsp;&emsp;中文</a>
             <a href="lineen.php">&emsp;English</a>

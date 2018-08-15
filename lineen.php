@@ -27,7 +27,7 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>OLMS</h3>
+            <h3 style="color: yellow">OLMS</h3>
             </div>
             <br>
             <a href="line.php">&emsp;&emsp;中文</a>

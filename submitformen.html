@@ -187,7 +187,7 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>OLMS</h3>
+                <h3 style="color: yellow">OLMS</h3>
             </div>
             <br>
             <a href="submitform.html">&emsp;&emsp;中文</a>
@@ -223,7 +223,7 @@
                     <!--                     <div class="card-body">-->
                     <form action="php/alarmphp.php" method="post">
                         <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:25%" name="mass"> 吨/m³
+                            <input class="form-control" type="number" placeholder="Input density here" id="rho" style="width:25%" name="mass">&nbsp;t/m³
                         </div>
                         <div class="form-inline">
                             <input class="form-control" type="number" placeholder="Input TML here" id="waterper" style="width:25%" name="water"> %
@@ -239,7 +239,7 @@
                     rho = document.getElementById('rho').value;
                     waterper = document.getElementById('waterper').value;
                     if (rho == "" || waterper == "") {
-                        alert("请输入计算值");
+                        alert("Please input value!");
                     } else {
                         document.getElementById('rhocon').innerHTML = rho;
                         document.getElementById('waterpercon').innerHTML = waterper;
@@ -266,13 +266,13 @@
             <div id="div2">
                 <div class="card" style="width: 100%;height: 100%;">
                     <div class="card-body">
-                        <h3>结构应力</h3>
-                        <div id="header1">● 1</div>
-                        <div id="header2">● 2</div>
-                        <div id="header3">● 3</div>
-                        <div id="header4">● 4</div>
-                        <div id="header5">● 5</div>
-                        <div id="header6">● 6</div>
+                        <h3>Strain</h3>
+                        <div id="header1">● AU</div>
+                        <div id="header2">● AM</div>
+                        <div id="header3">● AL</div>
+                        <div id="header4">● FU</div>
+                        <div id="header5">● FM</div>
+                        <div id="header6">● FL</div>
                     </div>
                 </div>
             </div>
