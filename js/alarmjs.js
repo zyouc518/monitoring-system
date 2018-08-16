@@ -142,6 +142,7 @@
         var water1 = 0;
         var water1a = 0;
         var waterflag = 0;
+        var waterflag2 = 0;
         for (var k = 0; k < 60; k++) {
             if (ar[k] != null) {
                 water1 = 1;
@@ -150,8 +151,11 @@
                 water1a = 1;
             }
         }
-        if (water1 == 0 || water1a == 1) {
+        if (water1 == 0) {
             waterflag++;
+        }
+        if (water1a == 1){
+            waterflag2++;
         }
 
 
@@ -167,8 +171,11 @@
             //if (ar2[k]>=64)调试语句，是可行的
             //{water2++;}
         }
-        if (water2 == 0 || water2a == 1) {
+        if (water2 == 0) {
             waterflag++;
+        }
+        if (water2a == 1){
+            waterflag2++;
         }
 
         var water3 = 0;
@@ -181,8 +188,11 @@
                 water3a = 1;
             }
         }
-        if (water3 == 0 || water3a == 1) {
+        if (water3 == 0 ) {
             waterflag++;
+        }
+        if (water3a == 1) {
+            waterflag2++;
         }
 
 
@@ -196,8 +206,11 @@
                 water4a = 1;
             }
         }
-        if (water4 == 0 || water4a == 1) {
+        if (water4 == 0) {
             waterflag++;
+        }
+        if (water4a == 1) {
+            waterflag2++;
         }
 
         var water5 = 0;
@@ -210,8 +223,11 @@
                 water5a = 1;
             }
         }
-        if (water5 == 0 || water5a == 1) {
+        if (water5 == 0) {
             waterflag++;
+        }
+        if (water5a == 1) {
+            waterflag2++;
         }
 
         var water6 = 0;
@@ -224,10 +240,14 @@
                 water6a = 1;
             }
         }
-        if (water6 == 0 || water6a == 1) {
+        if (water6 == 0) {
             waterflag++;
         }
+        if (water6a == 1) {
+            waterflag2++;
+        }
 
+document.getElementById("header7").innerHTML= "css/light.jpg";
 
         if (waterflag > 0) {
             document.getElementById('header7').className = "main";
@@ -235,10 +255,17 @@
             document.getElementById('header7').className = "normal";
         }
 
+        if (waterflag2 > 0) {
+            document.getElementById('header10').className = "main";
+        } else {
+            document.getElementById('header10').className = "normal";
+        }
+
 
         var press1 = 0;
         var press1a = 0;
         var pressflag = 0;
+        var pressflag2=0;
         for (var k = 0; k < 60; k++) {
             if (aar[k] != null) {
                 press1 = 1;
@@ -247,8 +274,11 @@
                 press1a = 1;
             }
         }
-        if (press1 == 0 || press1a == 1) {
+        if (press1 == 0) {
             pressflag++;
+        }
+        if (press1a == 1) {
+            pressflag2++;
         }
 
 
@@ -264,8 +294,12 @@
             //if (aar2[k]>=64)调试语句，是可行的
             //{press2++;}
         }
-        if (press2 == 0 || press2a == 1) {
+        if (press2 == 0) {
             pressflag++;
+        }
+        if (press2a == 1)
+        {
+            pressflag2++;
         }
 
         var press3 = 0;
@@ -278,8 +312,11 @@
                 press3a = 1;
             }
         }
-        if (press3 == 0 || press3a == 1) {
+        if (press3 == 0) {
             pressflag++;
+        }
+        if (press3a == 1) {
+            pressflag2++;
         }
 
 
@@ -293,8 +330,11 @@
                 press4a = 1;
             }
         }
-        if (press4 == 0 || press4a == 1) {
+        if (press4 == 0) {
             pressflag++;
+        }
+        if (press4a == 1) {
+            pressflag2++;
         }
 
         var press5 = 0;
@@ -307,8 +347,11 @@
                 press5a = 1;
             }
         }
-        if (press5 == 0 || press5a == 1) {
+        if (press5 == 0) {
             pressflag++;
+        }
+        if (press5a == 1) {
+            pressflag2++;
         }
 
         var press6 = 0;
@@ -322,8 +365,11 @@
                 press6a = 1;
             }
         }
-        if (press6 == 0 || press6a == 1) {
+        if (press6 == 0) {
             pressflag++;
+        }
+        if (press6a == 1) {
+            pressflag2++;
         }
 
         if (pressflag > 0) {
@@ -331,11 +377,17 @@
         } else {
             document.getElementById('header8').className = "normal";
         }
+        if (pressflag2 > 0) {
+            document.getElementById('header11').className = "main";
+        } else {
+            document.getElementById('header11').className = "normal";
+        }
 
 
         var strain1 = 0;
         var strain1a = 0;
         var strainflag = 0;
+        var strainflag2=0;
         for (var k = 0; k < 60; k++) {
             if (aaar[k] != null) {
                 strain1 = 1;
@@ -347,9 +399,12 @@
             //if (aaar[k]>2)
             //{strain1a=strain1a+1;}
         }
-        if (strain1 == 0 || strain1a == 1) //if (strain1a==60)
+        if (strain1 == 0) //if (strain1a==60)
         {
             strainflag++;
+        }
+        if (strain1a == 1) {
+            strainflag2++;
         }
 
 
@@ -365,8 +420,11 @@
             //if (aaar2[k]>=64)调试语句，是可行的
             //{strain2++;}
         }
-        if (strain2 == 0 || strain2a == 1) {
+        if (strain2 == 0) {
             strainflag++;
+        }
+        if (strain2a == 1) {
+            strainflag2++;
         }
 
         var strain3 = 0;
@@ -379,8 +437,11 @@
                 strain3a = 1;
             }
         }
-        if (strain3 == 0 || strain3a == 1) {
+        if (strain3 == 0) {
             strainflag++;
+        }
+        if (strain3a == 1) {
+            strainflag2++;
         }
 
 
@@ -394,8 +455,11 @@
                 strain4a = 1;
             }
         }
-        if (strain4 == 0 || strain4a == 1) {
+        if (strain4 == 0) {
             strainflag++;
+        }
+        if (strain4a == 1) {
+            strainflag2++;
         }
 
         var strain5 = 0;
@@ -408,8 +472,11 @@
                 strain5a = 1;
             }
         }
-        if (strain5 == 0 || strain5a == 1) {
+        if (strain5 == 0) {
             strainflag++;
+        }
+        if (strain5a == 1) {
+            strainflag2++;
         }
 
         var strain6 = 0;
@@ -423,8 +490,11 @@
                 strain6a = 1;
             }
         }
-        if (strain6 == 0 || strain6a == 1) {
+        if (strain6 == 0) {
             strainflag++;
+        }
+        if (strain6a == 1) {
+            strainflag2++;
         }
 
 
@@ -432,6 +502,11 @@
             document.getElementById('header9').className = "main";
         } else {
             document.getElementById('header9').className = "normal";
+        }
+        if (strainflag2 > 0) {
+            document.getElementById('header12').className = "main";
+        } else {
+            document.getElementById('header12').className = "normal";
         }
 
 
