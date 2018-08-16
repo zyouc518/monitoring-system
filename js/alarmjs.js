@@ -154,7 +154,7 @@
         if (water1 == 0) {
             waterflag++;
         }
-        if (water1a == 1){
+        if (water1a == 1) {
             waterflag2++;
         }
 
@@ -174,7 +174,7 @@
         if (water2 == 0) {
             waterflag++;
         }
-        if (water2a == 1){
+        if (water2a == 1) {
             waterflag2++;
         }
 
@@ -188,7 +188,7 @@
                 water3a = 1;
             }
         }
-        if (water3 == 0 ) {
+        if (water3 == 0) {
             waterflag++;
         }
         if (water3a == 1) {
@@ -247,7 +247,7 @@
             waterflag2++;
         }
 
-// document.getElementById("header7").innerHTML= "css/light.jpg";
+        // document.getElementById("header7").innerHTML= "css/light.jpg";
 
         if (waterflag > 0) {
             document.getElementById('header7').className = "main";
@@ -265,7 +265,7 @@
         var press1 = 0;
         var press1a = 0;
         var pressflag = 0;
-        var pressflag2=0;
+        var pressflag2 = 0;
         for (var k = 0; k < 60; k++) {
             if (aar[k] != null) {
                 press1 = 1;
@@ -297,8 +297,7 @@
         if (press2 == 0) {
             pressflag++;
         }
-        if (press2a == 1)
-        {
+        if (press2a == 1) {
             pressflag2++;
         }
 
@@ -387,10 +386,19 @@
         var strain1 = 0;
         var strain1a = 0;
         var strainflag = 0;
-        var strainflag2=0;
+        var strainflag2 = 0;
+        var yingflag1 = 0;
+        var yingflag2 = 0;
+        var yingflag3 = 0;
+        var yingflag4 = 0;
+        var yingflag5 = 0;
+        var yingflag6 = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar[k] != null) {
                 strain1 = 1;
+            }
+            if (aaar[k] >= 1530) {
+                yingflag1 = 1;
             }
             if (aaar[k] > 2000) //(aaar[k]>2)
             {
@@ -406,13 +414,20 @@
         if (strain1a == 1) {
             strainflag2++;
         }
-
+        if (yingflag1 == 1) {
+            document.getElementById('header13').className = "main";
+        } else {
+            document.getElementById('header13').className = "normal";
+        }
 
         var strain2 = 0;
         var strain2a = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar2[k] != null) {
                 strain2 = 1;
+            }
+            if (aaar2[k] >= 1530) {
+                yingflag2 = 1;
             }
             if (aaar2[k] > 2000) {
                 strain2a = 1;
@@ -426,12 +441,20 @@
         if (strain2a == 1) {
             strainflag2++;
         }
+        if (yingflag2 == 1) {
+            document.getElementById('header14').className = "main";
+        } else {
+            document.getElementById('header14').className = "normal";
+        }
 
         var strain3 = 0;
         var strain3a = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar3[k] != null) {
                 strain3 = 1;
+            }
+            if (aaar3[k] >= 1530) {
+                yingflag3 = 1;
             }
             if (aaar3[k] > 2000) {
                 strain3a = 1;
@@ -443,13 +466,20 @@
         if (strain3a == 1) {
             strainflag2++;
         }
-
+        if (yingflag3 == 1) {
+            document.getElementById('header15').className = "main";
+        } else {
+            document.getElementById('header15').className = "normal";
+        }
 
         var strain4 = 0;
         var strain4a = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar4[k] != null) {
                 strain4 = 1;
+            }
+            if (aaar4[k] >= 1530) {
+                yingflag4 = 1;
             }
             if (aaar4[k] > 2000) {
                 strain4a = 1;
@@ -461,12 +491,20 @@
         if (strain4a == 1) {
             strainflag2++;
         }
+        if (yingflag4 == 1) {
+            document.getElementById('header16').className = "main";
+        } else {
+            document.getElementById('header16').className = "normal";
+        }
 
         var strain5 = 0;
         var strain5a = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar5[k] != null) {
                 strain5 = 1;
+            }
+            if (aaar5[k] >= 1530) {
+                yingflag5 = 1;
             }
             if (aaar5[k] > 2000) {
                 strain5a = 1;
@@ -478,12 +516,20 @@
         if (strain5a == 1) {
             strainflag2++;
         }
+        if (yingflag5 == 1) {
+            document.getElementById('header17').className = "main";
+        } else {
+            document.getElementById('header17').className = "normal";
+        }
 
         var strain6 = 0;
         var strain6a = 0;
         for (var k = 0; k < 60; k++) {
             if (aaar6[k] != null) {
                 strain6 = 1;
+            }
+            if (aaar6[k] >= 1530) {
+                yingflag6 = 1;
             }
             if (aaar6[k] > 2000) //(aar6[k]>2)
             {
@@ -495,6 +541,11 @@
         }
         if (strain6a == 1) {
             strainflag2++;
+        }
+        if (yingflag6 == 1) {
+            document.getElementById('header18').className = "main";
+        } else {
+            document.getElementById('header18').className = "normal";
         }
 
 
