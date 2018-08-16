@@ -70,7 +70,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -130,7 +129,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -191,7 +189,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -251,7 +248,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -311,7 +307,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -371,7 +366,6 @@ $(document).ready(function () {
                         labelString: 'Value (%)'
                     },
                     ticks: {
-                        beginAtZero: true,
                         stepSize: 10
                     }
                 }]
@@ -432,12 +426,12 @@ $(document).ready(function () {
                 var sum5 = 0;
                 var sum6 = 0;
                 for (let j = 0; j < 60; j++) {
-                    sum1 += ar[60 * i + j];
-                    sum2 += ar2[60 * i + j];
-                    sum3 += ar3[60 * i + j];
-                    sum4 += ar4[60 * i + j];
-                    sum5 += ar5[60 * i + j];
-                    sum6 += ar6[60 * i + j];
+                    sum1 += Number(ar[60 * i + j]);
+                    sum2 += Number(ar2[60 * i + j]);
+                    sum3 += Number(ar3[60 * i + j]);
+                    sum4 += Number(ar4[60 * i + j]);
+                    sum5 += Number(ar5[60 * i + j]);
+                    sum6 += Number(ar6[60 * i + j]);
                 }
                 avg[i] = (sum1 / 60).toFixed(2);
                 avg2[i] = (sum2 / 60).toFixed(2);
@@ -445,6 +439,7 @@ $(document).ready(function () {
                 avg4[i] = (sum4 / 60).toFixed(2);
                 avg5[i] = (sum5 / 60).toFixed(2);
                 avg6[i] = (sum6 / 60).toFixed(2);
+                console.log(sum3);
             }
             chart.arrows[0].setValue(avg[0]);
             chart.axes[0].setTopText(avg[0] + " %");
@@ -564,12 +559,12 @@ $(document).ready(function () {
             var sum5 = 0;
             var sum6 = 0;
             for (let i = 0; i < 60; i++) {
-                sum1 += parseFloat(aar[i]);
-                sum2 += parseFloat(aar2[i]);
-                sum3 += parseFloat(aar3[i]);
-                sum4 += parseFloat(aar4[i]);
-                sum5 += parseFloat(aar5[i]);
-                sum6 += parseFloat(aar6[i]);
+                sum1 += Number(ar[i]);
+                sum2 += Number(ar2[i]);
+                sum3 += Number(ar3[i]);
+                sum4 += Number(ar4[i]);
+                sum5 += Number(ar5[i]);
+                sum6 += Number(ar6[i]);
             }
             avg = (sum1 / 60).toFixed(2);
             avg2 = (sum2 / 60).toFixed(2);
@@ -607,12 +602,12 @@ $(document).ready(function () {
             // adjust darker band to new ar[ar.length-1]
             chart6.axes[0].bands[1].setEndValue(avg6);
 
-            var currentValue1 = avg[0];
-            var currentValue2 = avg2[0];
-            var currentValue3 = avg3[0];
-            var currentValue4 = avg4[0];
-            var currentValue5 = avg5[0];
-            var currentValue6 = avg6[0]
+            var currentValue1 = avg;
+            var currentValue2 = avg2;
+            var currentValue3 = avg3;
+            var currentValue4 = avg4;
+            var currentValue5 = avg5;
+            var currentValue6 = avg6;
             for (var j = 0; j < 20; j++) {
                 valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
@@ -664,5 +659,5 @@ $(document).ready(function () {
             window.myLine5.update();
             window.myLine6.update();
         };
-    }, 1000);
+    }, 60000);
 });

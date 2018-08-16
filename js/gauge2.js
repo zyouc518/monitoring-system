@@ -427,12 +427,12 @@ $(document).ready(function () {
                 var sum5 = 0;
                 var sum6 = 0;
                 for (let j = 0; j < 60; j++) {
-                    sum1 += parseFloat(ar[60 * i + j]);
-                    sum2 += parseFloat(ar2[60 * i + j]);
-                    sum3 += parseFloat(ar3[60 * i + j]);
-                    sum4 += parseFloat(ar4[60 * i + j]);
-                    sum5 += parseFloat(ar5[60 * i + j]);
-                    sum6 += parseFloat(ar6[60 * i + j]);
+                    sum1 += Number(ar[60 * i + j]);
+                    sum2 += Number(ar2[60 * i + j]);
+                    sum3 += Number(ar3[60 * i + j]);
+                    sum4 += Number(ar4[60 * i + j]);
+                    sum5 += Number(ar5[60 * i + j]);
+                    sum6 += Number(ar6[60 * i + j]);
                 }
                 avg[i] = (sum1 / 60).toFixed(2);
                 avg2[i] = (sum2 / 60).toFixed(2);
@@ -559,12 +559,12 @@ $(document).ready(function () {
             var sum5 = 0;
             var sum6 = 0;
             for (let i = 0; i < 60; i++) {
-                sum1 += parseFloat(aar[i]);
-                sum2 += parseFloat(aar2[i]);
-                sum3 += parseFloat(aar3[i]);
-                sum4 += parseFloat(aar4[i]);
-                sum5 += parseFloat(aar5[i]);
-                sum6 += parseFloat(aar6[i]);
+                sum1 += Number(aar[i]);
+                sum2 += Number(aar2[i]);
+                sum3 += Number(aar3[i]);
+                sum4 += Number(aar4[i]);
+                sum5 += Number(aar5[i]);
+                sum6 += Number(aar6[i]);
             }
             avg = (sum1 / 60).toFixed(2);
             avg2 = (sum2 / 60).toFixed(2);
@@ -659,5 +659,5 @@ $(document).ready(function () {
             window.myLine6.update();
         };
     }
-    setInterval(drawLine, 1000);
+    setInterval(drawLine, 60000);
 });
