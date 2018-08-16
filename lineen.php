@@ -62,7 +62,7 @@
             <div class="form-inline">
                 <div class="card" style="width: 45%;">
                     <div class="card-body">
-                        2# cargo hold load：
+                        No. 2 cargo hold load：
                         <input class="form-control" type="number" placeholder="Input load here" id="mass" style="width:50%"> t
                         <br>Choose fuel type：
                         <div class="form-check form-check-inline">

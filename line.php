@@ -61,7 +61,7 @@
             <div class="form-inline">
                 <div class="card" style="width: 40%;">
                     <div class="card-body">
-                        2#货舱装载量：
+                        No.2 货舱装载量：
                         <input class="form-control" type="number" placeholder="在此输入装载量" id="mass" style="width:50%"> 吨
                         <br>请选择燃料类型：
                         <div class="form-check form-check-inline">

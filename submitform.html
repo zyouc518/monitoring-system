@@ -49,7 +49,7 @@
             top: 25%;
             width: 50%;
             height: 155px;
-            color: black;
+            color: grey;
         }
 
         #header2 {
@@ -58,7 +58,7 @@
             top: 50%;
             width: 50%;
             height: 155px;
-            color: black;
+            color: grey;
         }
 
         #header3 {
@@ -67,7 +67,7 @@
             top: 75%;
             width: 50%;
             height: 155px;
-            color: black;
+            color: grey;
         }
 
         #header4 {
@@ -145,6 +145,60 @@
         #header12 {
             position: absolute;
             left: 7%;
+            top: 75%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+		
+		#header13 {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+
+        #header14 {
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+
+        #header15 {
+            position: absolute;
+            left: 5%;
+            top: 75%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+
+        #header16 {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+
+        #header17 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            height: 155px;
+            color: black;
+        }
+
+        #header18 {
+            position: absolute;
+            left: 50%;
             top: 75%;
             width: 50%;
             height: 155px;
@@ -257,16 +311,16 @@
         </nav>
         <div id="content">
             <div id="div0">
-                <div class="card" style="width: 50%;height: 40%;">
+                <div class="card" style="width: 25%;height: 40%;">
                     <!--                     <div class="card-body">-->
                     <form action="php/alarmphp.php" method="post">
                         <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:40%" name="mass">&emsp;t/m³
+                            <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:80%" name="mass">&emsp;t/m³
                         </div>
                         <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="在此输入TML" id="waterper" style="width:40%" name="water">&emsp;%
+                            <input class="form-control" type="number" placeholder="在此输入TML" id="waterper" style="width:80%" name="water">&emsp;%
                         </div>
-                        <button type="button" class="btn btn-primary" style="width:10%" onclick="save()">提交</button>
+                        <button type="button" class="btn btn-primary" style="width:20%" onclick="save()">提交</button>
                     </form>
                 </div>
             </div>
@@ -295,17 +349,17 @@
                         <!--   </div> -->
 
                         <!-- 一级预警：矿砂局部含水率已大于TML，将会发生液化。 -->
-                        <div id="header1" style="width:100%">● 一级 矿砂局部含水率已大于TML,将会发生液化。</div>
-                        <div id="header2" style="width:100%">● 二级 调整航向，减少受风面积，调整航速，减少船舶运动加速度。</div>
-                        <div id="header3" style="width:100%">● 三级 寻找锚地，就近靠港，停船。</div>
+                        <div id="header1" style="width:100%">● 矿砂局部含水率已大于TML，将会发生液化。</div>
+                        <div id="header2" style="width:100%">● 进行船舶稳性估算，调整航向，减少受风面积，调整航速。</div>
+                        <div id="header3" style="width:100%">● 进行船舶稳性估算，寻找锚地或就近靠港停船。</div>
                     </div>
                 </div>
             </div>
             <div id="div2">
                 <div class="card" style="width: 100%;height: 100%;">
                     <div class="card-body">
-                        <h3>导出数据</h3>
-                        <button type="button" class="btn btn-primary" onclick="alert('没有找到数据!')">报警信息查询</button>
+                        <h3>报警信息查询</h3>
+                        <button type="button" class="btn btn-primary" onclick="alert('没有找到数据!')">导出到csv</button>
                     </div>
                 </div>
             </div>
@@ -336,12 +390,12 @@
                 <div class="card" style="width: 100%;height: 100%;">
                     <div class="card-body">
                         <h3>货舱局部应力</h3>
-                        <div id="header1">● 后舱壁上方</div>
-                        <div id="header2">● 后舱壁中部</div>
-                        <div id="header3">● 后舱壁中部</div>
-                        <div id="header4">● 前舱壁上方</div>
-                        <div id="header5">● 前舱壁中部</div>
-                        <div id="header6">● 前舱壁中部</div>
+                        <div id="header13">● 后舱壁上方</div>
+                        <div id="header14">● 后舱壁中部</div>
+                        <div id="header15">● 后舱壁中部</div>
+                        <div id="header16">● 前舱壁上方</div>
+                        <div id="header17">● 前舱壁中部</div>
+                        <div id="header18">● 前舱壁中部</div>
                     </div>
                 </div>
             </div>
