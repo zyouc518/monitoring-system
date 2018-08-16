@@ -7,9 +7,9 @@
 
     setInterval(function () {
 
-        $('#results').load('php/g1.php');
-        $('#results').load('php/g2.php');
-        $('#results').load('php/g3.php');
+        $('#results').load('php/alarm1.php');
+        $('#results').load('php/alarm2.php');
+        $('#results').load('php/alarm3.php');
 
         var alarm1flag = 0;
         var a = document.getElementById('rhocon').innerHTML;
@@ -247,7 +247,7 @@
             waterflag2++;
         }
 
-document.getElementById("header7").innerHTML= "css/light.jpg";
+// document.getElementById("header7").innerHTML= "css/light.jpg";
 
         if (waterflag > 0) {
             document.getElementById('header7').className = "main";

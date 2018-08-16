@@ -378,40 +378,6 @@ $(document).ready(function () {
             }
         }
     };
-    // var ajax = new XMLHttpRequest();
-    // var method = "GET";
-    // var url = "php/g1.php";
-    // var asynchronous = true;
-
-    // ajax.open(method, url, asynchronous);
-    // //sending ajax request
-    // ajax.send();
-
-    // //receiving response from g1.php
-    // ajax.onreadystatechange = function () {
-    //     // if (this.readyState == 4 && this.status == 200) {
-    //     var res = JSON.parse(this.responseText);
-    //     var ar = new Array();
-    //     var ar2 = new Array();
-    //     var ar3 = new Array();
-    //     var ar4 = new Array();
-    //     var ar5 = new Array();
-    //     var ar6 = new Array();
-    //     for (let i = 0; i < 300; i++) {
-    //         ar.push(res[i].WCAU);
-    //         ar2.push(res[i].WCAM);
-    //         ar3.push(res[i].WCAL);
-    //         ar4.push(res[i].WCFU);
-    //         ar5.push(res[i].WCFM);
-    //         ar6.push(res[i].WCFL);
-    //     }
-    //     valueArray1 = ar.slice(0, 19).reverse();
-    //     valueArray2 = ar2.slice(0, 19).reverse();
-    //     valueArray3 = ar3.slice(0, 19).reverse();
-    //     valueArray4 = ar4.slice(0, 19).reverse();
-    //     valueArray5 = ar5.slice(0, 19).reverse();
-    //     valueArray6 = ar6.slice(0, 19).reverse();
-    // };
     var ctx1 = document.getElementById("myChart1").getContext('2d');
     window.myLine1 = new Chart(ctx1, config1);
     var ctx2 = document.getElementById("myChart2").getContext('2d');
@@ -452,43 +418,70 @@ $(document).ready(function () {
                 ar5.push(res[i].WCFM);
                 ar6.push(res[i].WCFL);
             }
-            // }
-            chart.arrows[0].setValue(ar[0]);
-            chart.axes[0].setTopText(ar[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart.axes[0].bands[1].setEndValue(ar[0]);
-
-            chart2.arrows[0].setValue(ar2[0]);
-            chart2.axes[0].setTopText(ar2[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart2.axes[0].bands[1].setEndValue(ar2[0]);
-
-            chart3.arrows[0].setValue(ar3[0]);
-            chart3.axes[0].setTopText(ar3[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart3.axes[0].bands[1].setEndValue(ar3[0]);
-
-            chart4.arrows[0].setValue(ar4[0]);
-            chart4.axes[0].setTopText(ar4[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart4.axes[0].bands[1].setEndValue(ar4[0]);
-
-            chart5.arrows[0].setValue(ar5[0]);
-            chart5.axes[0].setTopText(ar5[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart5.axes[0].bands[1].setEndValue(ar5[0]);
-
-            chart6.arrows[0].setValue(ar6[0]);
-            chart6.axes[0].setTopText(ar6[0] + " %");
-            // adjust darker band to new ar[ar.length-1]
-            chart6.axes[0].bands[1].setEndValue(ar6[0]);
+            var avg = new Array();
+            var avg2 = new Array();
+            var avg3 = new Array();
+            var avg4 = new Array();
+            var avg5 = new Array();
+            var avg6 = new Array();
             for (let i = 0; i < 20; i++) {
-                valueArray1[i] = ar[19 - i];
-                valueArray2[i] = ar2[19 - i];
-                valueArray3[i] = ar3[19 - i];
-                valueArray4[i] = ar4[19 - i];
-                valueArray5[i] = ar5[19 - i];
-                valueArray6[i] = ar6[19 - i];
+                var sum1 = 0;
+                var sum2 = 0;
+                var sum3 = 0;
+                var sum4 = 0;
+                var sum5 = 0;
+                var sum6 = 0;
+                for (let j = 0; j < 60; j++) {
+                    sum1 += ar[60 * i + j];
+                    sum2 += ar2[60 * i + j];
+                    sum3 += ar3[60 * i + j];
+                    sum4 += ar4[60 * i + j];
+                    sum5 += ar5[60 * i + j];
+                    sum6 += ar6[60 * i + j];
+                }
+                avg[i] = (sum1 / 60).toFixed(2);
+                avg2[i] = (sum2 / 60).toFixed(2);
+                avg3[i] = (sum3 / 60).toFixed(2);
+                avg4[i] = (sum4 / 60).toFixed(2);
+                avg5[i] = (sum5 / 60).toFixed(2);
+                avg6[i] = (sum6 / 60).toFixed(2);
+            }
+            chart.arrows[0].setValue(avg[0]);
+            chart.axes[0].setTopText(avg[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart.axes[0].bands[1].setEndValue(avg[0]);
+
+            chart2.arrows[0].setValue(avg2[0]);
+            chart2.axes[0].setTopText(avg2[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart2.axes[0].bands[1].setEndValue(avg2[0]);
+
+            chart3.arrows[0].setValue(avg3[0]);
+            chart3.axes[0].setTopText(avg3[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart3.axes[0].bands[1].setEndValue(avg3[0]);
+
+            chart4.arrows[0].setValue(avg4[0]);
+            chart4.axes[0].setTopText(avg4[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart4.axes[0].bands[1].setEndValue(avg4[0]);
+
+            chart5.arrows[0].setValue(avg5[0]);
+            chart5.axes[0].setTopText(avg5[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart5.axes[0].bands[1].setEndValue(avg5[0]);
+
+            chart6.arrows[0].setValue(avg6[0]);
+            chart6.axes[0].setTopText(avg6[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart6.axes[0].bands[1].setEndValue(avg6[0]);
+            for (let i = 0; i < 20; i++) {
+                valueArray1[i] = avg[19 - i];
+                valueArray2[i] = avg2[19 - i];
+                valueArray3[i] = avg3[19 - i];
+                valueArray4[i] = avg4[19 - i];
+                valueArray5[i] = avg5[19 - i];
+                valueArray6[i] = avg6[19 - i];
             }
             var d = new Date();
             var hour = d.getHours();
@@ -558,43 +551,68 @@ $(document).ready(function () {
                 ar5.push(res[i].WCFM);
                 ar6.push(res[i].WCFL);
             }
-            // }
-            chart.arrows[0].setValue(ar[0]);
-            chart.axes[0].setTopText(ar[0] + " %");
+            var avg = 0;
+            var avg2 = 0;
+            var avg3 = 0;
+            var avg4 = 0;
+            var avg5 = 0;
+            var avg6 = 0;
+            var sum1 = 0;
+            var sum2 = 0;
+            var sum3 = 0;
+            var sum4 = 0;
+            var sum5 = 0;
+            var sum6 = 0;
+            for (let i = 0; i < 60; i++) {
+                sum1 += parseFloat(aar[i]);
+                sum2 += parseFloat(aar2[i]);
+                sum3 += parseFloat(aar3[i]);
+                sum4 += parseFloat(aar4[i]);
+                sum5 += parseFloat(aar5[i]);
+                sum6 += parseFloat(aar6[i]);
+            }
+            avg = (sum1 / 60).toFixed(2);
+            avg2 = (sum2 / 60).toFixed(2);
+            avg3 = (sum3 / 60).toFixed(2);
+            avg4 = (sum4 / 60).toFixed(2);
+            avg5 = (sum5 / 60).toFixed(2);
+            avg6 = (sum6 / 60).toFixed(2);
+            chart.arrows[0].setValue(avg);
+            chart.axes[0].setTopText(avg + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart.axes[0].bands[1].setEndValue(ar[0]);
+            chart.axes[0].bands[1].setEndValue(avg);
 
-            chart2.arrows[0].setValue(ar2[0]);
-            chart2.axes[0].setTopText(ar2[0] + " %");
+            chart2.arrows[0].setValue(avg2);
+            chart2.axes[0].setTopText(avg2 + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart2.axes[0].bands[1].setEndValue(ar2[0]);
+            chart2.axes[0].bands[1].setEndValue(avg2);
 
-            chart3.arrows[0].setValue(ar3[0]);
-            chart3.axes[0].setTopText(ar3[0] + " %");
+            chart3.arrows[0].setValue(avg3);
+            chart3.axes[0].setTopText(avg3 + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart3.axes[0].bands[1].setEndValue(ar3[0]);
+            chart3.axes[0].bands[1].setEndValue(avg3);
 
-            chart4.arrows[0].setValue(ar4[0]);
-            chart4.axes[0].setTopText(ar4[0] + " %");
+            chart4.arrows[0].setValue(avg4);
+            chart4.axes[0].setTopText(avg4 + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart4.axes[0].bands[1].setEndValue(ar4[0]);
+            chart4.axes[0].bands[1].setEndValue(avg4);
 
-            chart5.arrows[0].setValue(ar5[0]);
-            chart5.axes[0].setTopText(ar5[0] + " %");
+            chart5.arrows[0].setValue(avg5);
+            chart5.axes[0].setTopText(avg5 + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart5.axes[0].bands[1].setEndValue(ar5[0]);
+            chart5.axes[0].bands[1].setEndValue(avg5);
 
-            chart6.arrows[0].setValue(ar6[0]);
-            chart6.axes[0].setTopText(ar6[0] + " %");
+            chart6.arrows[0].setValue(avg6);
+            chart6.axes[0].setTopText(avg6 + " %");
             // adjust darker band to new ar[ar.length-1]
-            chart6.axes[0].bands[1].setEndValue(ar6[0]);
+            chart6.axes[0].bands[1].setEndValue(avg6);
 
-            var currentValue1 = ar[0];
-            var currentValue2 = ar2[0];
-            var currentValue3 = ar3[0];
-            var currentValue4 = ar4[0];
-            var currentValue5 = ar5[0];
-            var currentValue6 = ar6[0]
+            var currentValue1 = avg[0];
+            var currentValue2 = avg2[0];
+            var currentValue3 = avg3[0];
+            var currentValue4 = avg4[0];
+            var currentValue5 = avg5[0];
+            var currentValue6 = avg6[0]
             for (var j = 0; j < 20; j++) {
                 valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
