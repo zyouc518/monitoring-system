@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+	<style>
+#box_relative {
+  position: absolute;
+  left: 20px;
+  top: 55px;
+}
+</style>
     <!-- JavaScript -->
     <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/jquery.js"></script>
@@ -64,7 +71,7 @@
                     <div class="card-body">
                         No. 2 cargo hold load：
                         <input class="form-control" type="number" placeholder="Input load here" id="mass" style="width:50%"> t
-                        <br>Choose fuel type：
+                        <div id="box_relative">Choose fuel type：</div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="HFO" checked>
                             <label class="form-check-label" for="inlineRadio2">HFO&emsp;&emsp;&emsp;</label>
