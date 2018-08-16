@@ -8,7 +8,6 @@ $(document).ready(function () {
     var valueArray4 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     var valueArray5 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     var valueArray6 = Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-    var getValueIndex = 0;
     var d = new Date();
     var hour = d.getHours();
     var minute = d.getMinutes();
@@ -27,6 +26,9 @@ $(document).ready(function () {
         }
     } else {
         minuteb -= 19;
+    }
+    if (minuteb < 10) {
+        minuteb = "0" + minuteb;
     }
     timeb = hourb + ":" + minuteb;
     var config1 = {
@@ -376,6 +378,40 @@ $(document).ready(function () {
             }
         }
     };
+    // var ajax = new XMLHttpRequest();
+    // var method = "GET";
+    // var url = "php/g1.php";
+    // var asynchronous = true;
+
+    // ajax.open(method, url, asynchronous);
+    // //sending ajax request
+    // ajax.send();
+
+    // //receiving response from g1.php
+    // ajax.onreadystatechange = function () {
+    //     // if (this.readyState == 4 && this.status == 200) {
+    //     var res = JSON.parse(this.responseText);
+    //     var ar = new Array();
+    //     var ar2 = new Array();
+    //     var ar3 = new Array();
+    //     var ar4 = new Array();
+    //     var ar5 = new Array();
+    //     var ar6 = new Array();
+    //     for (let i = 0; i < 300; i++) {
+    //         ar.push(res[i].WCAU);
+    //         ar2.push(res[i].WCAM);
+    //         ar3.push(res[i].WCAL);
+    //         ar4.push(res[i].WCFU);
+    //         ar5.push(res[i].WCFM);
+    //         ar6.push(res[i].WCFL);
+    //     }
+    //     valueArray1 = ar.slice(0, 19).reverse();
+    //     valueArray2 = ar2.slice(0, 19).reverse();
+    //     valueArray3 = ar3.slice(0, 19).reverse();
+    //     valueArray4 = ar4.slice(0, 19).reverse();
+    //     valueArray5 = ar5.slice(0, 19).reverse();
+    //     valueArray6 = ar6.slice(0, 19).reverse();
+    // };
     var ctx1 = document.getElementById("myChart1").getContext('2d');
     window.myLine1 = new Chart(ctx1, config1);
     var ctx2 = document.getElementById("myChart2").getContext('2d');
@@ -388,54 +424,177 @@ $(document).ready(function () {
     window.myLine5 = new Chart(ctx5, config5);
     var ctx6 = document.getElementById("myChart6").getContext('2d');
     window.myLine6 = new Chart(ctx6, config6);
+    window.onload = function () {
+        var ajax = new XMLHttpRequest();
+        var method = "GET";
+        var url = "php/g1.php";
+        var asynchronous = true;
+
+        ajax.open(method, url, asynchronous);
+        //sending ajax request
+        ajax.send();
+
+        //receiving response from g1.php
+        ajax.onreadystatechange = function () {
+            // if (this.readyState == 4 && this.status == 200) {
+            var res = JSON.parse(this.responseText);
+            var ar = new Array();
+            var ar2 = new Array();
+            var ar3 = new Array();
+            var ar4 = new Array();
+            var ar5 = new Array();
+            var ar6 = new Array();
+            for (let i = 0; i < 1200; i++) {
+                ar.push(res[i].WCAU);
+                ar2.push(res[i].WCAM);
+                ar3.push(res[i].WCAL);
+                ar4.push(res[i].WCFU);
+                ar5.push(res[i].WCFM);
+                ar6.push(res[i].WCFL);
+            }
+            // }
+            chart.arrows[0].setValue(ar[0]);
+            chart.axes[0].setTopText(ar[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart.axes[0].bands[1].setEndValue(ar[0]);
+
+            chart2.arrows[0].setValue(ar2[0]);
+            chart2.axes[0].setTopText(ar2[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart2.axes[0].bands[1].setEndValue(ar2[0]);
+
+            chart3.arrows[0].setValue(ar3[0]);
+            chart3.axes[0].setTopText(ar3[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart3.axes[0].bands[1].setEndValue(ar3[0]);
+
+            chart4.arrows[0].setValue(ar4[0]);
+            chart4.axes[0].setTopText(ar4[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart4.axes[0].bands[1].setEndValue(ar4[0]);
+
+            chart5.arrows[0].setValue(ar5[0]);
+            chart5.axes[0].setTopText(ar5[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart5.axes[0].bands[1].setEndValue(ar5[0]);
+
+            chart6.arrows[0].setValue(ar6[0]);
+            chart6.axes[0].setTopText(ar6[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart6.axes[0].bands[1].setEndValue(ar6[0]);
+            for (let i = 0; i < 20; i++) {
+                valueArray1[i] = ar[19 - i];
+                valueArray2[i] = ar2[19 - i];
+                valueArray3[i] = ar3[19 - i];
+                valueArray4[i] = ar4[19 - i];
+                valueArray5[i] = ar5[19 - i];
+                valueArray6[i] = ar6[19 - i];
+            }
+            var d = new Date();
+            var hour = d.getHours();
+            var minute = d.getMinutes();
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+            time = hour + ":" + minute;
+            var hourb = d.getHours();
+            var minuteb = d.getMinutes();
+            if (minuteb < 19) {
+                minuteb = minuteb + 60 - 19;
+                if (hourb == 0) {
+                    hourb = 23;
+                } else {
+                    hourb -= 1;
+                }
+            } else {
+                minuteb -= 19;
+            }
+            if (minuteb < 10) {
+                minuteb = "0" + minuteb;
+            }
+            timeb = hourb + ":" + minuteb;
+            window.myLine1.data.labels[19] = time;
+            window.myLine2.data.labels[19] = time;
+            window.myLine3.data.labels[19] = time;
+            window.myLine4.data.labels[19] = time;
+            window.myLine5.data.labels[19] = time;
+            window.myLine6.data.labels[19] = time;
+
+            window.myLine1.update();
+            window.myLine2.update();
+            window.myLine3.update();
+            window.myLine4.update();
+            window.myLine5.update();
+            window.myLine6.update();
+        };
+    };
     setInterval(function () {
-        $('#results').load('php/g1.php');
-        chart.arrows[0].setValue(ar[0]);
-        chart.axes[0].setTopText(ar[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart.axes[0].bands[1].setEndValue(ar[0]);
+        // $('#results').load('php/g1.php');
+        //call ajax
+        var ajax = new XMLHttpRequest();
+        var method = "GET";
+        var url = "php/g1.php";
+        var asynchronous = true;
 
-        chart2.arrows[0].setValue(ar2[0]);
-        chart2.axes[0].setTopText(ar2[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart2.axes[0].bands[1].setEndValue(ar2[0]);
+        ajax.open(method, url, asynchronous);
+        //sending ajax request
+        ajax.send();
 
-        chart3.arrows[0].setValue(ar3[0]);
-        chart3.axes[0].setTopText(ar3[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart3.axes[0].bands[1].setEndValue(ar3[0]);
+        //receiving response from g1.php
+        ajax.onreadystatechange = function () {
+            // if (this.readyState == 4 && this.status == 200) {
+            var res = JSON.parse(this.responseText);
+            var ar = new Array();
+            var ar2 = new Array();
+            var ar3 = new Array();
+            var ar4 = new Array();
+            var ar5 = new Array();
+            var ar6 = new Array();
+            for (let i = 0; i < 1200; i++) {
+                ar.push(res[i].WCAU);
+                ar2.push(res[i].WCAM);
+                ar3.push(res[i].WCAL);
+                ar4.push(res[i].WCFU);
+                ar5.push(res[i].WCFM);
+                ar6.push(res[i].WCFL);
+            }
+            // }
+            chart.arrows[0].setValue(ar[0]);
+            chart.axes[0].setTopText(ar[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart.axes[0].bands[1].setEndValue(ar[0]);
 
-        chart4.arrows[0].setValue(ar4[0]);
-        chart4.axes[0].setTopText(ar4[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart4.axes[0].bands[1].setEndValue(ar4[0]);
+            chart2.arrows[0].setValue(ar2[0]);
+            chart2.axes[0].setTopText(ar2[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart2.axes[0].bands[1].setEndValue(ar2[0]);
 
-        chart5.arrows[0].setValue(ar5[0]);
-        chart5.axes[0].setTopText(ar5[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart5.axes[0].bands[1].setEndValue(ar5[0]);
+            chart3.arrows[0].setValue(ar3[0]);
+            chart3.axes[0].setTopText(ar3[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart3.axes[0].bands[1].setEndValue(ar3[0]);
 
-        chart6.arrows[0].setValue(ar6[0]);
-        chart6.axes[0].setTopText(ar6[0] + " %");
-        // adjust darker band to new ar[ar.length-1]
-        chart6.axes[0].bands[1].setEndValue(ar6[0]);
+            chart4.arrows[0].setValue(ar4[0]);
+            chart4.axes[0].setTopText(ar4[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart4.axes[0].bands[1].setEndValue(ar4[0]);
 
-        var currentValue1 = ar[0];
-        var currentValue2 = ar2[0];
-        var currentValue3 = ar3[0];
-        var currentValue4 = ar4[0];
-        var currentValue5 = ar5[0];
-        var currentValue6 = ar6[0];
-        valueArray1[getValueIndex] = currentValue1;
-        valueArray2[getValueIndex] = currentValue2;
-        valueArray3[getValueIndex] = currentValue3;
-        valueArray4[getValueIndex] = currentValue4;
-        valueArray5[getValueIndex] = currentValue5;
-        valueArray6[getValueIndex] = currentValue6;
-        if (getValueIndex < 20) {
-            getValueIndex++;
-        }
-        if (getValueIndex == 20) {
+            chart5.arrows[0].setValue(ar5[0]);
+            chart5.axes[0].setTopText(ar5[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart5.axes[0].bands[1].setEndValue(ar5[0]);
+
+            chart6.arrows[0].setValue(ar6[0]);
+            chart6.axes[0].setTopText(ar6[0] + " %");
+            // adjust darker band to new ar[ar.length-1]
+            chart6.axes[0].bands[1].setEndValue(ar6[0]);
+
+            var currentValue1 = ar[0];
+            var currentValue2 = ar2[0];
+            var currentValue3 = ar3[0];
+            var currentValue4 = ar4[0];
+            var currentValue5 = ar5[0];
+            var currentValue6 = ar6[0]
             for (var j = 0; j < 20; j++) {
                 valueArray1[j] = valueArray1[j + 1];
                 valueArray2[j] = valueArray2[j + 1];
@@ -450,39 +609,42 @@ $(document).ready(function () {
             valueArray4[19] = currentValue4;
             valueArray5[19] = currentValue5;
             valueArray6[19] = currentValue6;
-        }
-        var d = new Date();
-        var hour = d.getHours();
-        var minute = d.getMinutes();
-        if (minute < 10) {
-            minute = "0" + minute;
-        }
-        time = hour + ":" + minute;
-        var hourb = d.getHours();
-        var minuteb = d.getMinutes();
-        if (minuteb < 19) {
-            minuteb = minuteb + 60 - 19;
-            if (hourb == 0) {
-                hourb = 23;
-            } else {
-                hourb -= 1;
+            var d = new Date();
+            var hour = d.getHours();
+            var minute = d.getMinutes();
+            if (minute < 10) {
+                minute = "0" + minute;
             }
-        } else {
-            minuteb -= 19;
-        }
-        timeb = hourb + ":" + minuteb;
-        window.myLine1.data.labels[19] = time;
-        window.myLine2.data.labels[19] = time;
-        window.myLine3.data.labels[19] = time;
-        window.myLine4.data.labels[19] = time;
-        window.myLine5.data.labels[19] = time;
-        window.myLine6.data.labels[19] = time;
+            time = hour + ":" + minute;
+            var hourb = d.getHours();
+            var minuteb = d.getMinutes();
+            if (minuteb < 19) {
+                minuteb = minuteb + 60 - 19;
+                if (hourb == 0) {
+                    hourb = 23;
+                } else {
+                    hourb -= 1;
+                }
+            } else {
+                minuteb -= 19;
+            }
+            if (minuteb < 10) {
+                minuteb = "0" + minuteb;
+            }
+            timeb = hourb + ":" + minuteb;
+            window.myLine1.data.labels[19] = time;
+            window.myLine2.data.labels[19] = time;
+            window.myLine3.data.labels[19] = time;
+            window.myLine4.data.labels[19] = time;
+            window.myLine5.data.labels[19] = time;
+            window.myLine6.data.labels[19] = time;
 
-        window.myLine1.update();
-        window.myLine2.update();
-        window.myLine3.update();
-        window.myLine4.update();
-        window.myLine5.update();
-        window.myLine6.update();
+            window.myLine1.update();
+            window.myLine2.update();
+            window.myLine3.update();
+            window.myLine4.update();
+            window.myLine5.update();
+            window.myLine6.update();
+        };
     }, 1000);
 });

@@ -7,7 +7,33 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 
 	setInterval(function () {
 
-		$('#results').load('php/g1.php');
+		var ajax = new XMLHttpRequest();
+        var method = "GET";
+        var url = "php/g1.php";
+        var asynchronous = true;
+
+        ajax.open(method, url, asynchronous);
+        //sending ajax request
+        ajax.send();
+
+        //receiving response from g1.php
+        ajax.onreadystatechange = function () {
+            // if (this.readyState == 4 && this.status == 200) {
+            var res = JSON.parse(this.responseText);
+            var ar = new Array();
+            var ar2 = new Array();
+            var ar3 = new Array();
+            var ar4 = new Array();
+            var ar5 = new Array();
+            var ar6 = new Array();
+            for (let i = 0; i < 300; i++) {
+                ar.push(res[i].WCAU);
+                ar2.push(res[i].WCAM);
+                ar3.push(res[i].WCAL);
+                ar4.push(res[i].WCFU);
+                ar5.push(res[i].WCFM);
+                ar6.push(res[i].WCFL);
+            }
 
 		var press1 = 0;
 		var press1a = 0;
@@ -109,6 +135,6 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 		} else {
 			document.getElementById('header6').className = "normal";
 		}
-
+	};
 	}, 1000);
 });

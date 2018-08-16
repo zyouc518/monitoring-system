@@ -3,34 +3,14 @@
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "123456", "mineral liquefying");//改成对应的服务器地址、用户名、密码、数据库名称
 
-// Check connection
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-
-// Print host information
-echo "Connect Successfully. Host info: " . mysqli_get_host_info($link) . "<br>";
-$query = "SELECT * FROM `sensor1` ORDER BY Time_1 DESC LIMIT 300";//改成对应的数据表名称、列名称
+$query = "SELECT * FROM `sensor1` ORDER BY Time_1 DESC LIMIT 1200";//改成对应的数据表名称、列名称
 //SELECT * FROM `sensor1` ORDER BY `id` DESC LIMIT 10; 搜索最后10个
 
-$result = $link->query($query) or die($link->error);
-$i = 0;
-while ($car = $result->fetch_assoc()) {
-    $car_name1[$i] = $car['PAU'];
-    $car_name2[$i] = $car['PAM'];
-    $car_name3[$i] = $car['PAL'];
-    $car_name4[$i] = $car['PFU'];
-    $car_name5[$i] = $car['PFM'];
-    $car_name6[$i] = $car['PFL'];
-    $i++;
-}
-?>
+$result = $link->query($query);
 
-<script type="text/javascript">
-var aar = <?php echo json_encode($car_name1) ?>;
-var aar2 = <?php echo json_encode($car_name2) ?>;
-var aar3 = <?php echo json_encode($car_name3) ?>;
-var aar4 = <?php echo json_encode($car_name4) ?>;
-var aar5 = <?php echo json_encode($car_name5) ?>;
-var aar6 = <?php echo json_encode($car_name6) ?>;
-</script>
+while ($car = mysqli_fetch_assoc($result)) {
+    $data[] = $car;
+}
+
+echo json_encode($data);
+?>
