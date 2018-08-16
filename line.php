@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+	<style>
+#box_relative {
+  position: absolute;
+  left: 20px;
+  top: 55px;
+}
+</style>
     <!-- JavaScript -->
     <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/jquery.js"></script>
@@ -63,7 +70,7 @@
                     <div class="card-body">
                         No.2 货舱装载量：
                         <input class="form-control" type="number" placeholder="在此输入装载量" id="mass" style="width:50%"> 吨
-                        <br>请选择燃料类型：
+                        <div id="box_relative">请选择燃料类型：</div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="HFO" checked>
                             <label class="form-check-label" for="inlineRadio2">HFO&emsp;&emsp;&emsp;</label>
