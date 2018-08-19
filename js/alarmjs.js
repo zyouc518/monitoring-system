@@ -16,7 +16,7 @@
         var b = document.getElementById('waterpercon').innerHTML;
         var TML = 100;
         if (a != "" && b != "") {
-            TML = a * b / (a * b + 1 - a);
+            TML = a * b / (a * b + 1 - b);
         } else {
             TML = 100; //这里需要完善，拿到页面的输入
         }
