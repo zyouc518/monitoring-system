@@ -17,128 +17,125 @@
         var TML = 100;
         if (a != "" && b != "") {
             TML = a * b / (a * b + 1 - b);
-        } else {
-            TML = 100; //这里需要完善，拿到页面的输入
-        }
-        if (ar[0] > TML) alarm1flag++;
-        if (ar2[0] > TML) alarm1flag++;
-        if (ar3[0] > TML) alarm1flag++;
-        if (ar4[0] > TML) alarm1flag++;
-        if (ar5[0] > TML) alarm1flag++;
-        if (ar6[0] > TML) alarm1flag++;
-        if (alarm1flag >= 4) {
-            //一级报警操作
-            document.getElementById('header1').className = "main";
-        } else {
-            document.getElementById('header1').className = "normal";
-        }
-
-        //二级报警
-        var alarm2water = 0;
-        var alarm2waterure = 0;
-        var alarm2strain = 0;
-        var wflag = 0;
-        if (aar[0] > 80) {
-            wflag++;
-        }
-        if (aar2[0] > 80) {
-            wflag++;
-        }
-        if (aar3[0] > 80) {
-            wflag++;
-        }
-        if (aar4[0] > 80) {
-            wflag++;
-        }
-        if (aar5[0] > 80) {
-            wflag++;
-        }
-        if (aar6[0] > 80) {
-            wflag++;
-        }
-        if ((wflag / 6) > 0.75) {
-            alarm2water = 1;
-        }
-
-        var waterurealarm = 0;
-        if (((aar[0] - aar[1]) / aar[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar2[0] - aar2[1]) / aar2[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar3[0] - aar3[1]) / aar3[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar4[0] - aar4[1]) / aar4[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar5[0] - aar5[1]) / aar5[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar6[0] - aar6[1]) / aar6[1]) > 0.25) {
-            waterurealarm++;
-        }
-
-        if (waterurealarm > 3) {
-            alarm2waterure = 1;
-        }
-
-        var strainalarm = 0;
-        if (((aaar[0] - aaar[1]) / aaar[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar2[0] - aaar2[1]) / aaar2[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar3[0] - aaar3[1]) / aaar3[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar4[0] - aaar4[1]) / aaar4[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar5[0] - aaar5[1]) / aaar5[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar6[0] - aaar6[1]) / aaar6[1]) > 0.2) {
-            strainalarm++;
-        }
-
-        if (strainalarm > 3) {
-            alarm2strain = 1;
-        }
-
-        if (alarm2water && (alarm2waterure || alarm2strain)) {
-            //二级报警操作
-            document.getElementById('header2').className = "main";
-        } else {
-            document.getElementById('header2').className = "normal";
-        }
-
-        //三级报警
-        var alarm3 = 0;
-        var alarm3flag = 0;
-        for (var k = 0; k < 1100; k++) {
-            if (ar[k] > 99) {
-                alarm3flag++;
+            if (ar[0] > TML) alarm1flag++;
+            if (ar2[0] > TML) alarm1flag++;
+            if (ar3[0] > TML) alarm1flag++;
+            if (ar4[0] > TML) alarm1flag++;
+            if (ar5[0] > TML) alarm1flag++;
+            if (ar6[0] > TML) alarm1flag++;
+            if (alarm1flag >= 4) {
+                //一级报警操作
+                document.getElementById('header1').className = "main";
+            } else {
+                document.getElementById('header1').className = "normal";
             }
-            if (ar4[k] > 99) //最上层是传感器1和4
-            {
-                alarm3flag++;
+
+            //二级报警
+            var alarm2water = 0;
+            var alarm2waterure = 0;
+            var alarm2strain = 0;
+            var wflag = 0;
+            if (aar[0] > 80) {
+                wflag++;
+            }
+            if (aar2[0] > 80) {
+                wflag++;
+            }
+            if (aar3[0] > 80) {
+                wflag++;
+            }
+            if (aar4[0] > 80) {
+                wflag++;
+            }
+            if (aar5[0] > 80) {
+                wflag++;
+            }
+            if (aar6[0] > 80) {
+                wflag++;
+            }
+            if ((wflag / 6) > 0.75) {
+                alarm2water = 1;
+            }
+    
+            var waterurealarm = 0;
+            if (((aar[0] - aar[1]) / aar[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar2[0] - aar2[1]) / aar2[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar3[0] - aar3[1]) / aar3[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar4[0] - aar4[1]) / aar4[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar5[0] - aar5[1]) / aar5[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar6[0] - aar6[1]) / aar6[1]) > 0.25) {
+                waterurealarm++;
+            }
+    
+            if (waterurealarm > 3) {
+                alarm2waterure = 1;
+            }
+    
+            var strainalarm = 0;
+            if (((aaar[0] - aaar[1]) / aaar[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar2[0] - aaar2[1]) / aaar2[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar3[0] - aaar3[1]) / aaar3[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar4[0] - aaar4[1]) / aaar4[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar5[0] - aaar5[1]) / aaar5[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar6[0] - aaar6[1]) / aaar6[1]) > 0.2) {
+                strainalarm++;
+            }
+    
+            if (strainalarm > 3) {
+                alarm2strain = 1;
+            }
+    
+            if (alarm2water && (alarm2waterure || alarm2strain)) {
+                //二级报警操作
+                document.getElementById('header2').className = "main";
+            } else {
+                document.getElementById('header2').className = "normal";
+            }
+    
+            //三级报警
+            var alarm3 = 0;
+            var alarm3flag = 0;
+            for (var k = 0; k < 1100; k++) {
+                if (ar[k] > 99) {
+                    alarm3flag++;
+                }
+                if (ar4[k] > 99) //最上层是传感器1和4
+                {
+                    alarm3flag++;
+                }
+            }
+            if (alarm3flag > 120) {
+                alarm3 = 1;
+            }
+            if (alarm3 == 1) {
+                //三级报警操作
+                document.getElementById('header3').className = "main";
+            } else {
+                document.getElementById('header3').className = "normal";
             }
         }
-        if (alarm3flag > 120) {
-            alarm3 = 1;
-        }
-        if (alarm3 == 1) {
-            //三级报警操作
-            document.getElementById('header3').className = "main";
-        } else {
-            document.getElementById('header3').className = "normal";
-        }
-
-
-
+        
+        
         var water1 = 0;
         var water1a = 0;
         var waterflag = 0;
