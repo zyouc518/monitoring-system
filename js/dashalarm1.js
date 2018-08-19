@@ -41,7 +41,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar[k] != null) {
 				press1 = 1;
 			}
-			if (ar[k] > 100) {
+			if (ar[k] > 99.9 || ar[k]<0) {
 				press1a = 1;
 			}
 		}
@@ -59,7 +59,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar2[k] != null) {
 				press2 = 1;
 			}
-			if (ar2[k] > 100) {
+			if (ar2[k] > 99.9 || ar2[k]<0) {
 				press2a = 1;
 			}
 			//if (ar2[k]>=64)������䣬�ǿ��е�
@@ -77,7 +77,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar3[k] != null) {
 				press3 = 1;
 			}
-			if (ar3[k] > 100) {
+			if (ar3[k] > 99.9 || ar3[k]<0) {
 				press3a = 1;
 			}
 		}
@@ -94,7 +94,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar4[k] != null) {
 				press4 = 1;
 			}
-			if (ar4[k] > 100) {
+			if (ar4[k] > 99.9 || ar4[k]<0) {
 				press4a = 1;
 			}
 		}
@@ -110,7 +110,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar5[k] != null) {
 				press5 = 1;
 			}
-			if (ar5[k] > 100) {
+			if (ar5[k] > 99.9 || ar5[k]<0) {
 				press5a = 1;
 			}
 		}
@@ -126,7 +126,7 @@ $(document).ready(function () { //���ļ����Կ��õڶ����
 			if (ar6[k] != null) {
 				press6 = 1;
 			}
-			if (ar6[k] > 100) {
+			if (ar6[k] > 99.9 || ar6[k]<0) {
 				press6a = 1;
 			}
 		}
