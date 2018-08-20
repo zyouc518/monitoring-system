@@ -434,12 +434,12 @@ $(document).ready(function () {
                     sum5 += Number(ar5[4 * i + j]);
                     sum6 += Number(ar6[4 * i + j]);
                 }
-                avg[i] = (sum1 / 60).toFixed(2);
-                avg2[i] = (sum2 / 60).toFixed(2);
-                avg3[i] = (sum3 / 60).toFixed(2);
-                avg4[i] = (sum4 / 60).toFixed(2);
-                avg5[i] = (sum5 / 60).toFixed(2);
-                avg6[i] = (sum6 / 60).toFixed(2);
+                avg[i] = (sum1 / 4).toFixed(2);
+                avg2[i] = (sum2 / 4).toFixed(2);
+                avg3[i] = (sum3 / 4).toFixed(2);
+                avg4[i] = (sum4 / 4).toFixed(2);
+                avg5[i] = (sum5 / 4).toFixed(2);
+                avg6[i] = (sum6 / 4).toFixed(2);
             }
             // }
             chart.arrows[0].setValue(avg[0]);
