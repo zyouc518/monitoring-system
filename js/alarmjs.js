@@ -390,7 +390,7 @@
         var yingflag4 = 0;
         var yingflag5 = 0;
         var yingflag6 = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar[k] != null) {
                 strain1 = 1;
             }
@@ -401,7 +401,7 @@
             //if (aaar[k]>2)
             //{strain1a=strain1a+1;}
         }
-        if (strain1 == 0) //if (strain1a==60)
+        if (strain1 == 0) //if (strain1a==4)
         {
             strainflag++;
         }
@@ -411,7 +411,7 @@
 
         var strain2 = 0;
         var strain2a = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar2[k] != null) {
                 strain2 = 1;
             }
@@ -430,7 +430,7 @@
 
         var strain3 = 0;
         var strain3a = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar3[k] != null) {
                 strain3 = 1;
             }
@@ -447,7 +447,7 @@
 
         var strain4 = 0;
         var strain4a = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar4[k] != null) {
                 strain4 = 1;
             }
@@ -464,7 +464,7 @@
 
         var strain5 = 0;
         var strain5a = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar5[k] != null) {
                 strain5 = 1;
             }
@@ -481,7 +481,7 @@
 
         var strain6 = 0;
         var strain6a = 0;
-        for (var k = 0; k < 60; k++) {
+        for (var k = 0; k < 4; k++) {
             if (aaar6[k] != null) {
                 strain6 = 1;
             }
