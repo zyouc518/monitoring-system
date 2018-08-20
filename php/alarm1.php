@@ -7,7 +7,7 @@ if ($link === false) {
 
 echo "Connect Successfully. Host Info: " . mysqli_get_host_info($link);
 
-$query = "SELECT * FROM `sensor1` ORDER BY Time_1 DESC LIMIT 60";
+$query = "SELECT * FROM `sensor1` ORDER BY Time_1 DESC LIMIT 1200";
 
 $result = $link->query($query) or die($link->error);
 $i = 0;

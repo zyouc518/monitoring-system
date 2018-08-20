@@ -40,7 +40,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar[k] != null) {
 					press1 = 1;
 				}
-				if (aaar[k] > 2000) //(aaar[k]>2)
+				if (aaar[k] > 2000 || aaar[k]<0) //(aaar[k]>2)
 				{
 					press1a = 1;
 				}
@@ -61,7 +61,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar2[k] != null) {
 					press2 = 1;
 				}
-				if (aaar2[k] > 2000) {
+				if (aaar2[k] > 2000 || aaar2[k]<0) {
 					press2a = 1;
 				}
 				//if (aaar2[k]>=64)������䣬�ǿ��е�
@@ -79,7 +79,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar3[k] != null) {
 					press3 = 1;
 				}
-				if (aaar3[k] > 2000) {
+				if (aaar3[k] > 2000 || aaar3[k]<0) {
 					press3a = 1;
 				}
 			}
@@ -96,7 +96,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar4[k] != null) {
 					press4 = 1;
 				}
-				if (aaar4[k] > 2000) {
+				if (aaar4[k] > 2000 || aaar4[k]<0) {
 					press4a = 1;
 				}
 			}
@@ -112,7 +112,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar5[k] != null) {
 					press5 = 1;
 				}
-				if (aaar5[k] > 2000) {
+				if (aaar5[k] > 2000 || aaar5[k]<0) {
 					press5a = 1;
 				}
 			}
@@ -128,7 +128,7 @@ $(document).ready(function () { //���ļ��ĵ��Է��ڵ�һ��
 				if (aaar6[k] != null) {
 					press6 = 1;
 				}
-				if (aaar6[k] > 2000) //(aar6[k]>2)
+				if (aaar6[k] > 2000 || aaar6[k]<0) //(aar6[k]>2)
 				{
 					press6a = 1;
 				}

@@ -16,129 +16,126 @@
         var b = document.getElementById('waterpercon').innerHTML;
         var TML = 100;
         if (a != "" && b != "") {
-            TML = a * b / (a * b + 1 - a);
-        } else {
-            TML = 100; //这里需要完善，拿到页面的输入
-        }
-        if (ar[0] > TML) alarm1flag++;
-        if (ar2[0] > TML) alarm1flag++;
-        if (ar3[0] > TML) alarm1flag++;
-        if (ar4[0] > TML) alarm1flag++;
-        if (ar5[0] > TML) alarm1flag++;
-        if (ar6[0] > TML) alarm1flag++;
-        if (alarm1flag >= 4) {
-            //一级报警操作
-            document.getElementById('header1').className = "main";
-        } else {
-            document.getElementById('header1').className = "normal";
-        }
-
-        //二级报警
-        var alarm2water = 0;
-        var alarm2waterure = 0;
-        var alarm2strain = 0;
-        var waterflag = 0;
-        if (aar[0] > 20) {
-            waterflag++;
-        }
-        if (aar2[0] > 20) {
-            waterflag++;
-        }
-        if (aar3[0] > 20) {
-            waterflag++;
-        }
-        if (aar4[0] > 20) {
-            waterflag++;
-        }
-        if (aar5[0] > 20) {
-            waterflag++;
-        }
-        if (aar6[0] > 20) {
-            waterflag++;
-        }
-        if ((waterflag / 6) > 0.75) {
-            alarm2water = 1;
-        }
-
-        var waterurealarm = 0;
-        if (((aar[0] - aar[1]) / aar[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar2[0] - aar2[1]) / aar2[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar3[0] - aar3[1]) / aar3[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar4[0] - aar4[1]) / aar4[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar5[0] - aar5[1]) / aar5[1]) > 0.25) {
-            waterurealarm++;
-        }
-        if (((aar6[0] - aar6[1]) / aar6[1]) > 0.25) {
-            waterurealarm++;
-        }
-
-        if (waterurealarm > 3) {
-            alarm2waterure = 1;
-        }
-
-        var strainalarm = 0;
-        if (((aaar[0] - aaar[1]) / aaar[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar2[0] - aaar2[1]) / aaar2[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar3[0] - aaar3[1]) / aaar3[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar4[0] - aaar4[1]) / aaar4[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar5[0] - aaar5[1]) / aaar5[1]) > 0.2) {
-            strainalarm++;
-        }
-        if (((aaar6[0] - aaar6[1]) / aaar6[1]) > 0.2) {
-            strainalarm++;
-        }
-
-        if (strainalarm > 3) {
-            alarm2strain = 1;
-        }
-
-        if (alarm2water && (alarm2waterure || alarm2strain)) {
-            //二级报警操作
-            document.getElementById('header2').className = "main";
-        } else {
-            document.getElementById('header2').className = "normal";
-        }
-
-        //三级报警
-        var alarm3 = 0;
-        var alarm3flag = 0;
-        for (var k = 0; k < 100; k++) {
-            if (ar[k] > 99) {
-                alarm3flag++;
+            TML = a * b / (a * b + 1 - b);
+            if (ar[0] > TML) alarm1flag++;
+            if (ar2[0] > TML) alarm1flag++;
+            if (ar3[0] > TML) alarm1flag++;
+            if (ar4[0] > TML) alarm1flag++;
+            if (ar5[0] > TML) alarm1flag++;
+            if (ar6[0] > TML) alarm1flag++;
+            if (alarm1flag >= 4) {
+                //一级报警操作
+                document.getElementById('header1').className = "main";
+            } else {
+                document.getElementById('header1').className = "normal";
             }
-            if (ar4[k] > 99) //最上层是传感器1和4
-            {
-                alarm3flag++;
+
+            //二级报警
+            var alarm2water = 0;
+            var alarm2waterure = 0;
+            var alarm2strain = 0;
+            var wflag = 0;
+            if (aar[0] > 80) {
+                wflag++;
+            }
+            if (aar2[0] > 80) {
+                wflag++;
+            }
+            if (aar3[0] > 80) {
+                wflag++;
+            }
+            if (aar4[0] > 80) {
+                wflag++;
+            }
+            if (aar5[0] > 80) {
+                wflag++;
+            }
+            if (aar6[0] > 80) {
+                wflag++;
+            }
+            if ((wflag / 6) > 0.75) {
+                alarm2water = 1;
+            }
+    
+            var waterurealarm = 0;
+            if (((aar[0] - aar[1]) / aar[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar2[0] - aar2[1]) / aar2[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar3[0] - aar3[1]) / aar3[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar4[0] - aar4[1]) / aar4[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar5[0] - aar5[1]) / aar5[1]) > 0.25) {
+                waterurealarm++;
+            }
+            if (((aar6[0] - aar6[1]) / aar6[1]) > 0.25) {
+                waterurealarm++;
+            }
+    
+            if (waterurealarm > 3) {
+                alarm2waterure = 1;
+            }
+    
+            var strainalarm = 0;
+            if (((aaar[0] - aaar[1]) / aaar[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar2[0] - aaar2[1]) / aaar2[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar3[0] - aaar3[1]) / aaar3[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar4[0] - aaar4[1]) / aaar4[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar5[0] - aaar5[1]) / aaar5[1]) > 0.2) {
+                strainalarm++;
+            }
+            if (((aaar6[0] - aaar6[1]) / aaar6[1]) > 0.2) {
+                strainalarm++;
+            }
+    
+            if (strainalarm > 3) {
+                alarm2strain = 1;
+            }
+    
+            if (alarm2water && (alarm2waterure || alarm2strain)) {
+                //二级报警操作
+                document.getElementById('header2').className = "main";
+            } else {
+                document.getElementById('header2').className = "normal";
+            }
+    
+            //三级报警
+            var alarm3 = 0;
+            var alarm3flag = 0;
+            for (var k = 0; k < 1100; k++) {
+                if (ar[k] > 99) {
+                    alarm3flag++;
+                }
+                if (ar4[k] > 99) //最上层是传感器1和4
+                {
+                    alarm3flag++;
+                }
+            }
+            if (alarm3flag > 120) {
+                alarm3 = 1;
+            }
+            if (alarm3 == 1) {
+                //三级报警操作
+                document.getElementById('header3').className = "main";
+            } else {
+                document.getElementById('header3').className = "normal";
             }
         }
-        if (alarm3flag > 100) {
-            alarm3 = 1;
-        }
-        if (alarm3 == 1) {
-            //三级报警操作
-            document.getElementById('header3').className = "main";
-        } else {
-            document.getElementById('header3').className = "normal";
-        }
-
-
-
+        
+        
         var water1 = 0;
         var water1a = 0;
         var waterflag = 0;
@@ -147,7 +144,7 @@
             if (ar[k] != null) {
                 water1 = 1;
             }
-            if (ar[k] > 100) {
+            if (ar[k] > 99.9 || ar[k]<0) {
                 water1a = 1;
             }
         }
@@ -165,7 +162,7 @@
             if (ar2[k] != null) {
                 water2 = 1;
             }
-            if (ar2[k] > 100) {
+            if (ar2[k] > 99.9 || ar2[k]<0) {
                 water2a = 1;
             }
             //if (ar2[k]>=64)调试语句，是可行的
@@ -184,7 +181,7 @@
             if (ar3[k] != null) {
                 water3 = 1;
             }
-            if (ar3[k] > 100) {
+            if (ar3[k] > 99.9 || ar3[k]<0) {
                 water3a = 1;
             }
         }
@@ -202,7 +199,7 @@
             if (ar4[k] != null) {
                 water4 = 1;
             }
-            if (ar4[k] > 100) {
+            if (ar4[k] > 99.9 || ar4[k]<0) {
                 water4a = 1;
             }
         }
@@ -219,7 +216,7 @@
             if (ar5[k] != null) {
                 water5 = 1;
             }
-            if (ar5[k] > 100) {
+            if (ar5[k] > 99.9 || ar5[k]<0) {
                 water5a = 1;
             }
         }
@@ -236,7 +233,7 @@
             if (ar6[k] != null) {
                 water6 = 1;
             }
-            if (ar6[k] > 100) {
+            if (ar6[k] > 99.9 || ar6[k]<0) {
                 water6a = 1;
             }
         }
@@ -270,7 +267,7 @@
             if (aar[k] != null) {
                 press1 = 1;
             }
-            if (aar[k] > 2000) {
+            if (aar[k] > 2000 || aar[k]<0) {
                 press1a = 1;
             }
         }
@@ -288,7 +285,7 @@
             if (aar2[k] != null) {
                 press2 = 1;
             }
-            if (aar2[k] > 2000) {
+            if (aar2[k] > 2000 || aar2[k]<0) {
                 press2a = 1;
             }
             //if (aar2[k]>=64)调试语句，是可行的
@@ -307,7 +304,7 @@
             if (aar3[k] != null) {
                 press3 = 1;
             }
-            if (aar3[k] > 2000) {
+            if (aar3[k] > 2000 || aar3[k]<0) {
                 press3a = 1;
             }
         }
@@ -325,7 +322,7 @@
             if (aar4[k] != null) {
                 press4 = 1;
             }
-            if (aar4[k] > 2000) {
+            if (aar4[k] > 2000 || aar4[k]<0) {
                 press4a = 1;
             }
         }
@@ -342,7 +339,7 @@
             if (aar5[k] != null) {
                 press5 = 1;
             }
-            if (aar5[k] > 2000) {
+            if (aar5[k] > 2000 || aar5[k]<0) {
                 press5a = 1;
             }
         }
@@ -359,7 +356,7 @@
             if (aar6[k] != null) {
                 press6 = 1;
             }
-            if (aar6[k] > 2000) //(aar6[k]>2)
+            if (aar6[k] > 2000 || aar6[k]<0) //(aar6[k]>2)
             {
                 press6a = 1;
             }
@@ -397,7 +394,7 @@
             if (aaar[k] != null) {
                 strain1 = 1;
             }
-            if (aaar[k] > 2000) //(aaar[k]>2)
+            if (aaar[k] > 2000 || aaar[k]<0) //(aaar[k]>2)
             {
                 strain1a = 1;
             }
@@ -418,7 +415,7 @@
             if (aaar2[k] != null) {
                 strain2 = 1;
             }
-            if (aaar2[k] > 2000) {
+            if (aaar2[k] > 2000 || aaar2[k]<0) {
                 strain2a = 1;
             }
             //if (aaar2[k]>=64)调试语句，是可行的
@@ -437,7 +434,7 @@
             if (aaar3[k] != null) {
                 strain3 = 1;
             }
-            if (aaar3[k] > 2000) {
+            if (aaar3[k] > 2000 || aaar3[k]<0) {
                 strain3a = 1;
             }
         }
@@ -454,7 +451,7 @@
             if (aaar4[k] != null) {
                 strain4 = 1;
             }
-            if (aaar4[k] > 2000) {
+            if (aaar4[k] > 2000 || aaar4[k]<0) {
                 strain4a = 1;
             }
         }
@@ -471,7 +468,7 @@
             if (aaar5[k] != null) {
                 strain5 = 1;
             }
-            if (aaar5[k] > 2000) {
+            if (aaar5[k] > 2000 || aaar5[k]<0) {
                 strain5a = 1;
             }
         }
@@ -488,7 +485,7 @@
             if (aaar6[k] != null) {
                 strain6 = 1;
             }
-            if (aaar6[k] > 2000) //(aar6[k]>2)
+            if (aaar6[k] > 2000 || aaar6[k]<0) //(aar6[k]>2)
             {
                 strain6a = 1;
             }
