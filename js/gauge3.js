@@ -565,12 +565,12 @@ $(document).ready(function () {
                 sum5 += Number(aaar5[i]);
                 sum6 += Number(aaar6[i]);
             }
-            avg = (sum1 / 60).toFixed(2);
-            avg2 = (sum2 / 60).toFixed(2);
-            avg3 = (sum3 / 60).toFixed(2);
-            avg4 = (sum4 / 60).toFixed(2);
-            avg5 = (sum5 / 60).toFixed(2);
-            avg6 = (sum6 / 60).toFixed(2);
+            avg = (sum1 / 4).toFixed(2);
+            avg2 = (sum2 / 4).toFixed(2);
+            avg3 = (sum3 / 4).toFixed(2);
+            avg4 = (sum4 / 4).toFixed(2);
+            avg5 = (sum5 / 4).toFixed(2);
+            avg6 = (sum6 / 4).toFixed(2);
             chart.arrows[0].setValue(avg);
             chart.axes[0].setTopText(avg + " \265\u03b5");
             // adjust darker band to new ar[ar.length-1]
