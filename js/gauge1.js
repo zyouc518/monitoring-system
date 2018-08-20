@@ -439,7 +439,6 @@ $(document).ready(function () {
                 avg4[i] = (sum4 / 60).toFixed(2);
                 avg5[i] = (sum5 / 60).toFixed(2);
                 avg6[i] = (sum6 / 60).toFixed(2);
-                console.log(sum3);
             }
             chart.arrows[0].setValue(avg[0]);
             chart.axes[0].setTopText(avg[0] + " %");
