@@ -684,37 +684,45 @@
                         }
                     });
                 } else if (3 <= i && i < 6) {
-                    $.ajax({
-                        url: "php/insert.php",
-                        type: "post",
-                        data: {
-                            type: '设备故障',
-                            name: sensorName[i - 3],
-                            position: null,
-                            value: null,
-                            level: null
-                        },
-                        success: function (data) {
-                            var dataParsed = JSON.parse(data);
-                            console.log(dataParsed);
+                    for (let j = 3 * (i - 3); j < 3 * (i - 1); j++) {
+                        if (EENull[j]) {
+                            $.ajax({
+                                url: "php/insert.php",
+                                type: "post",
+                                data: {
+                                    type: '设备故障',
+                                    name: sensorName[i - 3],
+                                    position: positionExceed[j % 6],
+                                    value: null,
+                                    level: null
+                                },
+                                success: function (data) {
+                                    var dataParsed = JSON.parse(data);
+                                    console.log(dataParsed);
+                                }
+                            });
                         }
-                    });
+                    }
                 } else if (6 <= i && i < 9) {
-                    $.ajax({
-                        url: "php/insert.php",
-                        type: "post",
-                        data: {
-                            type: '数据异常',
-                            name: sensorName[i - 6],
-                            position: null,
-                            value: null,
-                            level: null
-                        },
-                        success: function (data) {
-                            var dataParsed = JSON.parse(data);
-                            console.log(dataParsed);
+                    for (let j = 3 * (i - 6); j < 3 * (i - 4); j++) {
+                        if (Exceed[j]) {
+                            $.ajax({
+                                url: "php/insert.php",
+                                type: "post",
+                                data: {
+                                    type: '数据异常',
+                                    name: sensorName[i - 6],
+                                    position: positionExceed[j % 6],
+                                    value: valueExceed[j],
+                                    level: null
+                                },
+                                success: function (data) {
+                                    var dataParsed = JSON.parse(data);
+                                    console.log(dataParsed);
+                                }
+                            });
                         }
-                    });
+                    }
                 } else {
                     $.ajax({
                         url: "php/insert.php",
