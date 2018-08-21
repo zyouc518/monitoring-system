@@ -2,8 +2,16 @@
     $.ajaxSetup({
         cache: false
     });
-    var alarmType = Array('Level 1 Alarm', 'Level 2 Alarm', 'Level 3 Alarm', 'Water Content Sensor Failure', 'Pressure Sensor Failure', 'Strain Sensor Failure', 'Water Content Sensor Data Exception', 'Pressure Sensor Data Exception', 'Strain Sensor Data Exception', 'ACBU Strain Alarm', 'ACBM Strain Alarm', 'ACBL Strain Alarm', 'FMBU Strain Alarm', 'FMBM Strain Alarm', 'FMBL Strain Alarm');
+    var sensorName = Array('含水率传感器', '压力传感器', '应变传感器');
+    var alarmLevel = Array('一级', '二级', '三级');
     var ins = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+    var valueExceed = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    var positionExceed = Array('AU', 'AM', 'AL', 'FU', 'FM', 'FL'); //zheli xie suoxie , weizhi d suoxie biru WCAU shenmede.
+    var Exceed = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+    var EENull = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
+    var SStrain = Array(false, false, false, false, false, false);
+    var ValStrain = Array(0, 0, 0, 0, 0, 0);
+
     setInterval(function () {
 
         $('#results').load('php/alarm1.php');
@@ -148,15 +156,19 @@
         for (var k = 0; k < 60; k++) {
             if (ar[k] != null) {
                 water1 = 1;
+
             }
             if (ar[k] > 99.9 || ar[k] < 0) {
                 water1a = 1;
+                valueExceed[0] = ar[k];
             }
         }
         if (water1 == 0) {
+            EENull[0] = true;
             waterflag++;
         }
         if (water1a == 1) {
+            Exceed[0] = true;
             waterflag2++;
         }
 
@@ -169,14 +181,17 @@
             }
             if (ar2[k] > 99.9 || ar2[k] < 0) {
                 water2a = 1;
+                valueExceed[1] = ar2[k];
             }
             //if (ar2[k]>=64)调试语句，是可行的
             //{water2++;}
         }
         if (water2 == 0) {
+            EENull[1] = true;
             waterflag++;
         }
         if (water2a == 1) {
+            Exceed[1] = true;
             waterflag2++;
         }
 
@@ -188,12 +203,16 @@
             }
             if (ar3[k] > 99.9 || ar3[k] < 0) {
                 water3a = 1;
+                valueExceed[2] = ar3[k];
+
             }
         }
         if (water3 == 0) {
+            EENull[2] = true;
             waterflag++;
         }
         if (water3a == 1) {
+            Exceed[2] = true;
             waterflag2++;
         }
 
@@ -206,12 +225,15 @@
             }
             if (ar4[k] > 99.9 || ar4[k] < 0) {
                 water4a = 1;
+                valueExceed[3] = ar4[k];
             }
         }
         if (water4 == 0) {
+            EENull[3] = true;
             waterflag++;
         }
         if (water4a == 1) {
+            Exceed[3] = true;
             waterflag2++;
         }
 
@@ -222,13 +244,16 @@
                 water5 = 1;
             }
             if (ar5[k] > 99.9 || ar5[k] < 0) {
+                valueExceed[4] = ar5[k];
                 water5a = 1;
             }
         }
         if (water5 == 0) {
+            EENull[4] = true;
             waterflag++;
         }
         if (water5a == 1) {
+            Exceed[4] = true;
             waterflag2++;
         }
 
@@ -240,12 +265,15 @@
             }
             if (ar6[k] > 99.9 || ar6[k] < 0) {
                 water6a = 1;
+                valueExceed[5] = ar6[k];
             }
         }
         if (water6 == 0) {
+            EENull[5] = true;
             waterflag++;
         }
         if (water6a == 1) {
+            Exceed[5] = true;
             waterflag2++;
         }
 
@@ -277,13 +305,16 @@
                 press1 = 1;
             }
             if (aar[k] > 2000 || aar[k] < 0) {
+                valueExceed[6] = aar[k];
                 press1a = 1;
             }
         }
         if (press1 == 0) {
+            EENull[6] = true;
             pressflag++;
         }
         if (press1a == 1) {
+            Exceed[6] = true;
             pressflag2++;
         }
 
@@ -295,15 +326,18 @@
                 press2 = 1;
             }
             if (aar2[k] > 2000 || aar2[k] < 0) {
+                valueExceed[7] = aar2[k];
                 press2a = 1;
             }
             //if (aar2[k]>=64)调试语句，是可行的
             //{press2++;}
         }
         if (press2 == 0) {
+            EENull[7] = true;
             pressflag++;
         }
         if (press2a == 1) {
+            Exceed[7] = true;
             pressflag2++;
         }
 
@@ -315,12 +349,15 @@
             }
             if (aar3[k] > 2000 || aar3[k] < 0) {
                 press3a = 1;
+                valueExceed[8] = aar3[k];
             }
         }
         if (press3 == 0) {
+            EENull[8] = true;
             pressflag++;
         }
         if (press3a == 1) {
+            Exceed[8] = true;
             pressflag2++;
         }
 
@@ -333,12 +370,15 @@
             }
             if (aar4[k] > 2000 || aar4[k] < 0) {
                 press4a = 1;
+                valueExceed[9] = aar4[k];
             }
         }
         if (press4 == 0) {
+            EENull[9] = true;
             pressflag++;
         }
         if (press4a == 1) {
+            Exceed[9] = true;
             pressflag2++;
         }
 
@@ -350,12 +390,16 @@
             }
             if (aar5[k] > 2000 || aar5[k] < 0) {
                 press5a = 1;
+                valueExceed[10] = aar5[k];
             }
         }
         if (press5 == 0) {
+            EENull[10] = true;
             pressflag++;
+
         }
         if (press5a == 1) {
+            Exceed[10] = true;
             pressflag2++;
         }
 
@@ -368,12 +412,15 @@
             if (aar6[k] > 2000 || aar6[k] < 0) //(aar6[k]>2)
             {
                 press6a = 1;
+                valueExceed[11] = aar6[k];
             }
         }
         if (press6 == 0) {
+            EENull[11] = true;
             pressflag++;
         }
         if (press6a == 1) {
+            Exceed[11] = true;
             pressflag2++;
         }
 
@@ -410,15 +457,18 @@
             if (aaar[k] > 2000 || aaar[k] < 0) //(aaar[k]>2)
             {
                 strain1a = 1;
+                valueExceed[12] = aaar[k];
             }
             //if (aaar[k]>2)
             //{strain1a=strain1a+1;}
         }
         if (strain1 == 0) //if (strain1a==4)
         {
+            EENull[12] = true;
             strainflag++;
         }
         if (strain1a == 1) {
+            Exceed[12] = true;
             strainflag2++;
         }
 
@@ -430,14 +480,17 @@
             }
             if (aaar2[k] > 2000 || aaar2[k] < 0) {
                 strain2a = 1;
+                valueExceed[13] = aaar2[k];
             }
             //if (aaar2[k]>=64)调试语句，是可行的
             //{strain2++;}
         }
         if (strain2 == 0) {
+            EENull[13] = true;
             strainflag++;
         }
         if (strain2a == 1) {
+            Exceed[13] = true;
             strainflag2++;
         }
 
@@ -449,12 +502,15 @@
             }
             if (aaar3[k] > 2000 || aaar3[k] < 0) {
                 strain3a = 1;
+                valueExceed[14] = aaar3[k];
             }
         }
         if (strain3 == 0) {
+            EENull[14] = true;
             strainflag++;
         }
         if (strain3a == 1) {
+            Exceed[14] = true;
             strainflag2++;
         }
 
@@ -466,12 +522,15 @@
             }
             if (aaar4[k] > 2000 || aaar4[k] < 0) {
                 strain4a = 1;
+                valueExceed[15] = aaar4[k];
             }
         }
         if (strain4 == 0) {
+            EENull[15] = true;
             strainflag++;
         }
         if (strain4a == 1) {
+            Exceed[15] = true;
             strainflag2++;
         }
 
@@ -483,12 +542,15 @@
             }
             if (aaar5[k] > 2000 || aaar5[k] < 0) {
                 strain5a = 1;
+                valueExceed[16] = aaar5[k];
             }
         }
         if (strain5 == 0) {
+            EENull[16] = true;
             strainflag++;
         }
         if (strain5a == 1) {
+            Exceed[16] = true;
             strainflag2++;
         }
 
@@ -501,12 +563,15 @@
             if (aaar6[k] > 2000 || aaar6[k] < 0) //(aar6[k]>2)
             {
                 strain6a = 1;
+                valueExceed[17] = aaar6[k];
             }
         }
         if (strain6 == 0) {
+            EENull[17] = true;
             strainflag++;
         }
         if (strain6a == 1) {
+            Exceed[17] = true;
             strainflag2++;
         }
 
@@ -529,21 +594,33 @@
 
         if (aaar[0] >= 1530) {
             yingflag1 = 1;
+            ValStrain[0] = aaar[0];
+            SStrain[0] = true;
         }
         if (aaar2[0] >= 1530) {
             yingflag2 = 1;
+            ValStrain[1] = aaar2[0];
+            SStrain[1] = true;
         }
         if (aaar3[0] >= 1530) {
             yingflag3 = 1;
+            ValStrain[2] = aaar3[0];
+            SStrain[2] = true;
         }
         if (aaar4[0] >= 1530) {
             yingflag4 = 1;
+            ValStrain[3] = aaar4[0];
+            SStrain[3] = true;
         }
         if (aaar5[0] >= 1530) {
             yingflag5 = 1;
+            ValStrain[4] = aaar5[0];
+            SStrain[4] = true;
         }
         if (aaar6[0] >= 1530) {
             yingflag6 = 1;
+            ValStrain[5] = aaar6[0];
+            SStrain[5] = true;
         }
         if (yingflag1 == 1) {
             document.getElementById('header13').className = "main";
@@ -588,19 +665,73 @@
             ins[14] = false;
         }
 
-        for (let i = 0; i < 16; i++) {
+        for (let i = 0; i < 15; i++) {
             if (ins[i]) {
-                $.ajax({
-                    url: "php/insert.php",
-                    type: "post",
-                    data: {
-                        type: alarmType[i]
-                    },
-                    success: function (data) {
-                        var dataParsed = JSON.parse(data);
-                        console.log(dataParsed);
-                    }
-                });
+                if (0 <= i && i < 3) {
+                    $.ajax({
+                        url: "php/insert.php",
+                        type: "post",
+                        data: {
+                            type: '预警',
+                            name: null,
+                            position: null,
+                            value: null,
+                            level: alarmLevel[i]
+                        },
+                        success: function (data) {
+                            var dataParsed = JSON.parse(data);
+                            console.log(dataParsed);
+                        }
+                    });
+                } else if (3 <= i && i < 6) {
+                    $.ajax({
+                        url: "php/insert.php",
+                        type: "post",
+                        data: {
+                            type: '设备故障',
+                            name: sensorName[i - 3],
+                            position: null,
+                            value: null,
+                            level: null
+                        },
+                        success: function (data) {
+                            var dataParsed = JSON.parse(data);
+                            console.log(dataParsed);
+                        }
+                    });
+                } else if (6 <= i && i < 9) {
+                    $.ajax({
+                        url: "php/insert.php",
+                        type: "post",
+                        data: {
+                            type: '数据异常',
+                            name: sensorName[i - 6],
+                            position: null,
+                            value: null,
+                            level: null
+                        },
+                        success: function (data) {
+                            var dataParsed = JSON.parse(data);
+                            console.log(dataParsed);
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        url: "php/insert.php",
+                        type: "post",
+                        data: {
+                            type: '货舱局部应力',
+                            name: '应变传感器',
+                            position: positionExceed[i - 9],
+                            value: ValStrain[i - 9],
+                            level: null
+                        },
+                        success: function (data) {
+                            var dataParsed = JSON.parse(data);
+                            console.log(dataParsed);
+                        }
+                    });
+                }
             }
         }
     }, 1000);
