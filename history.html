@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no, shrink-to-fit=no"/> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Wang & Zhao">
+    <meta name="description" content="Monitoring System">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>矿物液化监控智能系统</title>
+    <script src="js/amcharts.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/gauge.js"></script>
+    <script src="js/export.min.js"></script>
+    <link rel="stylesheet" href="css/export.css" type="text/css" media="all" />
+    <script src="js/light.js"></script>
+    <script>
+        if (screen.width <= 1024 || screen.height <= 768) {
+            $('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5 style="color: yellow">矿物液化智能监控系统</h5>
+            </div>
+            <br>
+            <a href="history.html">&emsp;&emsp;中文</a>
+            <a href="historyen.html">&emsp;English</a>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <!-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> -->
+                    <a>
+                        <i class="fa fa-bullseye"> 监测数据</i>
+                    </a>
+                    <ul class="list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="dashboard1.html" class="fa fa-dashboard"> 含水率传感器</a>
+                        </li>
+                        <li>
+                            <a href="dashboard2.html" class="fa fa-dashboard"> 压力传感器</a>
+                        </li>
+                        <li>
+                            <a href="dashboard3.html" class="fa fa-dashboard"> 应变传感器</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="line.php" class="fa fa-line-chart"> 稳性计算</a>
+                </li>
+                <li>
+                    <a href="submitform.html" class="fa fa-exclamation-triangle"> 报警系统</a>
+                </li>
+                <li>
+                    <a href="history.html" class="fa fa-list-alt"> 历史查询</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <script>
+                function query() {
+                    console.log("maheng");
+                    if (window.XMLHttpRequest) {
+                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    } else {
+                        // code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    var method = "GET";
+                    var url = "php/history.php";
+                    var asynchronous = true;
+                    xmlhttp.onreadystatechange = function () {
+                        document.getElementById("content").innerHTML = "<button type='button' class='btn btn-primary' onclick='query();'>查询</button>"+this.responseText;
+                    };
+                    xmlhttp.open(method, url, asynchronous);
+                    xmlhttp.send();
+                }
+            </script>
+            <button type="button" class="btn btn-primary" onclick="query();">查询</button>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope='col'>#</th>
+                        <th scope='col'>时间</th>
+                        <th scope='col'>类型</th>
+                        <th scope='col'>传感器名称</th>
+                        <th scope='col'>位置</th>
+                        <th scope='col'>值</th>
+                        <th scope='col'>预警等级</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

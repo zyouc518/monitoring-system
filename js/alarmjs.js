@@ -684,7 +684,7 @@
                         }
                     });
                 } else if (3 <= i && i < 6) {
-                    for (let j = 3 * (i - 3); j < 3 * (i - 1); j++) {
+                    for (let j = 6 * (i - 3); j < 6 * (i - 2); j++) {
                         if (EENull[j]) {
                             $.ajax({
                                 url: "php/insert.php",
@@ -704,7 +704,7 @@
                         }
                     }
                 } else if (6 <= i && i < 9) {
-                    for (let j = 3 * (i - 6); j < 3 * (i - 4); j++) {
+                    for (let j = 6 * (i - 6); j < 6 * (i - 5); j++) {
                         if (Exceed[j]) {
                             $.ajax({
                                 url: "php/insert.php",

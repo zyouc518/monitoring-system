@@ -1,10 +1,13 @@
 <?php
 $connection = mysqli_connect('localhost', 'root', '', 'alarms');
 
-$time = $_POST['time'];
 $type = $_POST['type'];
+$name = $_POST['name'];
+$position = $_POST['position'];
+$value = $_POST['value'];
+$level = $_POST['level'];
 
-$q = "INSERT INTO alarm (type) VALUES ('$type')";
+$q = "INSERT INTO alarm (type,name,position,value,level) VALUES ('$type','$name','$position','$value','$level')";
 
 $query = mysqli_query($connection, $q);
 

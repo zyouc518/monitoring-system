@@ -62,6 +62,9 @@
                 <li>
                     <a href="submitformen.html" class="fa fa-exclamation-triangle"> Alarm System</a>
                 </li>
+                <li>
+                <a href="historyen.html" class="fa fa-list-alt"> History</a>
+                </li>
             </ul>
         </nav>
         <div id="content">
