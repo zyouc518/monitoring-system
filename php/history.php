@@ -15,7 +15,7 @@
 <body>
 <table class="table">
 <?php
-$link = mysqli_connect('localhost', 'root', '', 'alarms');
+$link = mysqli_connect('localhost', 'root', '123456', 'alarms');
 echo "<thead>";
 echo "<tr>";
 echo "<th scope='col'>#</th>";
