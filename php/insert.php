@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('localhost', 'root', '', 'alarms');
+$connection = mysqli_connect('localhost', 'root', '123456', 'mineral liquefying');
 
 $type = $_POST['type'];
 $name = $_POST['name'];
