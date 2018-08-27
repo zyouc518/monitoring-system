@@ -79,7 +79,7 @@
                         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                     }
                     var method = "GET";
-                    var url = "php/history.php";
+                    var url = "php/historyen.php";
                     var asynchronous = true;
                     xmlhttp.onreadystatechange = function () {
                         document.getElementById("content").innerHTML =
@@ -95,12 +95,12 @@
                 <thead>
                     <tr>
                         <th scope='col'>#</th>
-                        <th scope='col'>时间</th>
-                        <th scope='col'>类型</th>
-                        <th scope='col'>传感器名称</th>
-                        <th scope='col'>位置</th>
-                        <th scope='col'>值</th>
-                        <th scope='col'>预警等级</th>
+                        <th scope='col'>Time</th>
+                        <th scope='col'>Type</th>
+                        <th scope='col'>Sensor Name</th>
+                        <th scope='col'>Position</th>
+                        <th scope='col'>Value</th>
+                        <th scope='col'>Alarm Level</th>
                     </tr>
                 </thead>
             </table>
