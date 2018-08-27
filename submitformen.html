@@ -217,18 +217,18 @@
 
         #div1 {
             position: absolute;
-            left: 2%;
-            top: 20%;
+            left: 39%;
+            top: 5%;
             width: 55%;
             height: 42%;
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
 
         #div2 {
             position: absolute;
-            left: 59%;
-            top: 20%;
+            left: 2%;
+            top: 5%;
             width: 35%;
             height: 42%;
             font-size: 20px;
@@ -238,30 +238,30 @@
         #div3 {
             position: absolute;
             left: 2%;
-            top: 64%;
+            top: 50%;
             width: 54%;
             height: 32%;
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
 
         #div5 {
             position: absolute;
             left: 30%;
-            top: 64%;
+            top: 50%;
             width: 54%;
             height: 32%;
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
 
         #div4 {
             position: absolute;
             left: 59%;
-            top: 64%;
+            top: 50%;
             width: 35%;
             height: 32%;
-            font-size: 18px;
+            font-size: 20px;
             color: black;
         }
     </style>
@@ -313,18 +313,23 @@
             </ul>
         </nav>
         <div id="content">
-            <div id="div0">
-                <div class="card" style="width: 25%;height: 40%;">
-                    <!--                     <div class="card-body">-->
-                    <form action="php/alarmphp.php" method="post">
-                        <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="Input density here" id="rho" style="width:80%" name="mass">&emsp;t/m³
-                        </div>
-                        <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="Input TML here" id="waterper" style="width:80%" name="water">&emsp;%
-                        </div>
-                        <button type="button" class="btn btn-primary" style="width:20%" onclick="save()">OK</button>
-                    </form>
+            <div id="div2">
+                <div class="card" style="width: 100%;height: 100%;">
+                    <div class="card-body">
+                        <h3>Input Alarm Data</h3>
+                        <!--                     <div class="card-body">-->
+                        <form action="php/alarmphp.php" method="post">
+                            <div class="form-inline">
+                                <input class="form-control" type="number" placeholder="Input density here" id="rho" style="width:80%" name="mass">&emsp;t/m³
+                            </div>
+                            <br>
+                            <div class="form-inline">
+                                <input class="form-control" type="number" placeholder="Input TML here" id="waterper" style="width:80%" name="water">&emsp;%
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary" style="width:20%" onclick="save()">OK</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div id="rhocon" style="visibility: hidden"></div>
@@ -365,15 +370,6 @@
                     </div>
                 </div>
             </div>
-            <div id="div2">
-                <div class="card" style="width: 100%;height: 100%;">
-                    <div class="card-body">
-                        <h3>Alarm Information</h3>
-                        <button type="button" class="btn btn-primary" onclick="window.open('php/history.php','_blank')">Query</button>
-                    </div>
-                </div>
-            </div>
-
             <div id="div3">
                 <div class="card" style="width: 50%;height: 100%;">
                     <div class="card-body">
@@ -381,10 +377,10 @@
                         <div id="header7" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Water Content Sensor</span>
                         </div>
-                        <div id="header8">&#9888;
+                        <div id="header8" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Pressure Sensor</span>
                         </div>
-                        <div id="header9">&#9888;
+                        <div id="header9" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Strain Sensor</span>
                         </div>
                     </div>
@@ -398,10 +394,10 @@
                         <div id="header10" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Water Content Sensor</span>
                         </div>
-                        <div id="header11">&#9888;
+                        <div id="header11" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Pressure Sensor</span>
                         </div>
-                        <div id="header12">&#9888;
+                        <div id="header12" style="white-space:nowrap;">&#9888;
                             <span style="color: black"> Strain Sensor</span>
                         </div>
                     </div>

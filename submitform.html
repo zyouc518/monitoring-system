@@ -217,8 +217,8 @@
 
         #div1 {
             position: absolute;
-            left: 2%;
-            top: 20%;
+            left: 39%;
+            top: 5%;
             width: 55%;
             height: 42%;
             font-size: 20px;
@@ -227,8 +227,8 @@
 
         #div2 {
             position: absolute;
-            left: 59%;
-            top: 20%;
+            left: 2%;
+            top: 5%;
             width: 35%;
             height: 42%;
             font-size: 20px;
@@ -238,7 +238,7 @@
         #div3 {
             position: absolute;
             left: 2%;
-            top: 64%;
+            top: 50%;
             width: 54%;
             height: 32%;
             font-size: 20px;
@@ -248,7 +248,7 @@
         #div5 {
             position: absolute;
             left: 30%;
-            top: 64%;
+            top: 50%;
             width: 54%;
             height: 32%;
             font-size: 20px;
@@ -258,7 +258,7 @@
         #div4 {
             position: absolute;
             left: 59%;
-            top: 64%;
+            top: 50%;
             width: 35%;
             height: 32%;
             font-size: 20px;
@@ -313,18 +313,22 @@
             </ul>
         </nav>
         <div id="content">
-            <div id="div0">
-                <div class="card" style="width: 25%;height: 40%;">
-                    <!--                     <div class="card-body">-->
-                    <form action="php/alarmphp.php" method="post">
-                        <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:80%" name="mass">&emsp;t/m³
-                        </div>
-                        <div class="form-inline">
-                            <input class="form-control" type="number" placeholder="在此输入TML" id="waterper" style="width:80%" name="water">&emsp;%
-                        </div>
-                        <button type="button" class="btn btn-primary" style="width:20%" onclick="save()">提交</button>
-                    </form>
+            <div id="div2">
+                <div class="card" style="width: 100%;height: 100%;">
+                    <div class="card-body">
+                        <h3>输入预警数据</h3>
+                        <!--                     <div class="card-body">-->
+                        <form action="php/alarmphp.php" method="post">
+                            <div class="form-inline">
+                                <input class="form-control" type="number" placeholder="在此输入矿砂密度" id="rho" style="width:80%" name="mass">&emsp;t/m³
+                            </div>
+                            <br>
+                            <div class="form-inline">
+                                <input class="form-control" type="number" placeholder="在此输入TML" id="waterper" style="width:80%" name="water">&emsp;%
+                            </div><br>
+                            <button type="button" class="btn btn-primary" style="width:20%" onclick="save()">提交</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div id="rhocon" style="visibility: hidden"></div>
@@ -361,14 +365,6 @@
                         <div id="header3" style="width:100%">&#9888;
                             <span style="color: black">进行船舶稳性估算，寻找锚地或就近靠港停船。</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="div2">
-                <div class="card" style="width: 100%;height: 100%;">
-                    <div class="card-body">
-                        <h3>报警信息查询</h3>
-                        <button type="button" class="btn btn-primary" onclick="window.open('php/history.php','_blank')">查询</button>
                     </div>
                 </div>
             </div>
