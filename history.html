@@ -26,6 +26,27 @@
             $('head').append('<link rel="stylesheet" type="text/css" href="css/zoom.css">');
         }
     </script>
+    <style>
+        legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+}
+    </style>
 </head>
 
 <body>
@@ -70,26 +91,81 @@
         <div id="content">
             <script>
                 function query() {
-                    console.log("maheng");
-                    if (window.XMLHttpRequest) {
-                        // code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp = new XMLHttpRequest();
-                    } else {
-                        // code for IE6, IE5
-                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    var method = "GET";
-                    var url = "php/history.php";
-                    var asynchronous = true;
-                    xmlhttp.onreadystatechange = function () {
-                        document.getElementById("content").innerHTML = "<button type='button' class='btn btn-primary' onclick='query();'>查询</button>"+this.responseText;
-                    };
-                    xmlhttp.open(method, url, asynchronous);
-                    xmlhttp.send();
+                    // if (window.XMLHttpRequest) {
+                    //     // code for IE7+, Firefox, Chrome, Opera, Safari
+                    //     xmlhttp = new XMLHttpRequest();
+                    // } else {
+                    //     // code for IE6, IE5
+                    //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    // }
+                    var v = $("#startdate").val();
+                    var x = $("#enddate").val();
+                    var datatosend = 'start='+v+'&end='+x;
+                    // var method = "GET";
+                    // var url = "php/test.php";
+                    // var asynchronous = true;
+                    // xmlhttp.onreadystatechange = function () {
+                    //     // document.getElementById("content").innerHTML = "<button type='button' class='btn btn-primary' onclick='query();'>查询</button>"+this.responseText;
+                    // };
+                    // xmlhttp.open(method, url, asynchronous);
+                    // xmlhttp.send();
+                    $.ajax({
+                        url: 'php/history.php',
+                        type: 'GET',
+                        data: datatosend,
+                        async: true,
+                        success: function (data) {
+                            document.getElementById("res").innerHTML = data;
+                        },
+                    });
+                    // console.log(v);
+                    // console.log(x);
                 }
             </script>
+            <div class="container">
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='date' class="form-control" id="startdate"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {              
+                           // Bootstrap DateTimePicker v4
+                           $('#datetimepicker4').datetimepicker({
+                                 format: 'DD/MM/YYYY'
+                           });
+                        });      
+                    </script>
+                </div>
+            </div>
+             <div class="container">
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='date' class="form-control" id="enddate"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {              
+                           // Bootstrap DateTimePicker v4
+                           $('#datetimepicker4').datetimepicker({
+                                 format: 'DD/MM/YYYY'
+                           });
+                        });      
+                    </script>
+                </div>
+            </div>
             <button type="button" class="btn btn-primary" onclick="query();">查询</button>
-
+            <div id="res">
             <table class="table">
                 <thead>
                     <tr>
@@ -103,6 +179,7 @@
                     </tr>
                 </thead>
             </table>
+            </div>
         </div>
     </div>
     <script src="js/popper.min.js"></script>
