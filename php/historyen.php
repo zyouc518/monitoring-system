@@ -15,6 +15,8 @@
 <body>
 <table class="table">
 <?php
+$start=$_GET['start'].' 00:00:00';
+$end=$_GET['end'].' 23:59:59';
 $link = mysqli_connect('localhost', 'root', '123456', 'mineral liquefying');
 echo "<thead>";
 echo "<tr>";
@@ -28,7 +30,7 @@ echo "<th scope='col'>Alarm Level</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
-$query = "SELECT * FROM `alarm` ORDER BY id DESC LIMIT 100";
+$query = "SELECT * FROM `alarm` WHERE time >= '$start' AND time <= '$end'";
 
 $result = $link->query($query);
 $i = 1;
