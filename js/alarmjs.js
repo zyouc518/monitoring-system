@@ -18,30 +18,38 @@
         $('#results').load('php/alarm2.php');
         $('#results').load('php/alarm3.php');
 
-        var alarm1flag = 0;
-        var a = document.getElementById('rhocon').innerHTML;
-        var b = document.getElementById('waterpercon').innerHTML;
-        var TML = 100;
-        if (a != "" && b != "") {
-            TML = a * b / (a * b + 1 - b);
-            if (ar[0] > TML) alarm1flag++;
-            if (ar2[0] > TML) alarm1flag++;
-            if (ar3[0] > TML) alarm1flag++;
-            if (ar4[0] > TML) alarm1flag++;
-            if (ar5[0] > TML) alarm1flag++;
-            if (ar6[0] > TML) alarm1flag++;
-            if (alarm1flag >= 4) {
-                //一级报警操作
-                document.getElementById('header1').className = "main";
-                document.getElementById('level1').style.color = "red";
-                ins[0] = true;
-            } else {
-                document.getElementById('header1').className = "normal";
-                document.getElementById('level1').style.color = "black";
-                ins[0] = false;
-            }
+        var ajax = new XMLHttpRequest();
+        var method = "GET";
+        var url = "php/parameterload.php";
+        var asynchronous = true;
+        ajax.open(method,url,asynchronous);
+        ajax.send();
+        ajax.onreadystatechange = function () {
+            var alarm1flag = 0;
+            var par = JSON.parse(this.responseText);
+            var a = par.density;
+            var b = par.tml;
+            if (a!="" && b!="")
+            {
+                var TML = a * b / (a * b + 1 - b);
+                if (ar[0] > TML) alarm1flag++;
+                if (ar2[0] > TML) alarm1flag++;
+                if (ar3[0] > TML) alarm1flag++;
+                if (ar4[0] > TML) alarm1flag++;
+                if (ar5[0] > TML) alarm1flag++;
+                if (ar6[0] > TML) alarm1flag++;
+                if (alarm1flag >= 4) {
+                    //一级报警操作
+                    document.getElementById('header1').className = "main";
+                    document.getElementById('level1').style.color = "red";
+                    ins[0] = true;
+                } else {
+                    document.getElementById('header1').className = "normal";
+                    document.getElementById('level1').style.color = "black";
+                    ins[0] = false;
+                }
 
-            //二级报警
+                //二级报警
             var alarm2water = 0;
             var alarm2waterure = 0;
             var alarm2strain = 0;
@@ -152,7 +160,9 @@
                 document.getElementById('level3').style.color = "black";
                 ins[2] = false;
             }
-        }
+            }
+        };
+            
 
 
         var water1 = 0;
