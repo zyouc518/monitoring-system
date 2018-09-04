@@ -30,7 +30,7 @@ echo "<th scope='col'>Alarm Level</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
-$query = "SELECT * FROM `alarm` WHERE time >= '$start' AND time <= '$end'";
+$query = "SELECT * FROM `alarm` WHERE time >= '$start' AND time <= '$end' ORDER BY id DESC";
 
 $result = $link->query($query);
 $i = 1;
