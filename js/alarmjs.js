@@ -33,9 +33,11 @@
             if (alarm1flag >= 4) {
                 //一级报警操作
                 document.getElementById('header1').className = "main";
+                document.getElementById('level1').style.color = "red";
                 ins[0] = true;
             } else {
                 document.getElementById('header1').className = "normal";
+                document.getElementById('level1').style.color = "black";
                 ins[0] = false;
             }
 
@@ -117,9 +119,11 @@
             if (alarm2water && (alarm2waterure || alarm2strain)) {
                 //二级报警操作
                 document.getElementById('header2').className = "main";
+                document.getElementById('level2').style.color = "red";
                 ins[1] = true;
             } else {
                 document.getElementById('header2').className = "normal";
+                document.getElementById('level2').style.color = "black";
                 ins[1] = false;
             }
 
@@ -141,9 +145,11 @@
             if (alarm3 == 1) {
                 //三级报警操作
                 document.getElementById('header3').className = "main";
+                document.getElementById('level3').style.color = "red";
                 ins[2] = true;
             } else {
                 document.getElementById('header3').className = "normal";
+                document.getElementById('level3').style.color = "black";
                 ins[2] = false;
             }
         }
