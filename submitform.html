@@ -335,13 +335,21 @@
             <div id="waterpercon" style="visibility: hidden"></div>
             <script>
                 function save() {
-                    rho = document.getElementById('rho').value;
-                    waterper = document.getElementById('waterper').value;
+                    var rho = document.getElementById('rho').value;
+                    var waterper = document.getElementById('waterper').value;
                     if (rho == "" || waterper == "") {
-                        alert("请输入计算值");
+                        alert("Input value!");
                     } else {
-                        document.getElementById('rhocon').innerText = rho;
-                        document.getElementById('waterpercon').innerText = waterper;
+                        var datatosend = 'density='+rho+'&tml='+waterper;
+                        $.ajax({
+                            url: 'php/parameterins.php',
+                            type: 'GET',
+                            data: datatosend,
+                            async: true,
+                            success: function (data) {
+                                console.log(data);
+                            },
+                        });
                     }
                 }
             </script>
