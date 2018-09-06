@@ -28,7 +28,7 @@
             var alarm1flag = 0;
             var par = JSON.parse(this.responseText);
             var a = par.density;
-            var b = par.tml;
+            var b = par.tml/100;
             if (a!="" && b!="")
             {
                 var TML = a * b / (a * b + 1 - b);
