@@ -31,7 +31,7 @@
             var b = par.tml/100;
             if (a!="" && b!="")
             {
-                var TML = a * b / (a * b + 1 - b);
+                var TML = 100 * a * b / (a * b + 1 - b);
                 if (ar[0] > TML) alarm1flag++;
                 if (ar2[0] > TML) alarm1flag++;
                 if (ar3[0] > TML) alarm1flag++;
