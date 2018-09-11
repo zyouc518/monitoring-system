@@ -11,7 +11,7 @@ $g = "SELECT * FROM `parameter` ORDER BY id DESC LIMIT 1";
 $getlevel = $connection->query($g);
 
 $car = mysqli_fetch_assoc($getlevel);
-echo json_encode($car);
+
 if ($level == '一级') {
     if ($car['level1'] == 0) {
         $q = "INSERT INTO alarm (type,name,position,value,level) VALUES ('$type','$name','$position','$value','$level')";
