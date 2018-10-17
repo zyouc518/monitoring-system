@@ -6,7 +6,7 @@
     var alarmLevel = Array('一级', '二级', '三级');
     var ins = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
     var valueExceed = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var positionExceed = Array('AU', 'AM', 'AL', 'FU', 'FM', 'FL'); //zheli xie suoxie , weizhi d suoxie biru WCAU shenmede.
+    var positionExceed = Array('FU', 'FM', 'FL', 'AU', 'AM', 'AL'); //zheli xie suoxie , weizhi d suoxie biru WCAU shenmede.
     var Exceed = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
     var EENull = Array(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
     var SStrain = Array(false, false, false, false, false, false);
