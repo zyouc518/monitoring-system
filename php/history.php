@@ -30,14 +30,14 @@ echo "<th scope='col'>预警等级</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
-$query = "SELECT * FROM `alarm` WHERE time >= '$start' AND time <= '$end' ORDER BY id DESC";
+$query = "SELECT * FROM `alarm` WHERE Time_1 >= '$start' AND Time_1 <= '$end' ORDER BY id DESC";
 
 $result = $link->query($query);
 $i = 1;
 while ($car = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<th scope='row'>$i</th>";
-    echo "<td>".$car['time']."</td>";
+    echo "<td>".$car['Time_1']."</td>";
     echo "<td>".$car['type']."</td>";
     echo "<td>".$car['name']."</td>";
     echo "<td>".$car['position']."</td>";
