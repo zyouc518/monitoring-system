@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "123456", "mineral liquefying");
+$link = mysqli_connect("localhost", "root", "zcq20181123sssri", "mineral liquefying");
 
 if ($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
