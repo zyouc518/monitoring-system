@@ -17,7 +17,7 @@
 <?php
 $start=$_GET['start'].' 00:00:00';
 $end=$_GET['end'].' 23:59:59';
-$link = mysqli_connect('localhost', 'root', '123456', 'mineral liquefying');
+$link = mysqli_connect('localhost', 'root', 'zcq20181123sssri', 'mineral liquefying');
 echo "<thead>";
 echo "<tr>";
 echo "<th scope='col'>#</th>";
