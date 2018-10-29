@@ -1,7 +1,7 @@
 <?php
 $density = $_GET['density'];
 $tml = $_GET['tml'];
-$link = mysqli_connect('localhost', 'root', '123456', 'mineral liquefying');
+$link = mysqli_connect('localhost', 'root', 'zcq20181123sssri', 'mineral liquefying');
 $q = "TRUNCATE parameter";
 $query = mysqli_query($link, $q);
 $q = "INSERT INTO parameter (density, tml, level1, level2, level3) VALUES ('$density', '$tml', 0, 0, 0)";
